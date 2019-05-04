@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>MyNumber Game</title>
+</head>
+<body>
+
+ 
+  <div class="container">
+    <!-- Timer -->
+    <div id="timer">90</div>
+    <!-- <img src="img/Timer.svg" alt=""> -->
+
+    <!-- Display Target Number and MyNumber -->
+    <p class='text-target'>Target Number</p>
+    <div id="target">000</div>
+    <p class="text-value">My Number</p>
+    <div id="value">???</div>
+
+    <div id="calculator">
+      <!-- Display -->
+      <div id="calc-display">
+        <div id="calc-display-val"></div>
+      </div>        
+      <div class="calc-backspace-btn used" id="calc-backspace">x</div>
+
+      <!-- Button Numbers -->    
+            
+      <div class="number-row">
+        <div class="calc-btn calc-btn-num column used" id="num1">0</div>
+        <div class="calc-btn calc-btn-num column used" id="num2">0</div>
+        <div class="calc-btn calc-btn-num column used" id="num3">0</div>
+        <div class="calc-btn calc-btn-num column used" id="num4">0</div>
+        <div class="calc-btn calc-btn-num column used" id="num5">00</div>
+        <div class="calc-btn calc-btn-num column used" id="num6">000</div>
+        <div  class="calc-btn column used" id="calc-stop">STOP</div>
+      </div>
+  
+      <!-- Button operators -->
+      <div class="calc-row">
+        <div class="calc-btn calc-btn-operator column used">+</div>
+        <div class="calc-btn calc-btn-operator column used">-</div>
+        <div class="calc-btn calc-btn-operator column used">x</div>
+        <div class="calc-btn calc-btn-operator column used">÷</div>
+        <div class="calc-btn calc-btn-operator column used">(</div>
+        <div class="calc-btn calc-btn-operator column used">)</div>
+        <div class="calc-btn column used" id="calc-confirm">confirm</div>
+      </div>
+
+    </div>
+
+    <!-- Buttons Start and New Game -->
+    <button id="start_game">Start Game</button>
+    <button id="new_game" class="used">New Game</button>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
