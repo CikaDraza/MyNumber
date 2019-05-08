@@ -87,8 +87,7 @@ calcBtnOperators.forEach(function(oprt) {
 });
 
 // Confirm Button
-confirm.onclick = () => { 
-
+confirm.onclick = () => {
     // if display empty show result this ??? 
     if(displayResult.innerText == ''){
       return displayResult.innerText = '???';
@@ -116,16 +115,16 @@ confirm.onclick = () => {
 
     // When press Confirm btn do this as well
     newGame.style.display = 'block';
+    stop.style.display = 'none';
+    numClear.classList.add('used');
+    confirm.style.display = 'none';
     window.clearInterval(timer);
     time.style.color = 'red';
     time.style.borderColor = 'red';
     audio.play();
     audio3.pause();
     audio3.currentTime = 0;
-    newGame.classList.remove('used');
-    stop.classList.add('used');
-    numClear.classList.add('used');
-    confirm.classList.add('used');
+    
     for(let i = 0; i < calcNumBtns.length; i++) {
       // calcNumBtns[i].classList.remove('used');
       [i].forEach.call(calcNumBtns, function(e) {
@@ -230,7 +229,8 @@ startGame.addEventListener('click', ()=> {
   // Remove New Game button ########################################################################
   startGame.style.display = 'none';
   newGame.style.display = 'none';
-  stop.classList.remove('used');
+  stop.style.display = 'block';
+  confirm.style.display = 'none';
   document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #f4f4f4';
   audio1.play();
 
@@ -240,10 +240,9 @@ startGame.addEventListener('click', ()=> {
     clearInterval(rotate);
     clearInterval(spin);
     clearInterval(swing);
-    newGame.classList.add('used');
     numClear.classList.remove('used');
-    stop.classList.add('used');
-    confirm.classList.remove('used');
+    stop.style.display = 'none';
+    confirm.style.display = 'block';
     counter = 90;
     timer = setInterval('progressTime()', 1000);
     audio1.play();
@@ -287,9 +286,9 @@ function progressTime() {
       audio.play();
       audio3.pause();
       audio3.currentTime = 0;
-      stop.classList.add('used');
-      numClear.classList.add('used');
-      newGame.classList.remove('used'); 
+      // stop.classList.add('used');
+      // numClear.classList.add('used');
+      // newGame.classList.remove('used'); 
   }
   if(counter === 0){    
     // Replace sign x whit sign * to make a calculation
@@ -300,11 +299,32 @@ function progressTime() {
     for(let e = 0; e < displayVal.length; e++)
     if(displayVal[e] === '÷ ')
     displayVal[e] = '/';
+
+    // If not a number on display set on new game
+    if(isNaN(displayValElement.innerText) == true){
+      displayResult.innerText = '???';
+      newGame.style.display = 'block';
+      confirm.style.display = 'none';
+      numClear.classList.add('used');
+      for(let i = 0; i < calcBtnOperators.length; i++) {
+        [i].forEach.call(calcBtnOperators, function(e) {
+          e.classList.add('used');        
+        });
+      }
+      for(let i = 0; i < calcNumBtns.length; i++) {
+        [i].forEach.call(calcNumBtns, function(e) {
+          e.classList.add('used');
+        });
+      };
+    }
+
     // When time up calculate
     displayResult.innerText = eval(displayVal.join(''));
 
-    confirm.classList.add('used');
+    // confirm.classList.add('used');
     newGame.style.display = 'block';
+    confirm.style.display = 'none';
+    numClear.classList.add('used');
 
     for(let i = 0; i < calcBtnOperators.length; i++) {
       [i].forEach.call(calcBtnOperators, function(e) {
@@ -316,6 +336,7 @@ function progressTime() {
         e.classList.add('used');
       });
     };
+    
     if(displayResult.innerText == targetResult.innerText){
       targetResult.style.boxShadow = '2px 4px 30px 7px #f4f4f4';
       document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
@@ -337,7 +358,7 @@ newGame.addEventListener('click', ()=> {
     window.clearInterval(timer);
     newGame.style.display = 'none';
     startGame.style.display = 'block';
-    stop.classList.add('used');
+    confirm.style.display = 'none';
     numClear.classList.add('used');    
     time.innerHTML = 90;    
     time.style.color = 'yellow';
