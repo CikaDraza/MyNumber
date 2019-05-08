@@ -359,7 +359,7 @@ body {
   background-color: #ff00b2;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 600px) {
 
   body{
     background: #000000;  
@@ -372,7 +372,7 @@ body {
   .container {
     display: block;
     width: 350px;
-    height: 620px;
+    height: 550px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -478,7 +478,7 @@ body {
   #calculator {
     width: 350px;
     height: 345px;
-    top: 22%;
+    top: 15%;
     background: linear-gradient(135deg, rgba(43, 43, 43, 0.5) 0%, rgba(89, 89, 89, 0.5) 0%, rgba(44, 44, 44, 0.5) 0%, rgba(71, 71, 71, 0.5) 0%, rgba(102, 102, 102, 1) 0%, rgb(0, 0, 0) 0%, rgb(82, 82, 82, 0.5) 50%, rgba(0, 0, 0, 0) 50%) no-repeat;
     background-color: #000;
     margin: 0 auto;
