@@ -143,7 +143,7 @@ body {
   border: 1px solid #f4f4f4;
 }
 
-.calc-btn-operator{
+.calc-btn-operator {
   border: 1px solid transparent;
   
 }
@@ -213,19 +213,19 @@ body {
   background-color: rgb(24, 204, 18);
 }
 
-.calc-btn:active {
-  font-size: 20px;
-}
-
-.calc-btn:focus {
-  outline: 0;
-}
-
 #calc-confirm:active {
   font-size: 20px;
 }
 
 #calc-confirm:focus {
+  outline: 0;
+}
+
+.calc-btn:active {
+  font-size: 20px;
+}
+
+.calc-btn:focus {
   outline: 0;
 }
 
@@ -549,14 +549,6 @@ body {
     border: 1px solid #f4f4f4;    
   }
 
-  .calc-btn-operator:hover {
-    border: 1px solid #f4f4f4;
-    padding: 0;
-    margin: 0;
-    font-size: 32px;
-    text-align: center;
-  }
-  
   .column {
     text-align: center;
     font-size: 32px;
@@ -564,7 +556,7 @@ body {
     height: 40px;
   }
 
-  .number-row > div {
+  .number-row {
     height: 40px;
 }
 
@@ -583,11 +575,19 @@ body {
   }
   
   .calc-btn:focus {
-    outline: none;
+    outline: 0;
   }
   
   #calc-confirm:active {
     font-size: 40px;
+  }
+
+  .calc-btn-operator:hover {
+    border: 1px solid #f4f4f4;
+    padding: 0;
+    margin: 0;
+    font-size: 32px;
+    text-align: center;
   }
 
   #calc-stop {
@@ -709,10 +709,11 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
   .container {
     display: block;
     width: 400px;
-    height: 620px;
+    height: 630px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -722,5 +723,105 @@ body {
     transform: scale(0.7);
     top: 0px;
     position: relative;
+  }
+
+  #calculator {
+    width: 380px;
+    height: 390px;
+    top: 15%;
+    background: linear-gradient(135deg, rgba(43, 43, 43, 0.5) 0%, rgba(89, 89, 89, 0.5) 0%, rgba(44, 44, 44, 0.5) 0%, rgba(71, 71, 71, 0.5) 0%, rgba(102, 102, 102, 1) 0%, rgb(0, 0, 0) 0%, rgb(82, 82, 82, 0.5) 50%, rgba(0, 0, 0, 0) 50%) no-repeat;
+    background-color: #000;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 25px;
+    box-shadow: 2px 4px 30px 7px #f4f4f4;
+    font-family: 'Orbitron', sans-serif;
+    display: block;
+}
+
+  .number-row {
+    display: grid;
+    width: 110px;
+    grid-template-columns: repeat(2, 45px);
+    grid-gap: 20px;
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    left: 25px;
+    float: left;
+}
+
+  .column {
+    text-align: center;
+    font-size: 32px;
+    padding: 0;
+    height: 40px;
+  }
+
+  .calc-btn-operator:hover {
+    border: 1px solid #f4f4f4;
+    padding: 0;
+    margin: 0;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  #calc-display-val {
+    width: 350px;
+    height: 30px;
+    margin: 0;
+    padding: 12px 0 0 10px;
+    position: relative;
+    font-size: 22px;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+  #calc-backspace {
+    position: relative;
+    text-align: center;
+    border-radius: 3px;
+    background: transparent;
+    border-top: 1px solid #f4f4f4;
+    border-right: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+    color: #f4f4f4;
+    width: 80px;
+    height: 30px;
+    font-size: 30px;
+    display: block;
+    padding: 5px 0;
+    top: 227px;
+    left: 180px;
+    line-height: 25px;
+  }
+
+  #start_game {
+    position: absolute;
+    top: calc(25% - 5px);
+    left: 290px;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    height: 167px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    line-height: 60px;
+  } 
+
+  #new_game {
+    position: absolute;
+    display: none;
+    top: calc(25% - 5px);
+    left: 290px;
+    background-position: 50% 50%;
+    background-size: 60%;
+    margin: 0;
+    width: 60px;
+    height: 167px;
+    background-color: #a30072;
+    line-height: 56px;
   }
 }
