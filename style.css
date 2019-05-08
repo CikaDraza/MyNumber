@@ -178,6 +178,7 @@ body {
 }
 
 #calc-stop {
+  display: none;
   background: rgb(196, 0, 0);
   color: #f4f4f4;
   grid-column: 11/13;
@@ -192,7 +193,7 @@ body {
 }
 
 #calc-confirm {
-  display: inline-block;
+  display: none;
   font-size: 24px;
   background-color: rgb(12, 153, 7);
   color: #f4f4f4;
