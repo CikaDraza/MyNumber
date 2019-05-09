@@ -185,7 +185,6 @@ numClear.onclick = () => {
 
 // Rundom Numbers Countdowon #################################################################
 startGame.addEventListener('click', ()=> {
-  window.clearInterval(timer);
   // Target Number
   let spinTarget = setInterval( () => {
     // let targetResult = document.getElementById("target");
