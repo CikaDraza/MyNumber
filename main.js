@@ -225,11 +225,10 @@ startGame.addEventListener('click', ()=> {
   }
   document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #f4f4f4';
   audio1.play();
-
+  audio3.currentTime = 0;
 // Stop random numbers and start clock #################################################################
   stop.addEventListener('click', ()=> {
     window.clearInterval(timer);
-    audio3.currentTime = 0;
     clearInterval(spinTarget);
     clearInterval(rotate);
     clearInterval(spin);
