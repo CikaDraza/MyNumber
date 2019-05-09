@@ -185,6 +185,7 @@ numClear.onclick = () => {
 
 // Rundom Numbers Countdowon #################################################################
 startGame.addEventListener('click', ()=> {
+  window.clearInterval(timer);
   // Target Number
   let spinTarget = setInterval( () => {
     // let targetResult = document.getElementById("target");
@@ -241,7 +242,8 @@ startGame.addEventListener('click', ()=> {
   audio1.play();
 
   stop.addEventListener('click', ()=> {
-    window.clearInterval(timer);
+    audio1.play();
+    audio5.play();
     clearInterval(spinTarget);
     clearInterval(rotate);
     clearInterval(spin);
@@ -251,8 +253,7 @@ startGame.addEventListener('click', ()=> {
     confirm.style.display = 'block';
     counter = 90;
     timer = setInterval('progressTime()', 1000);
-    audio1.play();
-    audio5.play();
+    
   
     for(let i = 0; i < calcNumBtns.length; i++) {
       // calcNumBtns[i].classList.remove('used');
@@ -278,7 +279,7 @@ function progressTime() {
       time.innerHTML = counter;
       audio3.play();        
   }
-  if(counter < 12){
+  if(counter < 13){
       audio4.play();        
   }  
   if(counter < 10){

@@ -735,7 +735,7 @@ body {
   body {
     position: relative;
     width: 300px;
-    height: 50vh;
+    height: 55vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -751,7 +751,7 @@ body {
     overflow: hidden;
     border-radius: 25px;
     transform: scale(0.7);
-    top: -75px;
+    top: -80px;
     left: -40px;
   }
 
@@ -783,7 +783,7 @@ body {
     width: 100px;
     height: 30px;
     text-align: center;
-    line-height: 30px;
+    line-height: 35px;
   }
 
   .text-target::after {
@@ -809,7 +809,7 @@ body {
     border: 2px solid rgb(48, 121, 255);
     text-align: center;
     font-family: 'Orbitron', sans-serif;
-    line-height: 30px;
+    line-height: 35px;
   }
 
   .number-row {
@@ -845,7 +845,7 @@ body {
     width: 350px;
     height: 30px;
     margin: 0;
-    padding: 15px 0 0 10px;
+    padding: 16px 0 0 10px;
     position: relative;
     font-size: 22px;
     font-weight: bold;
@@ -869,7 +869,7 @@ body {
     padding: 5px 0;
     top: 228px;
     left: 180px;
-    line-height: 28px;
+    line-height: 30px;
   }
 
   #start_game {
