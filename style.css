@@ -734,10 +734,11 @@ body {
 
   body {
     position: relative;
-    width: 100%;
-    height: 100vh;
+    width: 300px;
+    height: 50vh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
 
   .container {
@@ -750,8 +751,8 @@ body {
     overflow: hidden;
     border-radius: 25px;
     transform: scale(0.7);
-    top: 0px;
-    left: 5px;
+    top: -75px;
+    left: -40px;
   }
 
   #calculator {
@@ -768,43 +769,48 @@ body {
     display: block;
 }
 
-#target {
-  position: relative;
-  top: 20px;
-  left: -8px;
-  margin: 0;
-  padding: 5px;
-  color: #dbc715;
-  font-size: 30px;
-  font-family: 'Orbitron', sans-serif;
-  border: 2px solid rgba(228, 228, 228, 0.877);
-  background-color: #000;
-  width: 100px;
-  text-align: center;
-}
+  #target {
+    position: relative;
+    top: 20px;
+    left: -8px;
+    margin: 0;
+    padding: 5px;
+    color: #dbc715;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    border: 2px solid rgba(228, 228, 228, 0.877);
+    background-color: #000;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+  }
 
-.text-target::after {
-  content: ' Target';
-  color: #f4f4f4;
-  position: relative;
-  left: -15px;
-}
+  .text-target::after {
+    content: ' Target';
+    color: #f4f4f4;
+    position: relative;
+    top: -5px;
+    left: -15px;
+  }
 
-#value {
-  display: inline-block;
-  position: relative;
-  top: 50px;
-  left: calc(50% + 0px);
-  margin: 0;
-  padding: 5px;
-  color: #dbc715;
-  font-size: 30px;
-  width: 100px;
-  background-color: #000;
-  border: 2px solid rgb(48, 121, 255);
-  text-align: center;
-  font-family: 'Orbitron', sans-serif;
-}
+  #value {
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    left: calc(50% + 0px);
+    margin: 0;
+    padding: 5px;
+    color: #dbc715;
+    font-size: 30px;
+    width: 100px;
+    height: 30px;
+    background-color: #000;
+    border: 2px solid rgb(48, 121, 255);
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    line-height: 30px;
+  }
 
   .number-row {
     display: grid;
@@ -839,7 +845,7 @@ body {
     width: 350px;
     height: 30px;
     margin: 0;
-    padding: 14px 0 0 10px;
+    padding: 15px 0 0 10px;
     position: relative;
     font-size: 22px;
     font-weight: bold;
@@ -863,7 +869,7 @@ body {
     padding: 5px 0;
     top: 228px;
     left: 180px;
-    line-height: 27px;
+    line-height: 28px;
   }
 
   #start_game {
