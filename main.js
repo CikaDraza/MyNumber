@@ -231,6 +231,12 @@ startGame.addEventListener('click', ()=> {
   newGame.style.display = 'none';
   stop.style.display = 'block';
   confirm.style.display = 'none';
+  for(let i = 0; i < calcNumBtns.length; i++) {
+    // calcNumBtns[i].classList.remove('used');
+      [i].forEach.call(calcNumBtns, function(e) {
+      e.classList.add('run_num');
+    });        
+  }
   document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #f4f4f4';
   audio1.play();
 
@@ -252,6 +258,7 @@ startGame.addEventListener('click', ()=> {
       // calcNumBtns[i].classList.remove('used');
         [i].forEach.call(calcNumBtns, function(e) {
         e.classList.remove('used');
+        e.classList.remove('run_num');
       });        
     }
     for(let i = 0; i < calcBtnOperators.length; i++) {
@@ -260,6 +267,7 @@ startGame.addEventListener('click', ()=> {
         e.classList.remove('used');
       });        
     }
+
   });
 
 });
