@@ -110,7 +110,6 @@ confirm.onclick = () => {
       targetResult.style.boxShadow = '2px 4px 30px 7px #f4f4f4';
       document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
       audio6.play();
-      console.log('Bingo');
     }
 
     // When press Confirm btn do this as well
@@ -126,13 +125,11 @@ confirm.onclick = () => {
     audio3.currentTime = 0;
     
     for(let i = 0; i < calcNumBtns.length; i++) {
-      // calcNumBtns[i].classList.remove('used');
       [i].forEach.call(calcNumBtns, function(e) {
       e.classList.add('used');
       });
     }
     for(let i = 0; i < calcBtnOperators.length; i++) {
-      // calcNumBtns[i].classList.remove('used');
       [i].forEach.call(calcBtnOperators, function(e) {
       e.classList.add('used');
       });        
@@ -160,26 +157,16 @@ numClear.onclick = () => {
      displayResult.innerText = '???';
   }
   // Replace sign * whit sign x
-  for(let i = 0; i < displayVal.length; i++)
+  for(var i = 0; i < displayVal.length; i++)
   if(displayVal[i] == '*')
       displayVal[i] = 'x ';
   // Replace sign / whit sign ÷
-  for(let e = 0; e < displayVal.length; e++)
+  for(var e = 0; e < displayVal.length; e++)
     if(displayVal[e] == '/')
         displayVal[e] = '÷ ';
 
     // update display whit correct sign
   displayValElement.innerText = displayVal.join('');
-
-  // Removes inactive buttons
-  // for(let i = 0; i < clearStrArray.length; i++) {
-  //   clearStrArray[i].classList.remove('used');
-  // }
-  // [].forEach.call(calcNumBtns, function(e) {
-  //   e.classList.remove('used');
-  // });
-
-  // if display empty show result = ???
     
 };
 
@@ -232,7 +219,6 @@ startGame.addEventListener('click', ()=> {
   stop.style.display = 'block';
   confirm.style.display = 'none';
   for(let i = 0; i < calcNumBtns.length; i++) {
-    // calcNumBtns[i].classList.remove('used');
       [i].forEach.call(calcNumBtns, function(e) {
       e.classList.add('run_num');
     });        
@@ -241,8 +227,7 @@ startGame.addEventListener('click', ()=> {
   audio1.play();
 
   stop.addEventListener('click', ()=> {
-    audio1.play();
-    audio5.play();
+    window.clearInterval(timer);
     clearInterval(spinTarget);
     clearInterval(rotate);
     clearInterval(spin);
@@ -252,17 +237,16 @@ startGame.addEventListener('click', ()=> {
     confirm.style.display = 'block';
     counter = 90;
     timer = setInterval('progressTime()', 1000);
-    
+    audio1.play();
+    audio5.play();
   
     for(let i = 0; i < calcNumBtns.length; i++) {
-      // calcNumBtns[i].classList.remove('used');
         [i].forEach.call(calcNumBtns, function(e) {
         e.classList.remove('used');
         e.classList.remove('run_num');
       });        
     }
     for(let i = 0; i < calcBtnOperators.length; i++) {
-        // calcNumBtns[i].classList.remove('used');
         [i].forEach.call(calcBtnOperators, function(e) {
         e.classList.remove('used');
       });        
@@ -294,9 +278,6 @@ function progressTime() {
       audio.play();
       audio3.pause();
       audio3.currentTime = 0;
-      // stop.classList.add('used');
-      // numClear.classList.add('used');
-      // newGame.classList.remove('used'); 
   }
   if(counter === 0){    
     // Replace sign x whit sign * to make a calculation
@@ -329,7 +310,6 @@ function progressTime() {
     // When time up calculate
     displayResult.innerText = eval(displayVal.join(''));
 
-    // confirm.classList.add('used');
     newGame.style.display = 'block';
     confirm.style.display = 'none';
     numClear.classList.add('used');
@@ -380,7 +360,6 @@ newGame.addEventListener('click', ()=> {
     targetResult.innerText = '000';
     let firstFourNumb = Object.entries(calcNumBtns).slice(0,4).map(entry => entry[1]);
     for(let i = 0; i < calcNumBtns.length; i++) {
-      // calcNumBtns[i].classList.remove('used');
       [i].forEach.call(firstFourNumb, function(e) {
       e.innerText = '0';
       });
@@ -389,13 +368,11 @@ newGame.addEventListener('click', ()=> {
     calcNumBtns[5].innerText = '000';
     // Removes inactive buttons
     for(let i = 0; i < calcNumBtns.length; i++) {
-      // calcNumBtns[i].classList.remove('used');
       [i].forEach.call(calcNumBtns, function(e) {
       e.classList.add('used');
       });
     }
     for(let i = 0; i < calcBtnOperators.length; i++) {
-      // calcNumBtns[i].classList.remove('used');
       [i].forEach.call(calcBtnOperators, function(e) {
       e.classList.add('used');
     });        
