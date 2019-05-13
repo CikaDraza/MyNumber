@@ -792,7 +792,7 @@ body {
     width: 100px;
     height: 30px;
     text-align: center;
-    line-height: 41px;
+    line-height: 40px;
   }
 
   .text-target::after {
@@ -818,7 +818,7 @@ body {
     border: 2px solid rgb(48, 121, 255);
     text-align: center;
     font-family: 'Orbitron', sans-serif;
-    line-height: 41px;
+    line-height: 40px;
   }
 
   .number-row {
@@ -840,7 +840,7 @@ body {
   
   .calc-btn-operator {
     border: 1px solid #f4f4f4;
-    line-height: 37px;
+    line-height: 40px;
 
   }
 
@@ -877,7 +877,7 @@ body {
     padding: 5px 0;
     top: 228px;
     left: 180px;
-    line-height: 32px;
+    line-height: 33px;
   }
 
   #calc-backspace::before {
