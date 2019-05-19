@@ -1361,12 +1361,12 @@ footer img {
     position: absolute;
     width: 400px;
     height: 630px;
-    margin: 10px auto;
+    margin: 0px auto;
     padding: 0;
     overflow: hidden;
     border-radius: 25px;
     transform: scale(0.7);
-    top: -90px;
+    top: -40px;
     left: -35px;
   }
 
@@ -1535,9 +1535,9 @@ footer img {
     color: #f4f4f4;
     width: 250px;
     height: 30px;
-    top: 420px;
+    top: 460px;
     left: 70px;
-    z-index: 9999;
+    z-index: 1;
   }
 }
 
