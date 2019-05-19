@@ -1274,7 +1274,6 @@ footer img {
     animation: shake .3s;
     animation-delay: .6s;
     background-size: cover;
-    transform: scale(0.7);
 }
 
   .box-loader {
@@ -1290,7 +1289,8 @@ footer img {
     animation-delay: .3s;
     /* background-size: 330px 490px; */
     visibility: hidden;
-    overflow: hidden;    
+    overflow: hidden;
+    transform: scale(0.7);
   }
 
   .anima1 {
