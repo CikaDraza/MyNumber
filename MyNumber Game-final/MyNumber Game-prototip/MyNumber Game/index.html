@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/style_timer.css">
+  <title>MyNumber Game</title>
+</head>
+<body>
+
+  <div class="container">
+    <div id="timer">90</div>
+    <img src="img/simple-clock-drawing-7.png" alt="">
+
+      <!-- Display Target Number and MyNumber -->
+      <p class='text'>Target Number</p>
+      <div id="target">000</div>
+      <p class="text">My Number</p>
+      <div id="value">???</div>
+
+      <div id="calculator">
+        <!-- Display -->
+        <div id="calc-display">
+          <div id="calc-display-val"></div>
+        </div>        
+        <div class="calc-backspace-btn used" id="calc-backspace">x</div>
+
+        <!-- Button Numbers -->    
+              
+          <div class="number-row">
+            <div class="calc-btn calc-btn-num column used" id="calc-num1">0</div>
+            <div class="calc-btn calc-btn-num column used" id="calc-num2">0</div>
+            <div class="calc-btn calc-btn-num column used" id="calc-num3">0</div>
+            <div class="calc-btn calc-btn-num column used" id="calc-num4">0</div>
+            <div class="calc-btn calc-btn-num column used" id="calc-num5">00</div>
+            <div class="calc-btn calc-btn-num column used" id="calc-num6">000</div>
+            <div  class="calc-btn column used" id="calc-stop">STOP</div>
+          </div>
+    
+          <!-- Button operators -->
+          <div class="calc-row">
+            <div class="calc-btn calc-btn-operator column used" id="calc-plus">+</div>
+            <div class="calc-btn calc-btn-operator column used" id="calc-minus">-</div>
+            <div class="calc-btn calc-btn-operator column used" id="calc-multiply">x</div>
+            <div class="calc-btn calc-btn-operator column used" id="calc-divide">÷</div>
+            <!-- <div class="calc-btn calc-btn-operator column" id="calc-multiply">*</div> -->
+            <!-- <div class="calc-btn calc-btn-operator column" id="calc-divide">/</div> -->
+            <div class="calc-btn calc-btn-operator column used" id="calc-left-bracket">(</div>
+            <div class="calc-btn calc-btn-operator column used" id="calc-right-bracket">)</div>
+            <div class="calc-btn column" id="calc-confirm">confirm</div>
+          </div>
+      </div>
+      <!-- <button id="start">Start</button> -->
+      <button id="start_game">Start Game</button>
+      <button id="new_game" class="used">New Game</button>
+
+  </div>
+
+  <script src="JS/main.js"></script>
+  <!-- <script src="JS/timer.js"></script> -->
+</body>
+</html>

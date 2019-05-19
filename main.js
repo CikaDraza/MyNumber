@@ -42,7 +42,27 @@ const audio3 = new Audio('sounds/Rusty-clock.wav');
 const audio4 = new Audio('sounds/ten_seconds.m4a');
 const audio5 = new Audio('sounds/time.wav');
 const audio6 = new Audio('sounds/Ta Da.mp3');
+const audio7 = new Audio('sounds/Gun_Shot.wav');
+const audio8 = new Audio('sounds/apprehensive.mp3');
+const audio9 = new Audio('sounds/Pure Simphoni.mp3');
+const audio10 = new Audio('sounds/Blop.mp3');
 
+
+// Page Pre-Loader
+    audio7.play();
+    audio8.play();
+    audio9.play();
+
+  window.addEventListener('load', function() {
+    const loader = document.querySelector('.loader-wrap');
+    loader.classList.add('hidden');
+    setTimeout(clearBoxLoader, 10000);
+  });
+
+  function clearBoxLoader() {
+    const boxLoader = document.querySelector('.box-loader');
+    boxLoader.classList.add('no-animation');
+  };
 
 // When click buttons numbers display
 let displayVal = [];
@@ -138,7 +158,7 @@ confirm.onclick = () => {
 
 // backspace button
 numClear.onclick = () => {
-  audio1.play();
+  audio10.play();
   let lengthOfDisplayVal = displayVal.length;
   let elem = clearStrArray[displayVal.length - 1];
   if(elem){

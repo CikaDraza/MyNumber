@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700');
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+  background-color: #110d10fb;
+  overflow: hidden;  
+}
+
+.container {
+  width: 1000px;
+  height: 550px;
+  background-color: #504848;
+  margin: 200px auto;
+  border: 1px solid #f4f4f4;
+  border-radius: 20px;
+}
+
+#target {
+  display: inline-block;
+  position: relative;
+  top: 2%;
+  left: 23%;
+  margin: 0;
+  padding: 0;
+  color: #dbc715;
+  font-size: 36px;
+  font-family: 'Orbitron', sans-serif;
+  border: 2px solid rgba(228, 228, 228, 0.877);
+  background-color: #000;
+  width: 100px;
+  text-align: center;
+}
+
+.text {
+  position: relative;
+  width: 250px;
+  margin: 30px auto 0 auto;
+  padding: 5px 0;
+  text-align: center;
+  left: 5px;
+  color: #f4f4f4;
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#value {
+  position: relative;
+  top: 0%;
+  left: calc(50% - 50px);
+  margin: 0;
+  padding: 0;
+  color: #dbc715;
+  font-size: 36px;
+  width: 100px;
+  background-color: #000;
+  border: 2px solid rgb(48, 121, 255);
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#calculator {
+  width: 800px;
+  height: 250px;
+  background-color: #008fa518;
+  margin: 0px auto;
+  border-radius: 20px;
+  box-shadow: 3px 4px 20px 0px #f4f4f4;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.calc-btn:active {
+  font-size: 20px;
+}
+
+.calc-btn:focus {
+  outline: 0;
+}
+
+.calc-btn:hover {
+  background-color: rgba(192, 192, 192, 0.651);
+}
+
+.used {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.number-row {
+  display: grid;
+  grid-template-columns: repeat(12, 45px);
+  grid-gap: 15px;
+  margin: 5px 40px;
+  justify-content: start;
+  margin: 0 5%;
+
+}
+.calc-row {
+  display: grid;
+  grid-template-columns: repeat(12, 45px);
+  grid-gap: 15px;
+  margin: 25px 40px;
+  justify-content: start;
+}
+
+.column {
+  text-align: center;
+  font-size: 26px;
+  padding: 5px;
+}
+
+.number-row > div {
+  background-color: rgba(255, 255, 255, 0.651);
+}
+
+.calc-btn-operator {
+  background-color: #008fa518;
+  color: #f4f4f4;
+}
+
+#calc-num5 {
+  grid-column: 5/7;
+  margin-left: 30px;
+}
+
+#calc-num6 {
+  grid-column: 7/9;
+  margin-left: 30px;
+  width: 80px;
+}
+
+#calc-stop {
+  background: #e40000;
+  color: #f4f4f4;
+  grid-column: 11/13;
+}
+
+#calc-stop:hover {
+  background: #ff0000;
+}
+
+#calc-confirm {
+  font-size: 22px;
+  background-color: rgb(12, 153, 7);
+  color: #f4f4f4;
+  grid-column: 11/13;
+  text-align: center;
+}
+
+#calc-confirm:hover {
+  background-color: rgb(24, 204, 18);
+}
+
+#calc-confirm:active {
+  font-size: 20px;
+}
+
+#calc-confirm:focus {
+  outline: 0;
+}
+
+#calc-display {
+  width: 700px;
+  height: 42px;
+  background-color:  rgba(192, 192, 192, 0.877);
+  padding: 5px 25px;  
+  border-radius: 55px;  
+  transform: translate(0%, 30%);  
+  margin: 12px 25px;
+}
+
+#calc-display-val {
+  width: 650px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+#calc-backspace {
+  position: relative;
+  text-align: center;
+  border-radius: 5px 5px 5px 5px;
+  background-color:  rgb(41, 41, 41);
+  color: #f4f4f4;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  display: block;
+  padding: 2px;
+  top: -16%;
+  left: 90%;
+  line-height: 27px;
+}
+
+#calc-backspace::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  bottom: 0px;
+  width: 0;
+  height: 0px;
+  border-radius: 10px;
+  border-right: 18px solid rgb(41, 41, 41);
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+}
+
+#calc-backspace:active {
+  font-size: 15px;
+  background-color: rgb(78, 75, 75);
+}
+
+#calc-backspace:active::before {
+  border-right: 18px solid rgb(78, 75, 75);
+}
+
+#calc-backspace:focus {
+  outline: 0;
+}

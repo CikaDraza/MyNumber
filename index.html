@@ -9,60 +9,96 @@
 </head>
 <body>
 
- 
-  <div class="container">
-    <!-- Timer -->
-    <div id="timer">90</div>
-    <!-- <img src="img/Timer.svg" alt=""> -->
-
-    <!-- Display Target Number and MyNumber -->
-    <p class='text-target'>Target Number</p>
-    <div id="target">000</div>
-    <p class="text-value">My Number</p>
-    <div id="value">???</div>
-
-    <div id="calculator">
-      
-      <!-- Display -->
-      <div id="calc-display">
-        <div id="calc-display-val"></div>
+  <!-- Loader Page -->
+  <div class="loader-wrap">
+    <div class="loader">
+      <div class="box-loader">
+        <div class="wrap-anima1">
+          <img class="anima1" src="img/empty-brain.png" alt="">
+          <div class="anima1-bg"></div>      
+        </div>
+        <div class="wrap-anima2">
+          <img class="anima2" src="img/head-open.png" alt="">
+          <img class="kapa" src="img/kapa.png" alt="">
+        </div>
+        <div class="numbers">
+          <img src="img/Layer 2.png" alt="">
+          <img src="img/Layer 3.png" alt="">
+          <img src="img/Layer 4.png" alt="">
+          <img src="img/Layer 5.png" alt="">
+          <img src="img/Layer 6.png" alt="">
+          <img src="img/Layer 7.png" alt="">
+          <img src="img/Layer 8.png" alt="">
+          <img src="img/Layer 2.png" alt="">
+          <img src="img/Layer 3.png" alt="">
+          <img src="img/Layer 4.png" alt="">
+          <img src="img/Layer 5.png" alt="">
+          <img src="img/Layer 6.png" alt="">
+          <img src="img/Layer 7.png" alt="">
+          <img src="img/Layer 8.png" alt="">
+        </div>
       </div>
-      
-      <!-- Backspace Button -->
-      <div class="calc-backspace-btn used" id="calc-backspace">x</div>
-
-      <!-- Button Numbers -->            
-      <div class="number-row">
-        <div class="calc-btn calc-btn-num column used" id="num1">0</div>
-        <div class="calc-btn calc-btn-num column used" id="num2">0</div>
-        <div class="calc-btn calc-btn-num column used" id="num3">0</div>
-        <div class="calc-btn calc-btn-num column used" id="num4">0</div>
-        <div class="calc-btn calc-btn-num column used" id="num5">00</div>
-        <div class="calc-btn calc-btn-num column used" id="num6">000</div>
-        
-      </div>
-  
-      <!-- Button operators -->
-      <div class="calc-row">
-        <div class="calc-btn calc-btn-operator column used">+</div>
-        <div class="calc-btn calc-btn-operator column used">-</div>
-        <div class="calc-btn calc-btn-operator column used">x</div>
-        <div class="calc-btn calc-btn-operator column used">÷</div>
-        <div class="calc-btn calc-btn-operator column used">(</div>
-        <div class="calc-btn calc-btn-operator column used">)</div>
-        
-      </div>
-      <!-- Start and New Game Buttons  -->
-      <div id="calc-confirm">confirm</div>
-      <div id="calc-stop">STOP</div>
-      <div id="start_game">START</div>
-      <div id="new_game"></div>
-
-    </div>
-
-    
-
+    </div>    
   </div>
+ 
+  <!-- Game Page -->
+
+  <div id="game-page">    
+    <div class="container">
+      <!-- Timer -->
+      <div id="timer">90</div>
+      <!-- <img src="img/Timer.svg" alt=""> -->
+  
+      <!-- Display Target Number and MyNumber -->
+      <p class='text-target'>Target Number</p>
+      <div id="target">000</div>
+      <p class="text-value">MyNumber</p>
+      <div id="value">???</div>
+  
+      <div id="calculator">
+        
+        <!-- Display -->
+        <div id="calc-display">
+          <div id="calc-display-val"></div>
+        </div>
+        
+        <!-- Backspace Button -->
+        <div class="calc-backspace-btn used" id="calc-backspace">x</div>
+  
+        <!-- Button Numbers -->            
+        <div class="number-row">
+          <div class="calc-btn calc-btn-num column used" id="num1">0</div>
+          <div class="calc-btn calc-btn-num column used" id="num2">0</div>
+          <div class="calc-btn calc-btn-num column used" id="num3">0</div>
+          <div class="calc-btn calc-btn-num column used" id="num4">0</div>
+          <div class="calc-btn calc-btn-num column used" id="num5">00</div>
+          <div class="calc-btn calc-btn-num column used" id="num6">000</div>
+          
+        </div>
+    
+        <!-- Button operators -->
+        <div class="calc-row">
+          <div class="calc-btn calc-btn-operator column used">+</div>
+          <div class="calc-btn calc-btn-operator column used">-</div>
+          <div class="calc-btn calc-btn-operator column used">x</div>
+          <div class="calc-btn calc-btn-operator column used">÷</div>
+          <div class="calc-btn calc-btn-operator column used">(</div>
+          <div class="calc-btn calc-btn-operator column used">)</div>
+          
+        </div>
+        <!-- Start and New Game Buttons  -->
+        <div id="calc-confirm">confirm</div>
+        <div id="calc-stop">STOP</div>
+        <div id="start_game">START</div>
+        <div id="new_game"></div>
+  
+      </div> 
+    </div>
+  </div>
+  <footer>
+    <p>Made by: Drazilica &copy; 2019</p>
+    <img src="img/Logo.png" alt="">
+  </footer>
 
   <script src="main.js"></script>
 </body>
