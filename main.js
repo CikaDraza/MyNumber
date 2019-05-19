@@ -60,7 +60,7 @@ const audio9 = new Audio('sounds/Blop.mp3');
   function clearBoxLoader() {
     const boxLoader = document.querySelector('.box-loader');
     boxLoader.classList.add('no-animation');
-  };
+  }
 
 // When click buttons numbers display
 let displayVal = [];
