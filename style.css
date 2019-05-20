@@ -407,7 +407,7 @@ body {
 
 .loader-wrap.hidden {
   animation: fadeOut .3s ease-out forwards;
-  animation-delay: 10s;
+  animation-delay: 9.9s;
 }
 
 @keyframes fadeOut {
@@ -1246,9 +1246,9 @@ footer img {
     color: #f4f4f4;
     width: 250px;
     height: 30px;
-    top: 690px;
-    left: 750px;
-    z-index: 9999;
+    top: 635px;
+    left: 500px;
+    z-index: 100;
   }
   
 }
