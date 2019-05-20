@@ -48,17 +48,17 @@ const audio9 = new Audio('sounds/Blop.mp3');
 
 
 // Page Pre-Loader
-let promise = audio7.play();
-    if(promise !== undefined) {
-      promise.then(_ => {
+let promise7 = audio7.play();
+    if(promise7 !== undefined) {
+      promise7.then(_ => {
         audio7.play();
       }).catch(error => {
         console.log(error + ' cant auto play');
       });
     }
-let promise = audio8.play();
-    if(promise !== undefined) {
-      promise.then(_ => {
+let promise8 = audio8.play();
+    if(promise8 !== undefined) {
+      promise8.then(_ => {
         audio8.play();
       }).catch(error => {
         console.log(error + ' cant auto play');
