@@ -841,8 +841,8 @@ footer {
   color: #f4f4f4;
   width: 250px;
   height: 30px;
-  top: 870px;
-  left: 1650px;
+  top: 800px;
+  left: 850px;
   z-index: 9999;
 }
 
@@ -876,7 +876,7 @@ footer img {
     width: 250px;
     height: 30px;
     top: 710px;
-    left: 1150px;
+    left: 650px;
     z-index: 9999;
   }
 }
