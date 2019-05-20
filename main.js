@@ -59,7 +59,7 @@ const audio9 = new Audio('sounds/Blop.mp3');
 
 // When click buttons numbers display
 let displayVal = [];
-// let evalStrArray = [];
+let evalStrArray = [];
 let clearStrArray = [];
 
 // Number Buttons
