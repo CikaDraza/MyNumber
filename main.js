@@ -46,24 +46,20 @@ const audio7 = new Audio('sounds/Gun_Shot.wav');
 const audio8 = new Audio('sounds/apprehensive.mp3');
 const audio9 = new Audio('sounds/Blop.mp3');
 
-
 // Page Pre-Loader
-let promise7 = audio7.play();
-    if(promise7 !== undefined) {
-      promise7.then(_ => {
-        audio7.play();
-      }).catch(error => {
-        console.log(error + ' cant auto play');
+  const audios = [audio7.play(), audio8.play()];
+
+  function getAudio() {
+    setTimeout(() => {
+      let output = '';
+      audios.forEach((audio, index) => {
+        output += audio;
       });
-    }
-let promise8 = audio8.play();
-    if(promise8 !== undefined) {
-      promise8.then(_ => {
-        audio8.play();
-      }).catch(error => {
-        console.log(error + ' cant auto play');
-      });
-    }
+      output.play();
+    }, 300);
+  }
+
+  getAudio();
 
   window.addEventListener('load', function() {
     const loader = document.querySelector('.loader-wrap');
