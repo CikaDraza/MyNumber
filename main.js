@@ -142,7 +142,7 @@ confirm.onclick = () => {
       e.classList.add('used');
       });
     }
-    for(let i = 0; i < calcBtnOperators.length; i++) {
+    for(var i = 0; i < calcBtnOperators.length; i++) {
       [i].forEach.call(calcBtnOperators, function(e) {
       e.classList.add('used');
       });        
@@ -150,10 +150,10 @@ confirm.onclick = () => {
 };
 
 // backspace button
-numClear.onclick = () => {
+numClear.onclick = function() {
   audio9.play();
-  let lengthOfDisplayVal = displayVal.length;
-  let elem = clearStrArray[displayVal.length - 1];
+  var lengthOfDisplayVal = displayVal.length;
+  var elem = clearStrArray[displayVal.length - 1];
   if(elem){
     elem.classList.remove('used');
     // clearStrArray[displayVal - 1] = null;
@@ -170,11 +170,11 @@ numClear.onclick = () => {
      displayResult.innerText = '???';
   }
   // Replace sign * whit sign x
-  for(let i = 0; i < displayVal.length; i++)
+  for(var i = 0; i < displayVal.length; i++)
   if(displayVal[i] == '*')
       displayVal[i] = 'x ';
   // Replace sign / whit sign ÷
-  for(let e = 0; e < displayVal.length; e++)
+  for(var e = 0; e < displayVal.length; e++)
     if(displayVal[e] == '/')
         displayVal[e] = '÷ ';
 
@@ -184,16 +184,16 @@ numClear.onclick = () => {
 };
 
 // Rundom Numbers Countdowon #################################################################
-startGame.addEventListener('click', ()=> {
+startGame.addEventListener('click', function() {
   // Target Number
-  let spinTarget = setInterval( () => {
+  var spinTarget = setInterval( function() {
     // let targetResult = document.getElementById("target");
     targetResult.innerHTML = Math.floor(Math.random() * 999) + 1;
 
   }, 50);
 
   // with the help of numbers [1 - 9]
-  let rotate = setInterval( () => {
+  var rotate = setInterval(function() {
     
     document.getElementById("num1").innerHTML = Math.floor(Math.random() * 9) + 1;
     document.getElementById("num2").innerHTML = Math.floor(Math.random() * 9) + 1;
@@ -203,24 +203,24 @@ startGame.addEventListener('click', ()=> {
   }, 50);
 
   // with the help of numbers [10, 15, 20]
-  let spin = setInterval( ()=> {
+  var spin = setInterval(function() {
 
-  let numb = ["10", "15", "20"]; 
+  var numb = ["10", "15", "20"]; 
 
     function randomElement(completeArray) {
-    let comArray = completeArray.length;        
+    var comArray = completeArray.length;        
     return completeArray[ Math.floor(Math.random() * comArray) ];        
   }      
   document.getElementById("num5").innerHTML = randomElement(numb);
   }, 50);
 
   // with the help of numbers [25, 50, 75, 100]
-  let swing = setInterval( ()=> {
+  var swing = setInterval(function() {
     
-  let numb = ["25", "50", "75", "100"];
+  var numb = ["25", "50", "75", "100"];
     
     function randomElement(completeArray) { 
-    let comArray = completeArray.length;          
+    var comArray = completeArray.length;          
     return completeArray[ Math.floor(Math.random() * comArray) ];        
   }      
   document.getElementById("num6").innerHTML = randomElement(numb);
@@ -231,7 +231,7 @@ startGame.addEventListener('click', ()=> {
   newGame.style.display = 'none';
   stop.style.display = 'block';
   confirm.style.display = 'none';
-  for(let i = 0; i < calcNumBtns.length; i++) {
+  for(var i = 0; i < calcNumBtns.length; i++) {
       [i].forEach.call(calcNumBtns, function(e) {
       e.classList.add('run_num');
     });        
@@ -240,7 +240,7 @@ startGame.addEventListener('click', ()=> {
   audio1.play();
   audio3.currentTime = 0;
 // Stop random numbers and start clock #################################################################
-  stop.addEventListener('click', ()=> {
+  stop.addEventListener('click', function() {
     window.clearInterval(timer);
     clearInterval(spinTarget);
     clearInterval(rotate);
@@ -250,18 +250,18 @@ startGame.addEventListener('click', ()=> {
     stop.style.display = 'none';
     confirm.style.display = 'block';
     counter = 90;
-    timer = setInterval('progressTime()', 1000);
+    timer = setInterval(progressTime(), 1000);
     audio1.play();
     audio5.play();
   
-    for(let i = 0; i < calcNumBtns.length; i++) {
+    for(var i = 0; i < calcNumBtns.length; i++) {
         [i].forEach.call(calcNumBtns, function(e) {
         e.classList.remove('used');
         e.classList.remove('run_num');
       });        
     }
-    for(let i = 0; i < calcBtnOperators.length; i++) {
-        [i].forEach.call(calcBtnOperators, function(e) {
+    for(var j = 0; j < calcBtnOperators.length; j++) {
+        [j].forEach.call(calcBtnOperators, function(e) {
         e.classList.remove('used');
       });        
     }
@@ -295,11 +295,11 @@ function progressTime() {
   }
   if(counter === 0){    
     // Replace sign x whit sign * to make a calculation
-    for(let i = 0; i < displayVal.length; i++)
+    for(var i = 0; i < displayVal.length; i++)
       if(displayVal[i] ==='x ')
       displayVal[i] = '*';
     // Replace sign ÷ whit sign / to make a calculation
-    for(let e = 0; e < displayVal.length; e++)
+    for(var e = 0; e < displayVal.length; e++)
     if(displayVal[e] === '÷ ')
     displayVal[e] = '/';
 
@@ -309,55 +309,55 @@ function progressTime() {
       newGame.style.display = 'block';
       confirm.style.display = 'none';
       numClear.classList.add('used');
-      for(let i = 0; i < calcBtnOperators.length; i++) {
-        [i].forEach.call(calcBtnOperators, function(e) {
+      for(var k = 0; k < calcBtnOperators.length; k++) {
+        [k].forEach.call(calcBtnOperators, function(e) {
           e.classList.add('used');        
         });
       }
-      for(let i = 0; i < calcNumBtns.length; i++) {
+      for(var j = 0; j < calcNumBtns.length; j++) {
         [i].forEach.call(calcNumBtns, function(e) {
           e.classList.add('used');
         });
-      };
+      }
     }
 
-    // When time up calculate
+    // When time up calculate    
     displayResult.innerText = eval(displayVal.join(''));
 
     newGame.style.display = 'block';
     confirm.style.display = 'none';
     numClear.classList.add('used');
 
-    for(let i = 0; i < calcBtnOperators.length; i++) {
-      [i].forEach.call(calcBtnOperators, function(e) {
+    for(var t = 0; t < calcBtnOperators.length; t++) {
+      [t].forEach.call(calcBtnOperators, function(e) {
         e.classList.add('used');        
       });
     }
-    for(let i = 0; i < calcNumBtns.length; i++) {
-      [i].forEach.call(calcNumBtns, function(e) {
+    for(var g = 0; g < calcNumBtns.length; g++) {
+      [g].forEach.call(calcNumBtns, function(e) {
         e.classList.add('used');
       });
-    };
+    }
     
     if(displayResult.innerText == targetResult.innerText){
       targetResult.style.boxShadow = '2px 4px 30px 7px #f4f4f4';
       document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
       audio6.play();
-    };
+    }
     if(displayValElement.innerText == ''){
-      return displayResult.innerText = '???';
+      displayResult.innerText = '???';
     }else if(displayVal == []){
-      return displayResult.innerText = '???';
+      displayResult.innerText = '???';
     }else if(clearStrArray == []){
-      return displayResult.innerText = '???';
+      displayResult.innerText = '???';
     }
     audio3.currentTime = 0;
   }
 
-};
+}
 
 // Start New game ######################################
-newGame.addEventListener('click', ()=> {
+newGame.addEventListener('click', function() {
     window.clearInterval(timer);
     newGame.style.display = 'none';
     startGame.style.display = 'block';
@@ -373,21 +373,21 @@ newGame.addEventListener('click', ()=> {
     displayVal = [];
     evalStrArray = [];
     targetResult.innerText = '000';
-    let firstFourNumb = Object.entries(calcNumBtns).slice(0,4).map(entry => entry[1]);
-    for(let i = 0; i < calcNumBtns.length; i++) {
+    var firstFourNumb = Object.entries(calcNumBtns).slice(0,4).map(entry => entry[1]);
+    for(var i = 0; i < calcNumBtns.length; i++) {
       [i].forEach.call(firstFourNumb, function(e) {
       e.innerText = '0';
       });
-    };
+    }
     calcNumBtns[4].innerText = '00';
     calcNumBtns[5].innerText = '000';
     // Removes inactive buttons
-    for(let i = 0; i < calcNumBtns.length; i++) {
-      [i].forEach.call(calcNumBtns, function(e) {
+    for(var h = 0; h < calcNumBtns.length; h++) {
+      [h].forEach.call(calcNumBtns, function(e) {
       e.classList.add('used');
       });
     }
-    for(let i = 0; i < calcBtnOperators.length; i++) {
+    for(var j = 0; j < calcBtnOperators.length; j++) {
       [i].forEach.call(calcBtnOperators, function(e) {
       e.classList.add('used');
     });        
