@@ -46,21 +46,6 @@ const audio7 = new Audio('sounds/Gun_Shot.wav');
 const audio8 = new Audio('sounds/apprehensive.mp3');
 const audio9 = new Audio('sounds/Blop.mp3');
 
-// Page Pre-Loader
-  const audios = [audio7.play(), audio8.play()];
-
-  function getAudio() {
-    setTimeout(() => {
-      let output = '';
-      audios.forEach((audio, index) => {
-        output += audio;
-      });
-      output.play();
-    }, 300);
-  }
-
-  getAudio();
-
   window.addEventListener('load', function() {
     const loader = document.querySelector('.loader-wrap');
     loader.classList.add('hidden');
@@ -74,7 +59,7 @@ const audio9 = new Audio('sounds/Blop.mp3');
 
 // When click buttons numbers display
 let displayVal = [];
-let evalStrArray = [];
+// let evalStrArray = [];
 let clearStrArray = [];
 
 // Number Buttons
@@ -185,11 +170,11 @@ numClear.onclick = () => {
      displayResult.innerText = '???';
   }
   // Replace sign * whit sign x
-  for(var i = 0; i < displayVal.length; i++)
+  for(let i = 0; i < displayVal.length; i++)
   if(displayVal[i] == '*')
       displayVal[i] = 'x ';
   // Replace sign / whit sign ÷
-  for(var e = 0; e < displayVal.length; e++)
+  for(let e = 0; e < displayVal.length; e++)
     if(displayVal[e] == '/')
         displayVal[e] = '÷ ';
 
