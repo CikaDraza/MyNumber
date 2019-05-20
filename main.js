@@ -48,8 +48,22 @@ const audio9 = new Audio('sounds/Blop.mp3');
 
 
 // Page Pre-Loader
-    audio7.play();
-    audio8.play();
+let promise = audio7.play();
+    if(promise !== undefined) {
+      promise.then(_ => {
+        audio7.play();
+      }).catch(error => {
+        console.log(error + ' cant auto play');
+      });
+    }
+let promise = audio8.play();
+    if(promise !== undefined) {
+      promise.then(_ => {
+        audio8.play();
+      }).catch(error => {
+        console.log(error + ' cant auto play');
+      });
+    }
 
   window.addEventListener('load', function() {
     const loader = document.querySelector('.loader-wrap');
