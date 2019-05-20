@@ -895,7 +895,7 @@ footer img {
   .container {
     display: block;
     width: 400px;
-    height: 620px;
+    height: 630px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -1270,7 +1270,7 @@ footer img {
     background-size: 300px 450px;
     transform: scale(0.7);
     padding: 0;
-    margin: 0 20px;
+    margin: 10px 10px;
     visibility: hidden;
     animation: zoomBox .3s forwards;
     animation-delay: .3s;    
