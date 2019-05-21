@@ -250,7 +250,7 @@ startGame.addEventListener('click', function() {
     stop.style.display = 'none';
     confirm.style.display = 'block';
     counter = 90;
-    timer = setInterval(progressTime(), 1000);
+    timer = setInterval('progressTime()', 1000);
     audio1.play();
     audio5.play();
   
