@@ -249,6 +249,94 @@ startGame.addEventListener('click', function() {
     numClear.classList.remove('used');
     stop.style.display = 'none';
     confirm.style.display = 'block';
+
+    // start Timer
+    function progressTime() {
+      counter--;
+      if(counter < 90){
+          time.innerHTML = counter;
+          audio3.play();        
+      }
+      if(counter < 13){
+          audio4.play();        
+      }  
+      if(counter < 10){
+          audio2.play();        
+      }
+      if(counter < 9){
+          audio4.pause();
+      }
+      if(counter < 1){
+          window.clearInterval(timer);
+          time.style.color = 'red';
+          time.style.borderColor = 'red';
+          audio.play();
+          audio3.pause();
+          audio3.currentTime = 0;
+      }
+      if(counter === 0){    
+        // Replace sign x whit sign * to make a calculation
+        for(var i = 0; i < displayVal.length; i++)
+          if(displayVal[i] ==='x ')
+          displayVal[i] = '*';
+        // Replace sign ÷ whit sign / to make a calculation
+        for(var e = 0; e < displayVal.length; e++)
+        if(displayVal[e] === '÷ ')
+        displayVal[e] = '/';
+    
+        // If not a number on display set on new game
+        if(isNaN(displayValElement.innerText) == true){
+          displayResult.innerText = '???';
+          newGame.style.display = 'block';
+          confirm.style.display = 'none';
+          numClear.classList.add('used');
+          for(var k = 0; k < calcBtnOperators.length; k++) {
+            [k].forEach.call(calcBtnOperators, function(e) {
+              e.classList.add('used');        
+            });
+          }
+          for(var j = 0; j < calcNumBtns.length; j++) {
+            [i].forEach.call(calcNumBtns, function(e) {
+              e.classList.add('used');
+            });
+          }
+        }
+    
+        // When time up calculate    
+        displayResult.innerText = eval(displayVal.join(''));
+    
+        newGame.style.display = 'block';
+        confirm.style.display = 'none';
+        numClear.classList.add('used');
+    
+        for(var t = 0; t < calcBtnOperators.length; t++) {
+          [t].forEach.call(calcBtnOperators, function(e) {
+            e.classList.add('used');        
+          });
+        }
+        for(var g = 0; g < calcNumBtns.length; g++) {
+          [g].forEach.call(calcNumBtns, function(e) {
+            e.classList.add('used');
+          });
+        }
+        
+        if(displayResult.innerText == targetResult.innerText){
+          targetResult.style.boxShadow = '2px 4px 30px 7px #f4f4f4';
+          document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
+          audio6.play();
+        }
+        if(displayValElement.innerText == ''){
+          displayResult.innerText = '???';
+        }else if(displayVal == []){
+          displayResult.innerText = '???';
+        }else if(clearStrArray == []){
+          displayResult.innerText = '???';
+        }
+        audio3.currentTime = 0;
+      }
+    
+    }
+    // ------------------------------------------------------
     counter = 90;
     timer = setInterval(progressTime, 1000);
     audio1.play();
@@ -270,91 +358,91 @@ startGame.addEventListener('click', function() {
 
 });
 
-function progressTime() {
-  counter--;
-  if(counter < 90){
-      time.innerHTML = counter;
-      audio3.play();        
-  }
-  if(counter < 13){
-      audio4.play();        
-  }  
-  if(counter < 10){
-      audio2.play();        
-  }
-  if(counter < 9){
-      audio4.pause();
-  }
-  if(counter < 1){
-      window.clearInterval(timer);
-      time.style.color = 'red';
-      time.style.borderColor = 'red';
-      audio.play();
-      audio3.pause();
-      audio3.currentTime = 0;
-  }
-  if(counter === 0){    
-    // Replace sign x whit sign * to make a calculation
-    for(var i = 0; i < displayVal.length; i++)
-      if(displayVal[i] ==='x ')
-      displayVal[i] = '*';
-    // Replace sign ÷ whit sign / to make a calculation
-    for(var e = 0; e < displayVal.length; e++)
-    if(displayVal[e] === '÷ ')
-    displayVal[e] = '/';
+// function progressTime() {
+//   counter--;
+//   if(counter < 90){
+//       time.innerHTML = counter;
+//       audio3.play();        
+//   }
+//   if(counter < 13){
+//       audio4.play();        
+//   }  
+//   if(counter < 10){
+//       audio2.play();        
+//   }
+//   if(counter < 9){
+//       audio4.pause();
+//   }
+//   if(counter < 1){
+//       window.clearInterval(timer);
+//       time.style.color = 'red';
+//       time.style.borderColor = 'red';
+//       audio.play();
+//       audio3.pause();
+//       audio3.currentTime = 0;
+//   }
+//   if(counter === 0){    
+//     // Replace sign x whit sign * to make a calculation
+//     for(var i = 0; i < displayVal.length; i++)
+//       if(displayVal[i] ==='x ')
+//       displayVal[i] = '*';
+//     // Replace sign ÷ whit sign / to make a calculation
+//     for(var e = 0; e < displayVal.length; e++)
+//     if(displayVal[e] === '÷ ')
+//     displayVal[e] = '/';
 
-    // If not a number on display set on new game
-    if(isNaN(displayValElement.innerText) == true){
-      displayResult.innerText = '???';
-      newGame.style.display = 'block';
-      confirm.style.display = 'none';
-      numClear.classList.add('used');
-      for(var k = 0; k < calcBtnOperators.length; k++) {
-        [k].forEach.call(calcBtnOperators, function(e) {
-          e.classList.add('used');        
-        });
-      }
-      for(var j = 0; j < calcNumBtns.length; j++) {
-        [i].forEach.call(calcNumBtns, function(e) {
-          e.classList.add('used');
-        });
-      }
-    }
+//     // If not a number on display set on new game
+//     if(isNaN(displayValElement.innerText) == true){
+//       displayResult.innerText = '???';
+//       newGame.style.display = 'block';
+//       confirm.style.display = 'none';
+//       numClear.classList.add('used');
+//       for(var k = 0; k < calcBtnOperators.length; k++) {
+//         [k].forEach.call(calcBtnOperators, function(e) {
+//           e.classList.add('used');        
+//         });
+//       }
+//       for(var j = 0; j < calcNumBtns.length; j++) {
+//         [i].forEach.call(calcNumBtns, function(e) {
+//           e.classList.add('used');
+//         });
+//       }
+//     }
 
-    // When time up calculate    
-    displayResult.innerText = eval(displayVal.join(''));
+//     // When time up calculate    
+//     displayResult.innerText = eval(displayVal.join(''));
 
-    newGame.style.display = 'block';
-    confirm.style.display = 'none';
-    numClear.classList.add('used');
+//     newGame.style.display = 'block';
+//     confirm.style.display = 'none';
+//     numClear.classList.add('used');
 
-    for(var t = 0; t < calcBtnOperators.length; t++) {
-      [t].forEach.call(calcBtnOperators, function(e) {
-        e.classList.add('used');        
-      });
-    }
-    for(var g = 0; g < calcNumBtns.length; g++) {
-      [g].forEach.call(calcNumBtns, function(e) {
-        e.classList.add('used');
-      });
-    }
+//     for(var t = 0; t < calcBtnOperators.length; t++) {
+//       [t].forEach.call(calcBtnOperators, function(e) {
+//         e.classList.add('used');        
+//       });
+//     }
+//     for(var g = 0; g < calcNumBtns.length; g++) {
+//       [g].forEach.call(calcNumBtns, function(e) {
+//         e.classList.add('used');
+//       });
+//     }
     
-    if(displayResult.innerText == targetResult.innerText){
-      targetResult.style.boxShadow = '2px 4px 30px 7px #f4f4f4';
-      document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
-      audio6.play();
-    }
-    if(displayValElement.innerText == ''){
-      displayResult.innerText = '???';
-    }else if(displayVal == []){
-      displayResult.innerText = '???';
-    }else if(clearStrArray == []){
-      displayResult.innerText = '???';
-    }
-    audio3.currentTime = 0;
-  }
+//     if(displayResult.innerText == targetResult.innerText){
+//       targetResult.style.boxShadow = '2px 4px 30px 7px #f4f4f4';
+//       document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
+//       audio6.play();
+//     }
+//     if(displayValElement.innerText == ''){
+//       displayResult.innerText = '???';
+//     }else if(displayVal == []){
+//       displayResult.innerText = '???';
+//     }else if(clearStrArray == []){
+//       displayResult.innerText = '???';
+//     }
+//     audio3.currentTime = 0;
+//   }
 
-}
+// }
 
 // Start New game ######################################
 newGame.addEventListener('click', function() {
