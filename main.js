@@ -39,7 +39,7 @@ const newGame = document.getElementById('new_game');
 const audio = new Audio('sounds/Metal_Gong-Dianakc.mp3');
 const audio1 = new Audio('sounds/Tick-DeepFrozen.mp3');
 const audio2 = new Audio('sounds/Train Horn Low.mp3');
-const audio3 = new Audio('sounds/Rusty-clock.wav');
+const audio3 = new Audio('sounds/Clock_tik-tok.mp3');
 const audio4 = new Audio('sounds/ten_seconds.m4a');
 const audio5 = new Audio('sounds/time.wav');
 const audio6 = new Audio('sounds/Ta Da.mp3');
@@ -70,9 +70,7 @@ calcNumBtns.forEach(function(num) {
     if(displayVal.length && clearStrArray[displayVal.length - 1]){
       return;
     }
-    // var numbers = this.innerText;
     clearStrArray[displayVal.length] = this;
-
     // Update Display
     let btnText = clickObj.target.innerText;
     btn = btnText + ' ';
@@ -90,7 +88,7 @@ calcBtnOperators.forEach(function(oprt) {
     audio1.play();
     let oper = this.valueOf();
     clearStrArray[displayVal.length] = null;
-    evalStrArray[evalStrArray.length] = oper;
+    clearStrArray[clearStrArray.length] = oper;
     let btnText = clickObj.target.innerText;
     btn = btnText + ' ';
     evalStrArray.push(btn);
@@ -116,7 +114,7 @@ confirm.onclick = () => {
     for(let e = 0; e < displayVal.length; e++)
     if(displayVal[e] == '÷ ')
           displayVal[e] = '/';
-    // When click confirm to calculate
+    // When click confirm calculate
     displayResult.innerText = eval(displayVal.join(''));
 
     // if the result is correct 
@@ -143,7 +141,7 @@ confirm.onclick = () => {
       e.classList.add('used');
       });
     }
-    for(var i = 0; i < calcBtnOperators.length; i++) {
+    for(let i = 0; i < calcBtnOperators.length; i++) {
       [i].forEach.call(calcBtnOperators, function(e) {
       e.classList.add('used');
       });        
@@ -153,8 +151,8 @@ confirm.onclick = () => {
 // backspace button
 numClear.onclick = function() {
   audio9.play();
-  var lengthOfDisplayVal = displayVal.length;
-  var elem = clearStrArray[displayVal.length - 1];
+  let lengthOfDisplayVal = displayVal.length;
+  let elem = clearStrArray[displayVal.length - 1];
   if(elem){
     elem.classList.remove('used');
     // clearStrArray[displayVal - 1] = null;
@@ -171,11 +169,11 @@ numClear.onclick = function() {
      displayResult.innerText = '???';
   }
   // Replace sign * whit sign x
-  for(var i = 0; i < displayVal.length; i++)
+  for(let i = 0; i < displayVal.length; i++)
   if(displayVal[i] == '*')
       displayVal[i] = 'x ';
   // Replace sign / whit sign ÷
-  for(var e = 0; e < displayVal.length; e++)
+  for(let e = 0; e < displayVal.length; e++)
     if(displayVal[e] == '/')
         displayVal[e] = '÷ ';
 
@@ -187,14 +185,14 @@ numClear.onclick = function() {
 // Rundom Numbers Countdowon #################################################################
 startGame.addEventListener('click', function() {
   // Target Number
-  var spinTarget = setInterval( function() {
+  let spinTarget = setInterval( function() {
     // let targetResult = document.getElementById("target");
     targetResult.innerHTML = Math.floor(Math.random() * 999) + 1;
 
   }, 50);
 
   // with the help of numbers [1 - 9]
-  var rotate = setInterval(function() {
+  let rotate = setInterval(function() {
     
     document.getElementById("num1").innerHTML = Math.floor(Math.random() * 9) + 1;
     document.getElementById("num2").innerHTML = Math.floor(Math.random() * 9) + 1;
@@ -204,24 +202,24 @@ startGame.addEventListener('click', function() {
   }, 50);
 
   // with the help of numbers [10, 15, 20]
-  var spin = setInterval(function() {
+  let spin = setInterval(function() {
 
-  var numb = ["10", "15", "20"]; 
+  let numb = ["10", "15", "20"]; 
 
     function randomElement(completeArray) {
-    var comArray = completeArray.length;        
+    let comArray = completeArray.length;        
     return completeArray[ Math.floor(Math.random() * comArray) ];        
   }      
   document.getElementById("num5").innerHTML = randomElement(numb);
   }, 50);
 
   // with the help of numbers [25, 50, 75, 100]
-  var swing = setInterval(function() {
+  let swing = setInterval(function() {
     
-  var numb = ["25", "50", "75", "100"];
+  let numb = ["25", "50", "75", "100"];
     
     function randomElement(completeArray) { 
-    var comArray = completeArray.length;          
+    let comArray = completeArray.length;          
     return completeArray[ Math.floor(Math.random() * comArray) ];        
   }      
   document.getElementById("num6").innerHTML = randomElement(numb);
@@ -232,7 +230,7 @@ startGame.addEventListener('click', function() {
   newGame.style.display = 'none';
   stop.style.display = 'block';
   confirm.style.display = 'none';
-  for(var i = 0; i < calcNumBtns.length; i++) {
+  for(let i = 0; i < calcNumBtns.length; i++) {
       [i].forEach.call(calcNumBtns, function(e) {
       e.classList.add('run_num');
     });        
@@ -254,7 +252,7 @@ startGame.addEventListener('click', function() {
     audio1.play();
     audio5.play();
 
-    // every second the timer calls the function progressTime => this should be loaded before the timer variable
+    // every second the timer calls the function progressTime => this should be loaded before the timer
     function progressTime() {
       counter--;
       if(counter < 90){
@@ -280,11 +278,11 @@ startGame.addEventListener('click', function() {
       }
       if(counter === 0){    
         // Replace sign x whit sign * to make a calculation
-        for(var i = 0; i < displayVal.length; i++)
+        for(let i = 0; i < displayVal.length; i++)
           if(displayVal[i] ==='x ')
           displayVal[i] = '*';
         // Replace sign ÷ whit sign / to make a calculation
-        for(var e = 0; e < displayVal.length; e++)
+        for(let e = 0; e < displayVal.length; e++)
         if(displayVal[e] === '÷ ')
         displayVal[e] = '/';
     
@@ -294,31 +292,31 @@ startGame.addEventListener('click', function() {
           newGame.style.display = 'block';
           confirm.style.display = 'none';
           numClear.classList.add('used');
-          for(var k = 0; k < calcBtnOperators.length; k++) {
+          for(let k = 0; k < calcBtnOperators.length; k++) {
             [k].forEach.call(calcBtnOperators, function(e) {
               e.classList.add('used');        
             });
           }
-          for(var j = 0; j < calcNumBtns.length; j++) {
-            [i].forEach.call(calcNumBtns, function(e) {
+          for(let j = 0; j < calcNumBtns.length; j++) {
+            [j].forEach.call(calcNumBtns, function(e) {
               e.classList.add('used');
             });
           }
         }
     
-        // When time up calculate    
-        displayResult.innerText = (displayVal.join(''));
+        // When time up calculate what is on display  
+        displayResult.innerText = eval(displayVal.join(''));
     
         newGame.style.display = 'block';
         confirm.style.display = 'none';
         numClear.classList.add('used');
     
-        for(var t = 0; t < calcBtnOperators.length; t++) {
+        for(let t = 0; t < calcBtnOperators.length; t++) {
           [t].forEach.call(calcBtnOperators, function(e) {
             e.classList.add('used');        
           });
         }
-        for(var g = 0; g < calcNumBtns.length; g++) {
+        for(let g = 0; g < calcNumBtns.length; g++) {
           [g].forEach.call(calcNumBtns, function(e) {
             e.classList.add('used');
           });
@@ -340,17 +338,18 @@ startGame.addEventListener('click', function() {
       }    
     }
     // ------------------------------------------------------
-    // timer call progresTime every secund
-    timer = setInterval(progressTime, 1000);
+    // timer call progressTime every secund
+      counter = 90;
+      timer = setInterval(progressTime, 1000);
     // -------------------------------------------------------
   
-    for(var i = 0; i < calcNumBtns.length; i++) {
+    for(let i = 0; i < calcNumBtns.length; i++) {
         [i].forEach.call(calcNumBtns, function(e) {
         e.classList.remove('used');
         e.classList.remove('run_num');
       });        
     }
-    for(var j = 0; j < calcBtnOperators.length; j++) {
+    for(let j = 0; j < calcBtnOperators.length; j++) {
         [j].forEach.call(calcBtnOperators, function(e) {
         e.classList.remove('used');
       });        
@@ -377,23 +376,22 @@ newGame.addEventListener('click', function() {
     displayVal = [];
     evalStrArray = [];
     targetResult.innerText = '000';
-    var firstFourNumb = Object.entries(calcNumBtns).slice(0,4).map(function(entry) {
-      return entry[1];
-    });
-    for(var i = 0; i < calcNumBtns.length; i++) {
+    let firstFourNumb = Object.entries(calcNumBtns).slice(0,4).map(entry => entry[1]);
+    for(let i = 0; i < calcNumBtns.length; i++) {
       [i].forEach.call(firstFourNumb, function(e) {
-      e.innerText = '0';
+        e.innerText = '0';
       });
     }
     calcNumBtns[4].innerText = '00';
     calcNumBtns[5].innerText = '000';
+
     // Removes inactive buttons
-    for(var h = 0; h < calcNumBtns.length; h++) {
+    for(let h = 0; h < calcNumBtns.length; h++) {
       [h].forEach.call(calcNumBtns, function(e) {
       e.classList.add('used');
       });
     }
-    for(var j = 0; j < calcBtnOperators.length; j++) {
+    for(let j = 0; j < calcBtnOperators.length; j++) {
       [i].forEach.call(calcBtnOperators, function(e) {
       e.classList.add('used');
     });        

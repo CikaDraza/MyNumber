@@ -814,7 +814,8 @@ body {
   display: inline-block;
   top: 100px;
   left: 120px;  
-  background: url(img/Timer.svg) no-repeat;  
+  background: url(img/Timer.svg) no-repeat;
+  background-size: 85px;  
   background-position: 50% 50%;
   color: yellow;
   font-size: 40px;  
@@ -825,9 +826,7 @@ body {
   text-align: center;  
   box-sizing: border-box;
   padding-top: 0px;
-  background-clip: yellow;
   line-height: 110px;
-  z-index: 1;
 }
 
 #start_game {
