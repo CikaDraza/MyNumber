@@ -221,25 +221,13 @@ body {
 
 .anima2 {
   position: relative;
-  width: 260px;
+  width: 290px;
   height: 305px;
   margin: 0 auto;
   z-index: 10000;
   top: -125px;
-  left: 25px;
+  left: 42px;
   display: block;
-}
-
-.kapa {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  width: 100px;
-  height: 143px;
-  top: -428px;
-  left: 220px;
-  transform: rotate(0deg);
-  z-index: 10;
 }
 
 .wrap-anima2 {
@@ -266,7 +254,7 @@ body {
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: -5px;
   animation: num 7s;
   animation-delay: 3s;
   visibility: hidden;
@@ -441,75 +429,46 @@ body {
 
 
 .loader-wrap.hidden {
-  animation: fadeOut .3s ease-out forwards;
+  animation: fadeOut .3s ease-in-out forwards;
   animation-delay: 9.9s;
+  /* background-image: url(img/twotone_restore_white_48dp.png) #f4f4f4; */
 }
 
 @keyframes fadeOut {
   0% {
-    opacity: 1;
-    visibility: visible; 
-    transform: scale(.9);
-
+    transform: scale(1);
   }  
-  10% {
-    opacity: 1;
-    visibility: visible; 
-    transform: scale(.8); 
-
+  10% { 
+    transform: scale(.9);
   }
   20% {
-    opacity: 1;
-    visibility: visible; 
-    transform: scale(.7);
-
+    transform: scale(.8);
   }  
-  30% {
-    opacity: 1;
-    visibility: visible; 
-    transform: scale(.6);
-
+  30% { 
+    transform: scale(.7);
   }  
   40% {
-    opacity: 1;
-    visibility: visible; 
-    transform: scale(.5);
-
+    transform: scale(.6);
   }  
   50% {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(.4);
-    
-
+    transform: scale(.5);
   }  
   60% {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(.3);
-     
-
+    transform: scale(.4);
   }  
-  70% {
-    opacity: 1;
-    visibility: visible;  
-    transform: scale(.2); 
-
+  70% {  
+    transform: scale(.3);
   }  
   80% {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(.1); 
+    transform: scale(.2); 
   }   
   90% {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(0);    
+    transform: scale(0); 
   } 
   100% {
-    opacity: 1;
     visibility: hidden;
-  }  
+    z-index: -100;
+  }
 }
 
 /* ----------------------------------------------------------------- */
