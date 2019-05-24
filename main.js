@@ -33,7 +33,6 @@ const calcBtnOperators = document.querySelectorAll('.calc-btn-operator');
 let counter;
 counter = 90;
 const time = document.getElementById('timer');
-// const start = document.getElementById("start");
 const startGame = document.getElementById("start_game");
 const newGame = document.getElementById('new_game');
 const audio = new Audio('sounds/Metal_Gong-Dianakc.mp3');
@@ -47,16 +46,16 @@ const audio7 = new Audio('sounds/Gun_Shot.wav');
 const audio8 = new Audio('sounds/apprehensive.mp3');
 const audio9 = new Audio('sounds/Blop.mp3');
 
-  window.addEventListener('load', function() {
+  window.addEventListener('load', ()=> {
     const loader = document.querySelector('.loader-wrap');
     loader.classList.add('hidden');
     setTimeout(clearBoxLoader, 10000);
   });
 
-  function clearBoxLoader() {
+  clearBoxLoader = ()=> {
     const boxLoader = document.querySelector('.box-loader');
     boxLoader.classList.add('no-animation');
-  }
+  };
 
 // When click buttons numbers display
 let displayVal = [];
@@ -64,7 +63,7 @@ let evalStrArray = [];
 let clearStrArray = [];
 
 // Number Buttons
-calcNumBtns.forEach(function(num) { 
+calcNumBtns.forEach( (num)=> { 
   num.addEventListener('click', function(clickObj){
     audio1.play();      
     if(displayVal.length && clearStrArray[displayVal.length - 1]){
@@ -83,7 +82,7 @@ calcNumBtns.forEach(function(num) {
 });
 
 // Operator Buttons
-calcBtnOperators.forEach(function(oprt) {  
+calcBtnOperators.forEach( (oprt)=> {  
   oprt.addEventListener('click', function(clickObj){
     audio1.play();
     let oper = this.valueOf();
@@ -119,7 +118,8 @@ confirm.onclick = () => {
 
     // if the result is correct 
     if(displayResult.innerText == targetResult.innerText){
-      targetResult.style.boxShadow = '2px 4px 30px 7px #f4f4f4';
+      targetResult.style.boxShadow = '2px 4px 30px 7px #ce03b3';
+      // displayResult.style.boxShadow = '2px 4px 30px 7px #ce03b3';
       document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
       audio6.play();
     }
@@ -149,15 +149,13 @@ confirm.onclick = () => {
 };
 
 // backspace button
-numClear.onclick = function() {
+numClear.onclick = ()=> {
   audio9.play();
   let lengthOfDisplayVal = displayVal.length;
   let elem = clearStrArray[displayVal.length - 1];
   if(elem){
     elem.classList.remove('used');
-    // clearStrArray[displayVal - 1] = null;
   }
-  // displayVal.length = displayVal.length - 1;
   
   // Backspace elements on display
   displayVal = displayVal.slice(0, lengthOfDisplayVal - 1);  
@@ -183,16 +181,16 @@ numClear.onclick = function() {
 };
 
 // Rundom Numbers Countdowon #################################################################
-startGame.addEventListener('click', function() {
+startGame.addEventListener('click', ()=> {
   // Target Number
-  let spinTarget = setInterval( function() {
+  let spinTarget = setInterval( ()=> {
     // let targetResult = document.getElementById("target");
     targetResult.innerHTML = Math.floor(Math.random() * 999) + 1;
 
   }, 50);
 
   // with the help of numbers [1 - 9]
-  let rotate = setInterval(function() {
+  let rotate = setInterval( ()=> {
     
     document.getElementById("num1").innerHTML = Math.floor(Math.random() * 9) + 1;
     document.getElementById("num2").innerHTML = Math.floor(Math.random() * 9) + 1;
@@ -202,7 +200,7 @@ startGame.addEventListener('click', function() {
   }, 50);
 
   // with the help of numbers [10, 15, 20]
-  let spin = setInterval(function() {
+  let spin = setInterval( ()=> {
 
   let numb = ["10", "15", "20"]; 
 
@@ -214,7 +212,7 @@ startGame.addEventListener('click', function() {
   }, 50);
 
   // with the help of numbers [25, 50, 75, 100]
-  let swing = setInterval(function() {
+  let swing = setInterval( ()=> {
     
   let numb = ["25", "50", "75", "100"];
     
@@ -235,12 +233,11 @@ startGame.addEventListener('click', function() {
       e.classList.add('run_num');
     });        
   }
-  document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #f4f4f4';
   audio1.play();
   audio3.currentTime = 0;
 
 // Stop random numbers and start Timer #################################################################
-  stop.addEventListener('click', function() {
+  stop.addEventListener('click', ()=> {
     window.clearInterval(timer);
     clearInterval(spinTarget);
     clearInterval(rotate);
@@ -253,7 +250,7 @@ startGame.addEventListener('click', function() {
     audio5.play();
 
     // every second the timer calls the function progressTime => this should be loaded before the timer
-    function progressTime() {
+    progressTime = ()=> {
       counter--;
       if(counter < 90){
           time.innerHTML = counter;
@@ -323,7 +320,8 @@ startGame.addEventListener('click', function() {
         }
         
         if(displayResult.innerText == targetResult.innerText){
-          targetResult.style.boxShadow = '2px 4px 30px 7px #f4f4f4';
+          targetResult.style.boxShadow = '2px 4px 30px 7px #ce03b3';
+          // displayResult.style.boxShadow = '2px 4px 30px 7px #ce03b3';
           document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
           audio6.play();
         }
@@ -360,7 +358,7 @@ startGame.addEventListener('click', function() {
 });
 
 // Start New game ######################################
-newGame.addEventListener('click', function() {
+newGame.addEventListener('click', ()=> {
     window.clearInterval(timer);
     newGame.style.display = 'none';
     startGame.style.display = 'block';
@@ -369,6 +367,9 @@ newGame.addEventListener('click', function() {
     time.innerHTML = 90;    
     time.style.color = 'yellow';
     time.style.borderColor = 'yellow';
+    targetResult.style.boxShadow = 'none';
+    // displayResult.style.boxShadow = 'none';
+    document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #f4f4f4';
     audio1.play();
     audio3.pause();
     displayResult.innerText = '???';
@@ -396,5 +397,4 @@ newGame.addEventListener('click', function() {
       e.classList.add('used');
     });        
   }
-    targetResult.style.boxShadow = 'none';
 });
