@@ -1257,7 +1257,7 @@ footer img {
   }
 
   .box-loader {
-    position: relative;
+    position: absolute;
     background-image: url(img/box-loader.png);
     background-repeat: no-repeat;
     background-size: 300px 450px;
@@ -1301,25 +1301,13 @@ footer img {
 
   .anima2 {
     position: relative;
-    width: 260px;
-    height: 305px;
+    width: 290px;
+    height: 308px;
     margin: 0 auto;
     z-index: 10000;
     top: -179px;
-    left: -219px;
+    left: -204px;
     display: block;
-  }
-
-  .kapa {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    width: 100px;
-    height: 143px;
-    top: -482px;
-    left: -26px;
-    transform: rotate(0deg);
-    z-index: 10;
   }
 
   .numbers {
