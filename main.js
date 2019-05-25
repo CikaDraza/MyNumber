@@ -31,7 +31,6 @@ const calcBtnOperators = document.querySelectorAll('.calc-btn-operator');
 
 // Timer ####################################################################
 let counter;
-counter = 90;
 const time = document.getElementById('timer');
 const startGame = document.getElementById("start_game");
 const newGame = document.getElementById('new_game');
@@ -43,7 +42,10 @@ const audio4 = new Audio('sounds/ten_seconds.m4a');
 const audio5 = new Audio('sounds/time.wav');
 const audio6 = new Audio('sounds/Ta Da.mp3');
 const audio7 = new Audio('sounds/Blop.mp3');
+let gunShot = document.getElementById('gun-shot');
+let buffGunShot = gunShot.buffered;
 
+// Loader fadeout
   window.addEventListener('load', ()=> {
     const loader = document.querySelector('.loader-wrap');
     loader.classList.add('hidden');
@@ -334,7 +336,7 @@ startGame.addEventListener('click', ()=> {
         }
         audio3.currentTime = 0;
       }    
-    }
+    };
     // ------------------------------------------------------
     // timer call progressTime every secund
       counter = 90;
