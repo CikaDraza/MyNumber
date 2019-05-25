@@ -43,7 +43,7 @@ const audio5 = new Audio('sounds/time.wav');
 const audio6 = new Audio('sounds/Ta Da.mp3');
 const audio7 = new Audio('sounds/Blop.mp3');
 window.onload = ()=> {
-  const audio8 = new AudioContext('sounds/Gun_Shot.mp3');
+  const audio8 = new Audio('sounds/Gun_Shot.mp3');
   audio8.play();
 };
 
