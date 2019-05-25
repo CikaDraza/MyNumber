@@ -1338,7 +1338,7 @@ footer img {
     position: absolute;
     width: 70%;
     height: 70%;
-    top: calc(40% + 20px);
+    top: calc(40% + 25px);
     left: calc(20% - 0px);
     transform: translate(-50%, -50%);
     zoom: .7;
