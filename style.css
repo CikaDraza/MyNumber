@@ -155,8 +155,6 @@ body {
   height: 200px;
   margin: 0 auto;
   z-index: 10000;
-  /* top: 250px;
-  left: -4px; */
   top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -186,15 +184,9 @@ body {
   height: 0px;
   background-color: #D91C5C;
   overflow: hidden;
-  /* -webkit-transition: all 0.8s linear;
-  -moz-transition: all 0.8s linear;
-  -o-transition: all 0.8s linear;
-  transition: all 0.8s linear; */
   margin-top: 70px;
   position: absolute;
   z-index: 0;
-  /* top: 85px;
-  left: 335px; */
   top: calc(60% - 10px);
   left: calc(50% - 2px);
   transform: translate(-50%, -50%);
@@ -233,8 +225,6 @@ body {
   height: 308px;
   margin: 0 auto;
   z-index: 10000;
-  /* top: -129px;
-  left: 41px; */
   top: 55%;
   left: calc(55% + 4px);
   transform: translate(-50%, -50%);
@@ -1179,7 +1169,6 @@ footer img {
   #calc-backspace:active {
     font-size: 26px;
     background-color: rgb(255, 255, 255);
-    /* box-shadow: 5px 5px 20px #f4f4f4; */
     box-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1),
     0 0 30px rgba(255, 255, 255, 1), 0 0 0 75px rgba(255, 255, 255, 0.05),
     0 0 0 30px rgba(255, 255, 255, 0.05);
