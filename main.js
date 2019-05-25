@@ -46,8 +46,9 @@ window.onload = ()=> {
   const audio8 = new AudioContext('sounds/Gun_Shot.mp3');
   audio8.play();
 };
-let gunShot = document.getElementById('gun-shot');
-let buffGunShot = gunShot.buffered;
+// let gunShot = document.getElementById('gun-shot');
+// let buffGunShot = gunShot.buffered;
+// let buffClock = audio3.buffered;
 
 // Loader fadeout
   window.addEventListener('load', ()=> {
