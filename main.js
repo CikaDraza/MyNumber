@@ -37,14 +37,12 @@ const startGame = document.getElementById("start_game");
 const newGame = document.getElementById('new_game');
 const audio = new Audio('sounds/Metal_Gong-Dianakc.mp3');
 const audio1 = new Audio('sounds/Tick-DeepFrozen.mp3');
-const audio2 = new Audio('sounds/Train Horn Low.mp3');
-const audio3 = new Audio('sounds/Clock_tik-tok.mp3');
+const audio2 = new Audio('sounds/culmination.mp3');
+const audio3 = new Audio('sounds/clockIsTicking.mp3');
 const audio4 = new Audio('sounds/ten_seconds.m4a');
 const audio5 = new Audio('sounds/time.wav');
 const audio6 = new Audio('sounds/Ta Da.mp3');
-const audio7 = new Audio('sounds/Gun_Shot.wav');
-const audio8 = new Audio('sounds/apprehensive.mp3');
-const audio9 = new Audio('sounds/Blop.mp3');
+const audio7 = new Audio('sounds/Blop.mp3');
 
   window.addEventListener('load', ()=> {
     const loader = document.querySelector('.loader-wrap');
@@ -150,7 +148,7 @@ confirm.onclick = () => {
 
 // backspace button
 numClear.onclick = ()=> {
-  audio9.play();
+  audio7.play();
   let lengthOfDisplayVal = displayVal.length;
   let elem = clearStrArray[displayVal.length - 1];
   if(elem){
@@ -260,7 +258,8 @@ startGame.addEventListener('click', ()=> {
           audio4.play();        
       }  
       if(counter < 10){
-          audio2.play();        
+          audio2.play();
+          audio3.pause();      
       }
       if(counter < 9){
           audio4.pause();
@@ -270,6 +269,7 @@ startGame.addEventListener('click', ()=> {
           time.style.color = 'red';
           time.style.borderColor = 'red';
           audio.play();
+          audio2.pause();
           audio3.pause();
           audio3.currentTime = 0;
       }

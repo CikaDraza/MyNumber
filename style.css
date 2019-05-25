@@ -23,7 +23,7 @@ body {
   width: 100%;
   margin: 0;
   top: 0;
-  left: 0;
+  left: 0;  
 }
 
 .loader {
@@ -63,6 +63,7 @@ body {
   animation-delay: .3s;
   background-size: cover;
   visibility: hidden;
+  z-index: 1;
 }
 
 .no-animation {
@@ -429,38 +430,46 @@ body {
 
 
 .loader-wrap.hidden {
-  animation: fadeOut .3s ease-in-out forwards;
+  animation: fadeOut .3s linear forwards;
   animation-delay: 9.9s;
-  /* background-image: url(img/twotone_restore_white_48dp.png) #f4f4f4; */
 }
 
 @keyframes fadeOut {
   0% {
     transform: scale(1);
+    opacity: 1;
   }  
   10% { 
     transform: scale(.9);
+    opacity: 1;
   }
   20% {
     transform: scale(.8);
+    opacity: 1;
   }  
   30% { 
     transform: scale(.7);
+    opacity: 1;
   }  
   40% {
     transform: scale(.6);
+    opacity: 1;
   }  
   50% {
     transform: scale(.5);
+    opacity: 0;
   }  
   60% {
     transform: scale(.4);
+    opacity: 0;
   }  
   70% {  
     transform: scale(.3);
+    opacity: 0;
   }  
   80% {
-    transform: scale(.2); 
+    transform: scale(.1);
+    opacity: 0; 
   }   
   90% {
     transform: scale(0); 
