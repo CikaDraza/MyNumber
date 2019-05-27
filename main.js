@@ -32,8 +32,12 @@ const calcBtnOperators = document.querySelectorAll('.calc-btn-operator');
 // Timer ####################################################################
 let counter;
 const time = document.getElementById('timer');
+
+// Buttons Start and New game
 const startGame = document.getElementById("start_game");
 const newGame = document.getElementById('new_game');
+
+// Sounds in game
 const audio = new Audio('sounds/Metal_Gong-Dianakc.mp3');
 const audio1 = new Audio('sounds/Tick-DeepFrozen.mp3');
 const audio2 = new Audio('sounds/culmination.mp3');
@@ -42,9 +46,13 @@ const audio4 = new Audio('sounds/ten_seconds.m4a');
 const audio5 = new Audio('sounds/time.wav');
 const audio6 = new Audio('sounds/Ta Da.mp3');
 const audio7 = new Audio('sounds/Blop.mp3');
+
+// Sounds effect when load page
 window.onload = ()=> {
   const audio8 = new Audio('sounds/Gun_Shot.mp3');
   audio8.play();
+  const audio9 = new Audio('sounds/apprehensive.mp3');
+  audio9.play();
 };
 
 // Loader fadeout
@@ -61,12 +69,10 @@ window.onload = ()=> {
 
 // When click buttons numbers display
 let displayVal = [];
-let evalStrArray = [];
 let clearStrArray = [];
 
 // Number Buttons
-calcNumBtns.forEach( (num)=> { 
-  num.addEventListener('click', function(clickObj){
+calcNumBtns.forEach(num => num.addEventListener('click', function(clickObj){
     audio1.play();      
     if(displayVal.length && clearStrArray[displayVal.length - 1]){
       return;
@@ -77,27 +83,24 @@ calcNumBtns.forEach( (num)=> {
     btn = btnText + ' ';
     displayVal.push(btn);
     clearStrArray.push(btn);
-    evalStrArray.push(btn);
     displayValElement.innerText = displayVal.join('');
     this.classList.add('used');
-  });
-});
+  })
+);
 
 // Operator Buttons
-calcBtnOperators.forEach( (oprt)=> {  
-  oprt.addEventListener('click', function(clickObj){
+calcBtnOperators.forEach(oprt => oprt.addEventListener('click', function(clickObj){
     audio1.play();
     let oper = this.valueOf();
     clearStrArray[displayVal.length] = null;
     clearStrArray[clearStrArray.length] = oper;
     let btnText = clickObj.target.innerText;
     btn = btnText + ' ';
-    evalStrArray.push(btn);
     clearStrArray.push(btn);
     displayVal.push(btn);
     displayValElement.innerText = displayVal.join('');
-  });
-});
+  })
+);
 
 // Confirm Button
 confirm.onclick = () => {
@@ -182,11 +185,10 @@ numClear.onclick = ()=> {
     
 };
 
-// Rundom Numbers Countdowon #################################################################
+// Start Game And Start Rundom Numbers Countdowon #################################################################
 startGame.addEventListener('click', ()=> {
   // Target Number
   let spinTarget = setInterval( ()=> {
-    // let targetResult = document.getElementById("target");
     targetResult.innerHTML = Math.floor(Math.random() * 999) + 1;
 
   }, 50);
@@ -361,7 +363,7 @@ startGame.addEventListener('click', ()=> {
 
 });
 
-// Start New game ######################################
+// Start New game ##############################################################################
 newGame.addEventListener('click', ()=> {
     window.clearInterval(timer);
     newGame.style.display = 'none';
@@ -372,7 +374,6 @@ newGame.addEventListener('click', ()=> {
     time.style.color = 'yellow';
     time.style.borderColor = 'yellow';
     targetResult.style.boxShadow = 'none';
-    // displayResult.style.boxShadow = 'none';
     document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #f4f4f4';
     audio1.play();
     audio3.pause();
