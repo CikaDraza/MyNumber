@@ -46,14 +46,47 @@ const audio4 = new Audio('sounds/ten_seconds.m4a');
 const audio5 = new Audio('sounds/time.wav');
 const audio6 = new Audio('sounds/Ta Da.mp3');
 const audio7 = new Audio('sounds/Blop.mp3');
+// const audio8 = new Audio('sounds/Gun_Shot.mp3');
+// const audio9 = new Audio('sounds/apprehensive.mp3');
 
 // Sounds effect when load page
-window.onload = ()=> {
-  const audio8 = new Audio('sounds/Gun_Shot.mp3');
-  audio8.play();
-  const audio9 = new Audio('sounds/apprehensive.mp3');
-  audio9.play();
-};
+// document.querySelector('loader-wrap').addEventListener('load', playEffect);
+// function playEffect() {
+//   const xhr = new XMLHttpRequest();
+//   const req = new XMLHttpRequest();
+//   xhr.open('GET', 'sounds/Gun_Shot.mp3', true);
+//   req.open('GET', 'sounds/apprehensive.mp3', true);
+
+//   xhr.responseType = "blob";
+//   xhr.onload = function() {
+//     if(this.status === 200) {
+//       console.log('READYSTATE', xhr.readyState);
+
+//       let audio8 = new Audio(URL.createObjectURL(this.response));
+
+//       audio8.load();
+//       audio8.play();
+     
+//     }
+//   };
+//   xhr.send();
+
+//   req.responseType = 'blob';
+//   req.onload = function() {
+//     if(this.status === 200) {
+//       console.log('READYSTATE', xhr.readyState);
+
+//       let audio9 = new Audio(URL.createObjectURL(this.response));
+
+      
+//       audio9.load();
+//       audio9.play();
+//     }
+//   };
+//     req.send();
+// }
+// window.onload = ()=> (audio8.play().catch(console.log), audio9.play().catch(console.log));
+
 
 // Loader fadeout
   window.addEventListener('load', ()=> {
@@ -72,7 +105,7 @@ let displayVal = [];
 let clearStrArray = [];
 
 // Number Buttons
-calcNumBtns.forEach(num => num.addEventListener('click', function(clickObj){
+calcNumBtns.forEach(num => num.addEventListener('click', function(clickObj) {
     audio1.play();      
     if(displayVal.length && clearStrArray[displayVal.length - 1]){
       return;
@@ -89,7 +122,7 @@ calcNumBtns.forEach(num => num.addEventListener('click', function(clickObj){
 );
 
 // Operator Buttons
-calcBtnOperators.forEach(oprt => oprt.addEventListener('click', function(clickObj){
+calcBtnOperators.forEach(oprt => oprt.addEventListener('click', function(clickObj) {
     audio1.play();
     let oper = this.valueOf();
     clearStrArray[displayVal.length] = null;
@@ -124,7 +157,7 @@ confirm.onclick = () => {
     // if the result is correct 
     if(displayResult.innerText == targetResult.innerText){
       targetResult.style.boxShadow = '2px 4px 30px 7px #ce03b3';
-      // displayResult.style.boxShadow = '2px 4px 30px 7px #ce03b3';
+
       document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
       audio6.play();
     }
@@ -142,14 +175,10 @@ confirm.onclick = () => {
     audio3.currentTime = 0;
     
     for(let i = 0; i < calcNumBtns.length; i++) {
-      [i].forEach.call(calcNumBtns, function(e) {
-      e.classList.add('used');
-      });
+      [i].forEach.call(calcNumBtns, (e)=> e.classList.add('used'));
     }
     for(let i = 0; i < calcBtnOperators.length; i++) {
-      [i].forEach.call(calcBtnOperators, function(e) {
-      e.classList.add('used');
-      });        
+      [i].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));        
     }
 };
 
@@ -196,10 +225,10 @@ startGame.addEventListener('click', ()=> {
   // with the help of numbers [1 - 9]
   let rotate = setInterval( ()=> {
     
-    document.getElementById("num1").innerHTML = Math.floor(Math.random() * 9) + 1;
-    document.getElementById("num2").innerHTML = Math.floor(Math.random() * 9) + 1;
-    document.getElementById("num3").innerHTML = Math.floor(Math.random() * 9) + 1;
-    document.getElementById("num4").innerHTML = Math.floor(Math.random() * 9) + 1;
+    numOne.innerHTML = Math.floor(Math.random() * 9) + 1;
+    numTwo.innerHTML = Math.floor(Math.random() * 9) + 1;
+    numThree.innerHTML = Math.floor(Math.random() * 9) + 1;
+    numFour.innerHTML = Math.floor(Math.random() * 9) + 1;
 
   }, 50);
 
@@ -212,7 +241,7 @@ startGame.addEventListener('click', ()=> {
     let comArray = completeArray.length;        
     return completeArray[ Math.floor(Math.random() * comArray) ];        
   }      
-  document.getElementById("num5").innerHTML = randomElement(numb);
+    numFive.innerHTML = randomElement(numb);
   }, 50);
 
   // with the help of numbers [25, 50, 75, 100]
@@ -224,7 +253,7 @@ startGame.addEventListener('click', ()=> {
     let comArray = completeArray.length;          
     return completeArray[ Math.floor(Math.random() * comArray) ];        
   }      
-  document.getElementById("num6").innerHTML = randomElement(numb);
+    numSix.innerHTML = randomElement(numb);
   }, 50);
 
   // Remove New Game button ########################################################################
@@ -233,9 +262,7 @@ startGame.addEventListener('click', ()=> {
   stop.style.display = 'block';
   confirm.style.display = 'none';
   for(let i = 0; i < calcNumBtns.length; i++) {
-      [i].forEach.call(calcNumBtns, function(e) {
-      e.classList.add('run_num');
-    });        
+      [i].forEach.call(calcNumBtns, (e)=> e.classList.add('run_num'));        
   }
   audio1.play();
   audio3.currentTime = 0;
@@ -296,14 +323,10 @@ startGame.addEventListener('click', ()=> {
           confirm.style.display = 'none';
           numClear.classList.add('used');
           for(let k = 0; k < calcBtnOperators.length; k++) {
-            [k].forEach.call(calcBtnOperators, function(e) {
-              e.classList.add('used');        
-            });
+            [k].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
           }
           for(let j = 0; j < calcNumBtns.length; j++) {
-            [j].forEach.call(calcNumBtns, function(e) {
-              e.classList.add('used');
-            });
+            [j].forEach.call(calcNumBtns, (e)=> e.classList.add('used'));
           }
         }
     
@@ -315,19 +338,14 @@ startGame.addEventListener('click', ()=> {
         numClear.classList.add('used');
     
         for(let t = 0; t < calcBtnOperators.length; t++) {
-          [t].forEach.call(calcBtnOperators, function(e) {
-            e.classList.add('used');        
-          });
+          [t].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
         }
         for(let g = 0; g < calcNumBtns.length; g++) {
-          [g].forEach.call(calcNumBtns, function(e) {
-            e.classList.add('used');
-          });
+          [g].forEach.call(calcNumBtns, (e)=> e.classList.add('used'));
         }
         
         if(displayResult.innerText == targetResult.innerText){
           targetResult.style.boxShadow = '2px 4px 30px 7px #ce03b3';
-          // displayResult.style.boxShadow = '2px 4px 30px 7px #ce03b3';
           document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
           audio6.play();
         }
@@ -348,17 +366,11 @@ startGame.addEventListener('click', ()=> {
     // -------------------------------------------------------
   
     for(let i = 0; i < calcNumBtns.length; i++) {
-        [i].forEach.call(calcNumBtns, function(e) {
-        e.classList.remove('used');
-        e.classList.remove('run_num');
-      });        
+        [i].forEach.call(calcNumBtns, (e)=> (e.classList.remove('used'), e.classList.remove('run_num')));        
     }
     for(let j = 0; j < calcBtnOperators.length; j++) {
-        [j].forEach.call(calcBtnOperators, function(e) {
-        e.classList.remove('used');
-      });        
+        [j].forEach.call(calcBtnOperators, (e)=> e.classList.remove('used'));        
     }
-
   });
 
 });
@@ -384,22 +396,16 @@ newGame.addEventListener('click', ()=> {
     targetResult.innerText = '000';
     let firstFourNumb = Object.entries(calcNumBtns).slice(0,4).map(entry => entry[1]);
     for(let i = 0; i < calcNumBtns.length; i++) {
-      [i].forEach.call(firstFourNumb, function(e) {
-        e.innerText = '0';
-      });
+      [i].forEach.call(firstFourNumb, (e)=> e.innerText = '0');
     }
     calcNumBtns[4].innerText = '00';
     calcNumBtns[5].innerText = '000';
 
     // Removes inactive buttons
     for(let h = 0; h < calcNumBtns.length; h++) {
-      [h].forEach.call(calcNumBtns, function(e) {
-      e.classList.add('used');
-      });
+      [h].forEach.call(calcNumBtns, (e)=> e.classList.add('used'));
     }
     for(let j = 0; j < calcBtnOperators.length; j++) {
-      [i].forEach.call(calcBtnOperators, function(e) {
-      e.classList.add('used');
-    });        
-  }
+      [j].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
+    }
 });
