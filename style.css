@@ -1495,7 +1495,7 @@ body {
     writing-mode: vertical-lr;
     text-orientation: upright;
     line-height: 2.5;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   } 
 
   #new_game {
@@ -1516,7 +1516,7 @@ body {
     color: #f4f4f4;
     width: 250px;
     height: 30px;
-    bottom: 3%;
+    bottom: 2%;
     left: 55%;
     transform: translate(-50%, -50%);
     z-index: 100;
