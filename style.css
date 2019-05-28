@@ -1001,7 +1001,7 @@ footer img {
     box-sizing: border-box;
     padding-top: 0px;
     background-clip: yellow;
-    line-height: 2.7;
+    line-height: 2.5;
     z-index: 1;
   }
 
@@ -1061,6 +1061,7 @@ footer img {
     padding: 0;
     top: 0;
     left: 0;
+    line-height: 1.5;
   }
 
   .calc-row {
@@ -1072,6 +1073,7 @@ footer img {
     padding: 0;
     top: 0;
     left: 0;
+    line-height: 1.5;
   }
 
   .calc-btn-num {
@@ -1130,7 +1132,7 @@ footer img {
     height: 167px;
     width: 60px;
     position: absolute;
-    left: 290px;
+    left: 295px;
     top: 92px;
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -1156,7 +1158,7 @@ footer img {
     padding: 5px 0;
     top: 228px;
     left: 180px;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   #calc-backspace::before {
@@ -1212,7 +1214,7 @@ footer img {
     height: 167px;
     width: 60px;
     position: absolute;
-    left: 290px;
+    left: 295px;
     top: 92px;
   }
 
@@ -1228,7 +1230,7 @@ footer img {
   #start_game {
     position: absolute;
     top: calc(25% + 0px);
-    left: 290px;
+    left: 295px;
     font-size: 24px;
     margin: 0;
     padding: 0;
@@ -1243,7 +1245,7 @@ footer img {
     position: absolute;
     display: none;
     top: calc(25% + 0px);
-    left: 290px;
+    left: 295px;
     background-position: 50% 50%;
     background-size: 60%;
     margin: 0;
@@ -1256,7 +1258,7 @@ footer img {
     color: #f4f4f4;
     width: 250px;
     height: 30px;
-    top: 90%;
+    top: 95%;
     left: calc(50% + 20px);
     transform: translate(-50%, -50%);
     z-index: 100;
@@ -1458,7 +1460,7 @@ footer img {
     padding: 5px 0;
     top: 228px;
     left: 180px;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   #calc-backspace::before {
@@ -1480,7 +1482,7 @@ footer img {
   #start_game {
     position: absolute;
     top: calc(25% - 5px);
-    left: 290px;
+    left: 295px;
     font-size: 24px;
     margin: 0;
     padding: 0;
@@ -1495,7 +1497,7 @@ footer img {
     position: absolute;
     display: none;
     top: calc(25% - 5px);
-    left: 290px;
+    left: 295px;
     background-position: 50% 50%;
     background-size: 60%;
     margin: 0;
