@@ -1061,7 +1061,7 @@ body {
     padding: 0;
     top: 0;
     left: 0;
-    line-height: 1.5;
+    line-height: 1.3;
   }
 
   .calc-row {
@@ -1073,7 +1073,7 @@ body {
     padding: 0;
     top: 0;
     left: 0;
-    line-height: 1.5;
+    line-height: 1.3;
   }
 
   .calc-btn-num {
@@ -1423,7 +1423,7 @@ body {
   
   .calc-btn-operator {
     border: 1px solid #f4f4f4;
-    line-height: 1.3;
+    line-height: 1.4;
 
   }
 
@@ -1512,7 +1512,7 @@ body {
     color: #f4f4f4;
     width: 250px;
     height: 30px;
-    bottom: 10%;
+    bottom: 5%;
     left: 55%;
     transform: translate(-50%, -50%);
     z-index: 100;
