@@ -839,22 +839,22 @@ body {
   background-color: #ff00b2;
 }
 
-footer {
+.footer {
   position: absolute;
   color: #f4f4f4;
   width: 250px;
   height: 30px;
-  top: 800px;
-  left: 850px;
+  bottom: 3%;
+  left: 70%;
   z-index: 9999;
 }
 
-footer p {
+.footer p {
   margin: 0;
   display: inline-block;
 }
 
-footer img {
+.footer img {
   width: 30px;
   margin: 0 0 -10px 10px;
 }
@@ -1253,14 +1253,14 @@ footer img {
     height: 167px;
     background-color: #a30072;
   }
-  footer {
+  .footer {
     position: absolute;
     color: #f4f4f4;
     width: 250px;
     height: 30px;
-    top: 95%;
     left: calc(50% + 20px);
     transform: translate(-50%, -50%);
+    bottom: 1%;
     z-index: 100;
   }
   
@@ -1388,7 +1388,7 @@ footer img {
     width: 100px;
     height: 30px;
     text-align: center;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   .text-target::after {
@@ -1414,7 +1414,7 @@ footer img {
     border: 2px solid rgb(48, 121, 255);
     text-align: center;
     font-family: 'Orbitron', sans-serif;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   .calc-btn-num {
@@ -1435,7 +1435,7 @@ footer img {
     width: 350px;
     height: 30px;
     margin: 0;
-    padding: 15px 0 0 10px;
+    padding: 17px 0 0 10px;
     position: relative;
     font-size: 22px;
     font-weight: bold;
@@ -1506,13 +1506,13 @@ footer img {
     background-color: #a30072;
   }
 
-  footer {
+  .footer {
     position: absolute;
     color: #f4f4f4;
     width: 250px;
     height: 30px;
-    top: 75%;
-    left: 50%;
+    bottom: 1%;
+    left: 55%;
     transform: translate(-50%, -50%);
     z-index: 100;
   }
