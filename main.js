@@ -46,47 +46,6 @@ const audio4 = new Audio('sounds/ten_seconds.m4a');
 const audio5 = new Audio('sounds/time.wav');
 const audio6 = new Audio('sounds/Ta Da.mp3');
 const audio7 = new Audio('sounds/Blop.mp3');
-// const audio8 = new Audio('sounds/Gun_Shot.mp3');
-// const audio9 = new Audio('sounds/apprehensive.mp3');
-
-// Sounds effect when load page
-// document.querySelector('loader-wrap').addEventListener('load', playEffect);
-// function playEffect() {
-//   const xhr = new XMLHttpRequest();
-//   const req = new XMLHttpRequest();
-//   xhr.open('GET', 'sounds/Gun_Shot.mp3', true);
-//   req.open('GET', 'sounds/apprehensive.mp3', true);
-
-//   xhr.responseType = "blob";
-//   xhr.onload = function() {
-//     if(this.status === 200) {
-//       console.log('READYSTATE', xhr.readyState);
-
-//       let audio8 = new Audio(URL.createObjectURL(this.response));
-
-//       audio8.load();
-//       audio8.play();
-     
-//     }
-//   };
-//   xhr.send();
-
-//   req.responseType = 'blob';
-//   req.onload = function() {
-//     if(this.status === 200) {
-//       console.log('READYSTATE', xhr.readyState);
-
-//       let audio9 = new Audio(URL.createObjectURL(this.response));
-
-      
-//       audio9.load();
-//       audio9.play();
-//     }
-//   };
-//     req.send();
-// }
-// window.onload = ()=> (audio8.play().catch(console.log), audio9.play().catch(console.log));
-
 
 // Loader fadeout
   window.addEventListener('load', ()=> {
