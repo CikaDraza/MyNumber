@@ -1419,7 +1419,7 @@ body {
 
   .calc-btn-num {
     border: 1px solid #f4f4f4;
-    line-height: 1.4;
+    line-height: 1.5;
   }
   
   .calc-btn-operator {
@@ -1495,7 +1495,7 @@ body {
     writing-mode: vertical-lr;
     text-orientation: upright;
     line-height: 2.5;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
   } 
 
   #new_game {
