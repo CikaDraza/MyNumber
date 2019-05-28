@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <title>MyNumber Game</title>
-  <iframe src="sounds/Gun_Shot.mp3" allow="autoplay" frameborder="0"></iframe>
-  <iframe src="sounds/apprehensive.mp3" allow="autoplay" frameborder="0"></iframe>
+  <title>MyNumber Game</title>  
 </head>
 <body>
 
-    
+  <iframe src="sounds/Gun_Shot.mp3" allow="autoplay" frameborder="0"></iframe>
+  <iframe src="sounds/apprehensive.mp3" allow="autoplay" frameborder="0"></iframe>
   <!-- Loader Page -->
   <div class="loader-wrap">
     <div class="loader">
@@ -81,25 +80,28 @@
         <!-- Backspace Button -->
         <div class="calc-backspace-btn used" id="calc-backspace">x</div>
   
-        <!-- Button Numbers -->            
-        <div class="number-row">
-          <div class="calc-btn calc-btn-num column used" id="num1">0</div>
-          <div class="calc-btn calc-btn-num column used" id="num2">0</div>
-          <div class="calc-btn calc-btn-num column used" id="num3">0</div>
-          <div class="calc-btn calc-btn-num column used" id="num4">0</div>
-          <div class="calc-btn calc-btn-num column used" id="num5">00</div>
-          <div class="calc-btn calc-btn-num column used" id="num6">000</div>
-          
+        <!-- Button Numbers -->
+        <div id="keyboard">
+          <!-- Number opeartors -->
+          <div class="number-row">
+            <div class="calc-btn calc-btn-num column used" id="num1">0</div>
+            <div class="calc-btn calc-btn-num column used" id="num2">0</div>
+            <div class="calc-btn calc-btn-num column used" id="num3">0</div>
+            <div class="calc-btn calc-btn-num column used" id="num4">0</div>
+            <div class="calc-btn calc-btn-num column used" id="num5">00</div>
+            <div class="calc-btn calc-btn-num column used" id="num6">000</div>
+            
+          </div>
+      
+          <!-- Button operators -->
+          <div class="calc-row">
+            <div class="calc-btn calc-btn-operator column used">+</div>
+            <div class="calc-btn calc-btn-operator column used">-</div>
+            <div class="calc-btn calc-btn-operator column used">x</div>
+            <div class="calc-btn calc-btn-operator column used">÷</div>
+            <div class="calc-btn calc-btn-operator column used">(</div>
+            <div class="calc-btn calc-btn-operator column used">)</div>
         </div>
-    
-        <!-- Button operators -->
-        <div class="calc-row">
-          <div class="calc-btn calc-btn-operator column used">+</div>
-          <div class="calc-btn calc-btn-operator column used">-</div>
-          <div class="calc-btn calc-btn-operator column used">x</div>
-          <div class="calc-btn calc-btn-operator column used">÷</div>
-          <div class="calc-btn calc-btn-operator column used">(</div>
-          <div class="calc-btn calc-btn-operator column used">)</div>
           
         </div>
         <!-- Start and New Game Buttons  -->
