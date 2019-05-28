@@ -1419,12 +1419,16 @@ body {
 
   .calc-btn-num {
     border: 1px solid #f4f4f4;
+    line-height: 1.4;
   }
   
   .calc-btn-operator {
     border: 1px solid #f4f4f4;
     line-height: 1.4;
+  }
 
+  .calc-btn-operator:nth-last-of-type(-n + 2) {
+      line-height: 1.5;
   }
 
   .calc-btn-operator:active {
@@ -1512,7 +1516,7 @@ body {
     color: #f4f4f4;
     width: 250px;
     height: 30px;
-    bottom: 5%;
+    bottom: 3%;
     left: 55%;
     transform: translate(-50%, -50%);
     z-index: 100;
