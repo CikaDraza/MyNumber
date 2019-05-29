@@ -1049,7 +1049,7 @@ body {
     width: 250px;
     justify-items: center;
     position: absolute;
-    left: 15px;
+    left: 25px;
   }
 
   .number-row {
@@ -1157,7 +1157,7 @@ body {
     display: block;
     padding: 5px 0;
     top: 228px;
-    left: 180px;
+    left: 190px;
     line-height: 1.2;
   }
 
@@ -1463,7 +1463,7 @@ body {
     display: block;
     padding: 5px 0;
     top: 228px;
-    left: 180px;
+    left: 190px;
     line-height: 1.3;
   }
 
