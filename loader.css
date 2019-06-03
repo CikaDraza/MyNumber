@@ -13,7 +13,6 @@
 }
 
 .loader {
-  position: absolute;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -41,100 +40,153 @@
 
 .box-loader {
   position: relative;
-  width: 800px;
-  height: 600px;
-  background-image: url(img/box-loader.png);
-  padding: 20px;
-  margin: 100px auto;
-  animation: zoomBox .3s forwards;
-  animation-delay: .3s;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  height: 70%;
+  padding: 10px;
+  display: inline-block;
+  background: url(img/box-loader.png);
   background-size: cover;
+  background-position-x: center;
   visibility: hidden;
   z-index: 1;
-}
-
-.no-animation {
-  display: none;
+  transition: all 2s;
+  animation: zoomBox .5s linear forwards;
+  animation-delay: .3s;
+  overflow: hidden;
 }
 
 @keyframes zoomBox {
   0% {
-    transform: scale(5);
-    width: 400px;
-    height: 100px;
-    background-size: cover;
+    transform: scale3d(9, 9, 9);
+    width: 20%;
+    height: 7.5%;
+    left: 40%;
+    top: 50%;
     visibility: visible;
+
   }
   10% {
-    transform: scale(4);
-    width: 400px;
-    height: 100px;
-    background-size: cover;
-    visibility: visible;
+    transform: scale3d(7, 7, 7);
+    width: 20%;
+    height: 7.5%;
+    left: 40%;
+    top: 50%;
   }
   20% {
-    transform: scale(3);
-    width: 400px;
-    height: 100px;
-    background-size: cover;
-    visibility: visible;
+    transform: scale3d(5, 5, 5);
+    width: 20%;
+    height: 7.5%;
+    left: 40%;
+    top: 50%;
   }
   30% {
-    transform: scale(2);
-    width: 400px;
-    height: 100px;
-    background-size: cover;
-    visibility: visible;
+    transform: scale3d(3, 3, 3);
+    width: 20%;
+    height: 7.5%;
+    left: 40%;
+    top: 50%;
   }
   40% {
-    transform: scale(1);
-    width: 500px;
-    height: 120px;
-    background-size: cover;
-    visibility: visible;
+    transform: scale3d(2, 2, 2);
+    width: 60%;
+    height: 26%;
+    left: 20%;
+    top: 40%;
   }
   50% {
-    transform: scale(1);
-    width: 550px;
-    height: 140px;
-    background-size: cover;
-    visibility: visible;
+    transform: scale3d(1, 1, 1);
+    width: 50%;
+    height: 22%;
+    left: 25%;
+    top: 40%;
   }
   60% {
-    transform: scale(1);
-    width: 600px;
-    height: 150px;
-    background-size: cover;
-    visibility: visible;
+    transform: scale3d(1, 1, 1);
+    width: 50%;
+    height: 22%;
+    left: 25%;
+    top: 40%;
   }
   70% {
-    transform: scale(1);
-    width: 650px;
-    height: 150px;
-    background-size: cover;
-    visibility: visible;
+    transform: scale3d(1, 1, 1);
+    width: 60%;
+    height: 26%;
+    left: 20%;
+    top: 40%;
   }
   80% {
-    transform: scale(1);
-    width: 700px;
-    height: 170px;
-    background-size: cover;
-    visibility: visible;
+    transform: scale3d(1, 1, 1);
+    width: 60%;
+    height: 26%;
+    left: 20%;
+    top: 40%;
   }
   90% {
-    transform: scale(1);
-    width: 800px;
-    height: 350px;
-    visibility: visible;
+    transform: scale3d(1, 1, 1);
+    width: 60%;
+    height: 26%;
+    left: 20%;
+    top: 40%;
   }
   100% {
-    transform: scale(1);
-    width: 800px;
-    height: 500px;
+    width: 61%;
+    height: 80%;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
     visibility: visible;
   }
 }
 
+/* Shining effect */
+.box-loader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -110%;
+  width: 30%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255,255,255, .7), rgba(0,0,0, .2));
+  transition: all .3s;
+  transform: skewX(-45deg);
+  animation: shine .5s linear forwards;
+  animation-delay: 1s;
+}
+
+.box-loader::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -110%;
+  width: 30%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255,255,255, .7), rgba(0,0,0, .2));
+  transition: all .3s;
+  transform: skewX(-45deg);
+  animation: shine .3s linear forwards;
+  animation-delay: 3s;
+}
+
+@keyframes shine {
+  0%{
+    left: -50%;
+    /* margin-left: 0px; */
+  }
+  50%{
+    left: 100%;
+    /* margin-left: 80px; */
+  }
+  100%{
+    left: 200%;
+    /* margin-left: 80px; */
+  }
+}
+
+/* Head animation */
 .anima1 {
   position: absolute;
   width: 200px;
@@ -173,7 +225,7 @@
   margin-top: 70px;
   position: absolute;
   z-index: 0;
-  top: calc(60% - 10px);
+  top: calc(60% + 5px);
   left: calc(50% - 2px);
   transform: translate(-50%, -50%);
   display: block;
@@ -211,8 +263,8 @@
   height: 308px;
   margin: 0 auto;
   z-index: 10000;
-  top: 55%;
-  left: calc(55% + 4px);
+  top: calc(55% + 22px);
+  left: calc(55% - 13px);
   transform: translate(-50%, -50%);
   display: block;
 }
@@ -238,10 +290,10 @@
 
 .numbers {
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
   top: 0;
-  left: +.2%;
+  left: +5%;
   animation: num 7s;
   animation-delay: 3s;
   visibility: hidden;
@@ -413,3 +465,172 @@
     top: 0%;
   }
 }
+
+/* Response for 19" #################################################################################################################################### */
+@media only screen and (max-width: 1440px) {
+
+  .anima1-bg {    
+    top: calc(60% - 5px);    
+ }
+
+  .anima2 {
+    top: calc(55% + 7px);
+    left: calc(55% + 2px);
+  }
+
+  .numbers {
+    width: 85%;
+    top: -5%;
+    left: +6%;
+  }
+}
+
+/* Response for tablet #################################################################################################################################### */
+@media only screen and (max-width: 780px) {
+
+  @keyframes zoomBox {
+    0% {
+      transform: scale3d(9, 9, 9);
+      width: 20%;
+      height: 7.5%;
+      left: 40%;
+      top: 50%;
+      visibility: visible;
+  
+    }
+    10% {
+      transform: scale3d(7, 7, 7);
+      width: 20%;
+      height: 7.5%;
+      left: 40%;
+      top: 50%;
+    }
+    20% {
+      transform: scale3d(5, 5, 5);
+      width: 20%;
+      height: 7.5%;
+      left: 40%;
+      top: 50%;
+    }
+    30% {
+      transform: scale3d(3, 3, 3);
+      width: 20%;
+      height: 7.5%;
+      left: 40%;
+      top: 50%;
+    }
+    40% {
+      transform: scale3d(2, 2, 2);
+      width: 60%;
+      height: 26%;
+      left: 20%;
+      top: 40%;
+    }
+    50% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 22%;
+      left: 25%;
+      top: 40%;
+    }
+    60% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 22%;
+      left: 25%;
+      top: 40%;
+    }
+    70% {
+      transform: scale3d(1, 1, 1);
+      width: 60%;
+      height: 26%;
+      left: 20%;
+      top: 40%;
+    }
+    80% {
+      transform: scale3d(1, 1, 1);
+      width: 60%;
+      height: 26%;
+      left: 20%;
+      top: 40%;
+    }
+    90% {
+      transform: scale3d(1, 1, 1);
+      width: 60%;
+      height: 26%;
+      left: 20%;
+      top: 40%;
+    }
+    100% {
+      width: 95%;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      visibility: visible;
+    }
+  }
+
+  .anima1 {
+    zoom: 1;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    visibility: hidden;
+  }
+
+  .anima1-bg {    
+    top: calc(60% - 5px);    
+  }
+
+  .anima2 {
+    zoom: 1;
+    top: calc(55% + 5px);
+    left: calc(55% + 10px);
+  }
+
+  .numbers {
+    width: 85%;
+    top: -5%;
+    left: +6%;
+  }
+}
+
+/* Response for mobile device 4" #################################################################################################################################### */
+@media only screen and (max-width: 480px) {
+
+  .box-loader {
+    background-size: 405px 590px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .anima1 {
+    zoom: 1;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    visibility: hidden;
+  }
+
+  .anima1-bg {    
+    top: calc(60% - 5px);
+    zoom: 1;   
+  }
+
+  .anima2 {
+    zoom: 1;
+    top: calc(55% + 3px);
+    left: calc(60% + 6px);
+  }
+
+  .numbers {
+    width: 85%;
+    top: 50%;
+    left: 50%;
+    zoom: 1;
+  }
+}
+
