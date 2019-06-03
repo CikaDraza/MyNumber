@@ -52,7 +52,6 @@ const audio7 = new Audio('sounds/Blop.mp3');
   document.addEventListener('DOMContentLoaded', ()=> {
     window.addEventListener('load', ()=> {
         const loaderWrap = document.querySelector('.loader-wrap');
-        const boxLoader = document.querySelector('.box-loader');
         const game = document.querySelector('#game-page');
 
         loaderWrap.style.display = 'block';
