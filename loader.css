@@ -1,3 +1,4 @@
+
 .loader-wrap {
   position: absolute;
   z-index: 1000;
@@ -147,42 +148,39 @@
   content: '';
   position: absolute;
   top: 0;
-  left: -110%;
+  left: -115%;
   width: 30%;
   height: 100%;
-  background-image: linear-gradient(rgba(255,255,255, .7), rgba(0,0,0, .2));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0,0,0, .2));
   transition: all .3s;
   transform: skewX(-45deg);
   animation: shine .5s linear forwards;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 
 .box-loader::after {
   content: '';
   position: absolute;
   top: 0;
-  left: -110%;
+  left: -115%;
   width: 30%;
   height: 100%;
-  background-image: linear-gradient(rgba(255,255,255, .7), rgba(0,0,0, .2));
+  background-image: linear-gradient(rgba(255,255,255, .4), rgba(0,0,0, .2));
   transition: all .3s;
   transform: skewX(-45deg);
   animation: shine .3s linear forwards;
-  animation-delay: 3s;
+  animation-delay: 4s;
 }
 
 @keyframes shine {
   0%{
     left: -50%;
-    /* margin-left: 0px; */
   }
   50%{
     left: 100%;
-    /* margin-left: 80px; */
   }
   100%{
     left: 200%;
-    /* margin-left: 80px; */
   }
 }
 
@@ -463,11 +461,18 @@
   }
   100% {
     top: 0%;
+    display: none;
   }
 }
 
 /* Response for 19" #################################################################################################################################### */
 @media only screen and (max-width: 1440px) {
+
+  .box-loader {
+    background-size: 880px 600px;
+    padding: 0;
+    margin: 0;
+  }
 
   .anima1-bg {    
     top: calc(60% - 5px);    
@@ -487,6 +492,12 @@
 
 /* Response for tablet #################################################################################################################################### */
 @media only screen and (max-width: 780px) {
+
+  .box-loader {
+    background-size: 405px 590px;
+    padding: 0;
+    margin: 0;
+  }
 
   @keyframes zoomBox {
     0% {
@@ -598,9 +609,10 @@
 }
 
 /* Response for mobile device 4" #################################################################################################################################### */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 520px) {
 
   .box-loader {
+    background-repeat: no-repeat;
     background-size: 405px 590px;
     padding: 0;
     margin: 0;
@@ -622,14 +634,14 @@
 
   .anima2 {
     zoom: 1;
-    top: calc(55% + 3px);
-    left: calc(60% + 6px);
+    top: calc(55% + 2px);
+    left: calc(60% + 12px);
   }
 
   .numbers {
-    width: 85%;
-    top: 50%;
-    left: 50%;
+    width: 80%;
+    top: 0%;
+    left: 10%;
     zoom: 1;
   }
 }

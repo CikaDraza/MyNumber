@@ -37,11 +37,7 @@ const time = document.getElementById('timer');
 const startGame = document.getElementById("start_game");
 const newGame = document.getElementById('new_game');
 
-// Sounds in game
-// const audioLoaderShot = new Audio('sounds/Gun_Shot.mp3');
-// audioLoaderShot.play();
-// const audioLoaderWeesh = new Audio('sounds/apprehensive.mp3');
-// audioLoaderWeesh.play();
+// Audio effects
 const audio = new Audio('sounds/Metal_Gong-Dianakc.mp3');
 const audio1 = new Audio('sounds/Tick-DeepFrozen.mp3');
 const audio2 = new Audio('sounds/culmination.mp3');
@@ -62,13 +58,13 @@ const audio7 = new Audio('sounds/Blop.mp3');
         init = ()=> {
           setTimeout(()=> {            
             setTimeout(()=>{
-              // loaderWrap.style.opacity = 0;
-              // loaderWrap.style.display = 'none';
+              loaderWrap.style.opacity = 0;
+              loaderWrap.style.display = 'none';
             }, 700);
 
             game.style.display = 'block';
             setTimeout(()=> game.style.opacity = 1, 50);
-          }, 9500);
+          }, 9000);
         };
 
         init();
