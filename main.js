@@ -52,6 +52,14 @@ const audio7 = new Audio('sounds/Blop.mp3');
     window.addEventListener('load', ()=> {
         const loaderWrap = document.querySelector('.loader-wrap');
         const game = document.querySelector('#game-page');
+        const gun = document.querySelector('#gun');
+        const appre = document.querySelector('#appre');
+
+
+        setTimeout(()=> {
+          gun.src = 'sounds/Gun_Shot.mp3';
+          appre.src = 'sounds/apprehensive.mp3';
+        }, 1000);
 
         loaderWrap.style.display = 'block';
 

@@ -9,10 +9,10 @@
   <title>MyNumber Game</title>  
 </head>
 <body>
-
+  
   <!-- Audio Loader -->
-  <iframe src="sounds/Gun_Shot.mp3" style="display:none" frameborder="0"></iframe>
-  <iframe src="sounds/apprehensive.mp3" style="display:none" frameborder="0"></iframe>
+  <iframe id="gun" style="display:none" frameborder="0"></iframe>
+  <iframe id="appre" style="display:none" frameborder="0"></iframe>
 
   <!-- Loader Page -->
   <div class="loader-wrap">
@@ -66,14 +66,15 @@
       <div id="value">???</div>
   
       <div id="calculator">
-        
+        <div class="calc-shine"></div>
         <!-- Display -->
         <div id="calc-display">
           <div id="calc-display-val"></div>
+          <!-- Backspace Button -->
+        <div class="calc-backspace-btn used" id="calc-backspace">x</div>
         </div>
         
-        <!-- Backspace Button -->
-        <div class="calc-backspace-btn used" id="calc-backspace">x</div>
+        
   
         <!-- Button Numbers -->
         <div id="keyboard">
@@ -112,7 +113,6 @@
       </div> 
     </div>    
   </div>
-  
 
   <script src="main.js"></script>
 </body>

@@ -22,7 +22,7 @@
   background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7) ), url(img/1.jpg) no-repeat;
   background-size: cover;
   animation: shake .3s;
-  animation-delay: .6s;
+  animation-delay: 1.6s;
 }
 
 @keyframes shake {
@@ -55,7 +55,7 @@
   z-index: 1;
   transition: all 2s;
   animation: zoomBox .5s linear forwards;
-  animation-delay: .3s;
+  animation-delay: 1.3s;
   overflow: hidden;
 }
 
@@ -155,7 +155,7 @@
   transition: all .3s;
   transform: skewX(-45deg);
   animation: shine .5s linear forwards;
-  animation-delay: 1.5s;
+  animation-delay: 2.5s;
 }
 
 .box-loader::after {
@@ -169,7 +169,7 @@
   transition: all .3s;
   transform: skewX(-45deg);
   animation: shine .3s linear forwards;
-  animation-delay: 4s;
+  animation-delay: 5s;
 }
 
 @keyframes shine {
@@ -197,7 +197,7 @@
   display: block;
   visibility: hidden;
   animation: head 2s ease forwards;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes head {
@@ -228,8 +228,7 @@
   transform: translate(-50%, -50%);
   display: block;
   animation: brain 1.5s ease forwards;
-  animation-delay: 1s;
-
+  animation-delay: 2s;
 }
 
 @keyframes brain {
@@ -240,7 +239,8 @@
 }
 
 .wrap-anima1 {
-  animation: head 3s forwards;
+  animation: head 4s forwards;
+  animation-delay: 1s;
 }
 
 @keyframes head {
@@ -262,7 +262,7 @@
   margin: 0 auto;
   z-index: 10000;
   top: calc(55% + 22px);
-  left: calc(55% - 13px);
+  left: calc(55% - 12px);
   transform: translate(-50%, -50%);
   display: block;
 }
@@ -271,7 +271,9 @@
   width: 300px;
   height: 200px;
   margin: 0 auto;
-  animation: head-open 6s ease;
+  visibility: hidden;
+  animation: head-open 6s ease forwards;
+  animation-delay: 1s;
 }
 
 @keyframes head-open {
@@ -293,7 +295,7 @@
   top: 0;
   left: +5%;
   animation: num 7s;
-  animation-delay: 3s;
+  animation-delay: 4s;
   visibility: hidden;
 }
 
@@ -330,110 +332,110 @@
 
 .numbers img:nth-child(1) {
   left: calc(50% + 20px);
-  animation: anima-num 7s linear infinite;
+  animation: anima-num 7s linear forwards;
   animation-delay: 3.7s;
 }
 .numbers img:nth-child(2) {
   left: calc(50% - 20px);
-  animation: anima-num 8s linear infinite;
+  animation: anima-num 8s linear forwards;
   animation-delay: 4s;
 }
 .numbers img:nth-child(3) {
   left: calc(50% + 25px);
-  animation: anima-num 9s linear infinite;
+  animation: anima-num 9s linear forwards;
   animation-delay: 5s;
 }
 .numbers img:nth-child(4) {
   left: calc(50% + 0px);
-  animation: anima-num 10s linear infinite;
-  animation-delay: 12s;
+  animation: anima-num 6s linear forwards;
+  animation-delay: 8s;
 }
 .numbers img:nth-child(5) {
   left: calc(50% - 50px);
-  animation: anima-num 11s linear infinite;
-  animation-delay: 17s;
+  animation: anima-num 11s linear forwards;
+  animation-delay: 6s;
 }
 .numbers img:nth-child(6) {
   left: calc(50% + 23px);
-  animation: anima-num 12s linear infinite;
-  animation-delay: 15s;
+  animation: anima-num 12s linear forwards;
+  animation-delay: 4s;
 }
 .numbers img:nth-child(7) {
   left: calc(50% - 25px);
-  animation: anima-num 13s linear infinite;
+  animation: anima-num 13s linear forwards;
   animation-delay: 5s;
 }
 .numbers img:nth-child(8) {
   left: calc(50% + 20px);
-  animation: anima-num 15s linear infinite;
+  animation: anima-num 15s linear forwards;
   animation-delay: 4s;
 }
 .numbers img:nth-child(9) {
   left: calc(50% - 30px);
-  animation: anima-num 7s linear infinite;
-  animation-delay: 17s;
+  animation: anima-num 7s linear forwards;
+  animation-delay: 7s;
 
 }
 .numbers img:nth-child(10) {
   left: calc(50% - 45px);
-  animation: anima-num 8s linear infinite;
-  animation-delay: 13s;
+  animation: anima-num 8s linear forwards;
+  animation-delay: 3s;
 
 }
 .numbers img:nth-child(11) {
   left: calc(50% + 5px);
-  animation: anima-num 9s linear infinite;
+  animation: anima-num 9s linear forwards;
   animation-delay: 7s;
 
 }
 .numbers img:nth-child(12) {
   left: calc(50% - 75px);
-  animation: anima-num 10s linear infinite;
+  animation: anima-num 10s linear forwards;
   animation-delay: 5s;
 }
 .numbers img:nth-child(13) {
   left: calc(50% - 65px);
-  animation: anima-num 11s linear infinite;
+  animation: anima-num 11s linear forwards;
   animation-delay: 4s;
 }
 .numbers img:nth-child(14) {
   left: calc(50% - 35px);
-  animation: anima-num 12s linear infinite;
+  animation: anima-num 12s linear forwards;
   animation-delay: 4.7s;
 }
 .numbers img:nth-child(15) {
   left: calc(50% + 20px);
-  animation: anima-num 18.2s linear infinite;
+  animation: anima-num 18.2s linear forwards;
   animation-delay: 3.7s;
 }
 .numbers img:nth-child(16) {
   left: calc(50% - 20px);
-  animation: anima-num 18.5s linear infinite;
+  animation: anima-num 18.5s linear forwards;
   animation-delay: 4s;
 }
 .numbers img:nth-child(17) {
   left: calc(50% + 25px);
-  animation: anima-num 32s linear infinite;
+  animation: anima-num 32s linear forwards;
   animation-delay: 5s;
 }
 .numbers img:nth-child(18) {
   left: calc(50% + 0px);
-  animation: anima-num 25s linear infinite;
-  animation-delay: 12s;
+  animation: anima-num 25s linear forwards;
+  animation-delay: 8s;
 }
 .numbers img:nth-child(19) {
   left: calc(50% - 50px);
-  animation: anima-num 20s linear infinite;
-  animation-delay: 17s;
+  animation: anima-num 20s linear forwards;
+  animation-delay: 7s;
 }
 .numbers img:nth-child(20) {
   left: calc(50% + 23px);
-  animation: anima-num 22s linear infinite;
-  animation-delay: 15s;
+  animation: anima-num 22s linear forwards;
+  animation-delay: 5s;
 }
 .numbers img:nth-child(21) {
   left: calc(50% - 25px);
-  animation: anima-num 23.5s linear infinite;
+  animation: anima-num 23.5s linear forwards;
   animation-delay: 5s;
 }
 
