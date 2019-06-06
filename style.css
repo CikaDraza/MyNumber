@@ -440,7 +440,7 @@ body {
 }
 
 /* Response for mobile" #################################################################################################################################### */
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 575px) {
 
   .frame {
     position: relative;
@@ -457,7 +457,7 @@ body {
   #calculator {
     position: relative;
     width: 98%;
-    height: 390px;
+    height: 65%;
     top: calc(30% + 20px);
     margin: auto;
   }
@@ -469,45 +469,48 @@ body {
     left: 11%;  
     margin: 0;
     line-height: 2.7;
+    zoom: .8;
   }
   
   #target {
     position: absolute;
     top: 11%;
-    left: calc(50% + 85px);
+    left: calc(50% + 75px);
     line-height: 1;
     padding: 5px;
-    zoom: .85;
+    zoom: .8;
+    margin: 0;
   }
   
   .text-target {
     position: absolute;
-    top: 0%;
+    top: 4%;
     left: 70%;
-    zoom: .8;
+    zoom: .7;
     padding: 0;
+    margin: 0;
   }
 
   .text-value {
     position: absolute;
     top: 15%;
     left: 70%;
-    zoom: .8;
+    zoom: .7;
     padding: 0;
   }
   
   #value {
     position: absolute;
-    top: calc(20% + 35px);
-    left: calc(50% + 85px);
+    top: calc(22% + 25px);
+    left: calc(50% + 75px);
     line-height: 1;
     padding: 5px;
-    zoom: .85;
+    zoom: .8;
   }
 
   #calc-display {
     position: relative;
-    width: 275px;
+    width: 80%;
     height: 40px;
     margin: auto;
     border-radius: 15px;
@@ -515,23 +518,23 @@ body {
 
   #calc-display-val {
     position: absolute;
-    width: 310px;
+    width: 95%;
     height: 40px;
     margin: auto -15px;
     padding: 0;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: bold;
     word-wrap: break-word;
     overflow: hidden;
-    line-height: 2;
+    line-height: 2.3;
   }
 
   #keyboard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
-    width: 235px;
-    justify-items: end;
+    width: 70%;
+    justify-items: start;
     position: absolute;
     left: 4%;
     top: calc(20% + 15px);
@@ -539,16 +542,16 @@ body {
 
   .column {
     text-align: center;
-    font-size: 26px;
+    font-size: 24px;
     padding: 0;
-    height: 40px;
+    height: 37px;
   }
 
   .number-row {
     display: grid;
-    width: 100px;
+    width: 95px;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
+    grid-gap: 10px;
     margin: 0;
     padding: 0;
     top: 0;
@@ -558,9 +561,9 @@ body {
 
   .calc-row {
     display: grid;
-    width: 100px;
+    width: 95px;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
+    grid-gap: 10px;
     margin: 0;
     padding: 0;
     top: 0;
@@ -618,8 +621,9 @@ body {
     display: block;
     padding: 5px 0;
     transform: translate(-50%, 100%);
-    left: 62%;
-    top: 416%;
+    left: 60%;
+    top: 358%;
+    zoom: 1;
     line-height: .7;
     text-shadow: 3px 2px 0px #aea5a5, 3px 2px 0px #aea5a5;
   }
@@ -669,16 +673,16 @@ body {
     display: none;
     background: rgb(196, 0, 0);
     color: #f4f4f4;
-    height: 167px;
-    width: 60px;
+    height: 140px;
+    width: 55px;
     position: absolute;
-    top: 45%;
+    top: calc(45% + 6px);
     left: 86%;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    line-height: 2.4;
+    line-height: 2.9;
     letter-spacing: 3px;
-    font-size: 26px;
+    font-size: 20px;
   } 
   
   #calc-confirm {
@@ -689,11 +693,11 @@ body {
     background-color: rgb(12, 153, 7);
     color: transparent;
     text-align: center;
-    line-height: 1.4;
-    height: 167px;
-    width: 60px;
+    line-height: 1.1;
+    height: 140px;
+    width: 55px;
     position: absolute;
-    top: 45%;
+    top: calc(45% + 6px);
     left: 86%;
   }
 
@@ -708,29 +712,29 @@ body {
 
   #start_game {
     position: absolute;
-    top: 45%;
+    top: calc(45% + 6px);
     left: 86%;
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
-    width: 60px;
-    height: 167px;
+    width: 55px;
+    height: 140px;
     writing-mode: vertical-lr;
     text-orientation: upright;
-    line-height: 2.5;
+    line-height: 2.7;
     letter-spacing: 0;
   } 
 
   #new_game {
     position: absolute;
     display: none;
-    top: 45%;
+    top: calc(45% + 6px);
     left: 86%;
     background-position: 50% 50%;
     background-size: 60%;
     margin: 0;
-    width: 60px;
-    height: 167px;
+    width: 55px;
+    height: 140px;
     background-color: #a30072;
   }
   .footer {

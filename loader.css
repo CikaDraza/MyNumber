@@ -48,7 +48,7 @@
   height: 70%;
   padding: 10px;
   display: inline-block;
-  background: url(img/box-loader.png);
+  background: url(img/box-loader.png) no-repeat;
   background-size: cover;
   background-position-x: center;
   visibility: hidden;
@@ -471,7 +471,7 @@
 @media only screen and (max-width: 1440px) {
 
   .box-loader {
-    background-size: 880px 600px;
+    background-size: 100% 100%;
     padding: 0;
     margin: 0;
   }
@@ -493,10 +493,10 @@
 }
 
 /* Response for tablet #################################################################################################################################### */
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 767px) {
 
   .box-loader {
-    background-size: 405px 590px;
+    background-size: 100% 100%;
     padding: 0;
     margin: 0;
   }
@@ -611,17 +611,17 @@
 }
 
 /* Response for mobile device 4" #################################################################################################################################### */
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 575px) {
 
   .box-loader {
     background-repeat: no-repeat;
-    background-size: 405px 590px;
+    background-size: 100% 100%;
     padding: 0;
     margin: 0;
   }
 
   .anima1 {
-    zoom: 1;
+    zoom: .8;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -631,20 +631,21 @@
 
   .anima1-bg {    
     top: calc(60% - 5px);
-    zoom: 1;   
+    left: 50%;
+    zoom: .8;   
   }
 
   .anima2 {
-    zoom: 1;
+    zoom: .8;
     top: calc(55% + 2px);
-    left: calc(60% + 13px);
+    left: calc(60% + 8px);
   }
 
   .numbers {
     width: 80%;
     top: 0%;
     left: 10%;
-    zoom: 1;
+    zoom: .8;
   }
 }
 
