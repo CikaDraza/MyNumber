@@ -468,7 +468,7 @@ body {
     top: 8%;
     left: 11%;  
     margin: 0;
-    line-height: 2.7;
+    line-height: 2.5;
     zoom: .8;
   }
   
@@ -476,7 +476,7 @@ body {
     position: absolute;
     top: 11%;
     left: calc(50% + 75px);
-    line-height: 1;
+    line-height: 1.1;
     padding: 5px;
     zoom: .8;
     margin: 0;
@@ -503,7 +503,7 @@ body {
     position: absolute;
     top: calc(22% + 25px);
     left: calc(50% + 75px);
-    line-height: 1;
+    line-height: 1.1;
     padding: 5px;
     zoom: .8;
   }
@@ -545,6 +545,7 @@ body {
     font-size: 24px;
     padding: 0;
     height: 37px;
+    line-height: 1.7
   }
 
   .number-row {
@@ -624,7 +625,7 @@ body {
     left: 60%;
     top: 358%;
     zoom: 1;
-    line-height: .7;
+    line-height: .9;
     text-shadow: 3px 2px 0px #aea5a5, 3px 2px 0px #aea5a5;
   }
 
@@ -680,7 +681,7 @@ body {
     left: 86%;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    line-height: 2.9;
+    line-height: 2.8;
     letter-spacing: 3px;
     font-size: 20px;
   } 
