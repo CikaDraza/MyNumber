@@ -468,7 +468,7 @@ body {
     top: 8%;
     left: 11%;  
     margin: 0;
-    line-height: 2.5;
+    line-height: 2.6;
     zoom: .8;
   }
   
@@ -477,7 +477,7 @@ body {
     top: 11%;
     left: calc(50% + 75px);
     line-height: 1;
-    padding: 5px 0 0;
+    padding: 6px 0 0;
     zoom: .8;
     margin: 0;
   }
@@ -504,7 +504,7 @@ body {
     top: calc(22% + 25px);
     left: calc(50% + 75px);
     line-height: 1;
-    padding: 5px 0 0;
+    padding: 6px 0 0;
     zoom: .8;
   }
 
@@ -526,7 +526,7 @@ body {
     font-weight: bold;
     word-wrap: break-word;
     overflow: hidden;
-    line-height: 2.4;
+    line-height: 2.5;
   }
 
   #keyboard {
@@ -545,7 +545,7 @@ body {
     font-size: 24px;
     padding: 0;
     height: 37px;
-    line-height: 1.8;
+    line-height: 1.7;
   }
 
   .number-row {
@@ -621,9 +621,9 @@ body {
     padding: 5px 0;
     transform: translate(-50%, 100%);
     left: 60%;
-    top: 358%;
+    top: 359%;
     zoom: 1;
-    line-height: 1;
+    line-height: .9;
     text-shadow: 3px 2px 0px #aea5a5, 3px 2px 0px #aea5a5;
   }
 
@@ -738,7 +738,7 @@ body {
   }
   .footer {
     position: absolute;
-    left: calc(50% + 20px);
+    left: calc(50% + 10px);
     top: 95%;
     transform: translate(-50%, -50%);
   }
