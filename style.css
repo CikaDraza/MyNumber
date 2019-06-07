@@ -462,6 +462,10 @@ body {
     margin: auto;
   }
 
+  .calc-shine {
+    left: 16%;
+}
+
   #timer {
     position: absolute;
     display: block;
