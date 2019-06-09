@@ -439,6 +439,103 @@ body {
   }
 }
 
+/* Response for 17" #################################################################################################################################### */
+@media only screen and (max-width: 1366px) {
+
+  .frame {
+    margin: 50px auto;
+    height: 80%;
+  }
+
+  #calculator {
+    position: relative;
+    width: 85%;
+    height: 50%;
+    top: calc(50% - 20px);
+  }
+
+  .calc-shine {
+    left: 7%;
+    top: -111%;
+  }
+
+  .text-target {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .text-value {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    padding: 0;
+  }
+
+  #calc-display {
+    position: relative;
+    width: 85%;
+    height: 50px;
+    margin: auto;
+  }
+
+  #keyboard {
+    grid-gap: 20px;
+  }
+
+  .number-row {
+    grid-gap: 17px;
+  }
+
+  #calc-backspace {
+    left: 88%;
+  }
+
+  #calc-stop {
+    height: 50px;
+    width: 130px;
+    top: calc(50% + 10px);
+    left: calc(85% + 15px);
+    line-height: 1.9;
+    letter-spacing: 3px;
+  } 
+  
+  #calc-confirm {
+    line-height: 1.9;
+    height: 50px;
+    width: 130px;
+    top: calc(70% + 20px);
+    left: calc(85% + 15px);
+  }
+
+  #start_game {
+    top: calc(70% + 20px);
+    left: calc(85% + 15px);
+    width: 130px;
+    height: 50px;
+    line-height: 1.9;
+    letter-spacing: 0;
+  } 
+
+  #new_game {
+    top: calc(50% + 10px);
+    left: calc(85% + 15px);
+    width: 130px;
+    height: 50px;
+    line-height: 1.9;
+    letter-spacing: 0;
+  }
+
+  .footer {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 110%;
+    left: 80%;
+  }
+}
+
 /* Response for mobile" #################################################################################################################################### */
 @media only screen and (max-width: 575px) {
 
@@ -464,7 +561,7 @@ body {
 
   .calc-shine {
     left: 16%;
-}
+  }
 
   #timer {
     position: absolute;
@@ -517,7 +614,7 @@ body {
     width: 80%;
     height: 40px;
     margin: auto;
-    border-radius: 15px;
+    border-radius: 25px;
   }
 
   #calc-display-val {
@@ -740,6 +837,7 @@ body {
     height: 140px;
     background-color: #a30072;
   }
+
   .footer {
     position: absolute;
     left: calc(50% + 10px);

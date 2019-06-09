@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   display: none;
-  transition: opacity 3s ease-out;
+  transition: all .5s ease;
   opacity: 1;
 }
 
@@ -22,7 +22,7 @@
   background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7) ), url(img/1.jpg) no-repeat;
   background-size: cover;
   animation: shake .3s;
-  animation-delay: 1.6s;
+  animation-delay: 2.6s;
 }
 
 @keyframes shake {
@@ -54,8 +54,8 @@
   visibility: hidden;
   z-index: 1;
   transition: all 2s;
-  animation: zoomBox .5s linear forwards;
-  animation-delay: 1.3s;
+  animation: zoomBox .8s linear forwards;
+  animation-delay: 2.3s;
   overflow: hidden;
 }
 
@@ -69,35 +69,77 @@
     visibility: visible;
 
   }
-  10% {
+  5% {
     transform: scale3d(7, 7, 7);
     width: 20%;
     height: 7.5%;
     left: 40%;
     top: 50%;
   }
-  20% {
+  10% {
     transform: scale3d(5, 5, 5);
     width: 20%;
     height: 7.5%;
     left: 40%;
     top: 50%;
   }
-  30% {
+  15% {
     transform: scale3d(3, 3, 3);
     width: 20%;
     height: 7.5%;
     left: 40%;
     top: 50%;
   }
-  40% {
+  20% {
     transform: scale3d(2, 2, 2);
     width: 60%;
     height: 26%;
     left: 20%;
     top: 40%;
   }
+  25% {
+    transform: scale3d(1, 1, 1);
+    width: 50%;
+    height: 22%;
+    left: 25%;
+    top: 40%;
+  }
+  30% {
+    transform: scale3d(1, 1, 1);
+    width: 50%;
+    height: 22%;
+    left: 25%;
+    top: 40%;
+  }
+  35% {
+    transform: scale3d(1, 1, 1);
+    width: 50%;
+    height: 22%;
+    left: 25%;
+    top: 40%;
+  }
+  40% {
+    transform: scale3d(1, 1, 1);
+    width: 50%;
+    height: 22%;
+    left: 25%;
+    top: 40%;
+  }
+  45% {
+    transform: scale3d(1, 1, 1);
+    width: 50%;
+    height: 22%;
+    left: 25%;
+    top: 40%;
+  }
   50% {
+    transform: scale3d(1, 1, 1);
+    width: 50%;
+    height: 22%;
+    left: 25%;
+    top: 40%;
+  }
+  55% {
     transform: scale3d(1, 1, 1);
     width: 50%;
     height: 22%;
@@ -111,26 +153,36 @@
     left: 25%;
     top: 40%;
   }
+  65% {
+    transform: scale3d(1, 1, 1);
+    width: 50%;
+    height: 22%;
+    left: 25%;
+    top: 40%;
+  }
   70% {
     transform: scale3d(1, 1, 1);
     width: 60%;
-    height: 26%;
-    left: 20%;
-    top: 40%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
   }
   80% {
     transform: scale3d(1, 1, 1);
     width: 60%;
-    height: 26%;
-    left: 20%;
-    top: 40%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
   }
   90% {
     transform: scale3d(1, 1, 1);
     width: 60%;
-    height: 26%;
-    left: 20%;
-    top: 40%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
   }
   100% {
     width: 61%;
@@ -155,7 +207,7 @@
   transition: all .3s;
   transform: skewX(-45deg);
   animation: shine .5s linear forwards;
-  animation-delay: 2.5s;
+  animation-delay: 3.5s;
 }
 
 .box-loader::after {
@@ -197,7 +249,7 @@
   display: block;
   visibility: hidden;
   animation: head 2s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 
 @keyframes head {
@@ -228,7 +280,7 @@
   transform: translate(-50%, -50%);
   display: block;
   animation: brain 1.5s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 
 @keyframes brain {
@@ -240,7 +292,7 @@
 
 .wrap-anima1 {
   animation: head 4s forwards;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes head {
@@ -272,8 +324,9 @@
   height: 200px;
   margin: 0 auto;
   visibility: hidden;
+  transition: visibility 1s ease;
   animation: head-open 6s ease forwards;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes head-open {
@@ -295,8 +348,9 @@
   top: 0;
   left: +5%;
   animation: num 7s;
-  animation-delay: 4s;
+  animation-delay: 5s;
   visibility: hidden;
+  z-index: -1;
 }
 
 @keyframes num {
@@ -490,6 +544,30 @@
     top: -5%;
     left: +6%;
   }
+}
+
+/* Response for 17" #################################################################################################################################### */
+@media only screen and (max-width: 1366px) {
+
+  .anima1 {
+    zoom: 1;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    visibility: hidden;
+  }
+
+  .anima1-bg {    
+    top: calc(60% - 5px);    
+  }
+
+  .anima2 {
+    zoom: 1;
+    top: calc(55% - 4px);
+    left: calc(55% + 6px);
+  }
+
 }
 
 /* Response for tablet #################################################################################################################################### */

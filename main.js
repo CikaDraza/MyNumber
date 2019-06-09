@@ -59,7 +59,7 @@ const audio7 = new Audio('sounds/Blop.mp3');
         setTimeout(()=> {
           gun.src = 'sounds/Gun_Shot.mp3';
           appre.src = 'sounds/apprehensive.mp3';
-        }, 1000);
+        }, 2000);
 
         loaderWrap.style.display = 'block';
 
