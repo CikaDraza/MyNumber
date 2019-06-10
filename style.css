@@ -541,7 +541,7 @@ body {
 
   .frame {
     position: relative;
-    width: calc(98% - 10px);
+    width: calc(100% - 7px);
     height: 95%;
     margin: 10px auto;
     padding: 0;
@@ -553,7 +553,7 @@ body {
   
   #calculator {
     position: relative;
-    width: 98%;
+    width: 99%;
     height: 65%;
     top: calc(30% + 20px);
     margin: auto;
