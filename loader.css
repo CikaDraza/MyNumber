@@ -54,7 +54,7 @@
   visibility: hidden;
   z-index: 1;
   transition: all 2s;
-  animation: zoomBox 5.8s linear forwards;
+  animation: zoomBox .8s linear forwards;
   animation-delay: 2.3s;
   overflow: hidden;
 }
@@ -704,7 +704,7 @@
       visibility: visible;
     }
   }
-  
+
   .anima1 {
     zoom: 1;
     top: 65%;
