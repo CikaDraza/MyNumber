@@ -54,7 +54,7 @@
   visibility: hidden;
   z-index: 1;
   transition: all 2s;
-  animation: zoomBox .8s linear forwards;
+  animation: zoomBox 5.8s linear forwards;
   animation-delay: 2.3s;
   overflow: hidden;
 }
@@ -549,6 +549,162 @@
 /* Response for 17" #################################################################################################################################### */
 @media only screen and (max-width: 1366px) {
 
+  .box-loader {
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+    width: 100%;
+    height: 70%;
+    padding: 10px;
+    display: inline-block;
+    background: url(img/box-loader.png) no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    visibility: hidden;
+    z-index: 1;
+    transition: all 2s;
+    animation: zoomBox .8s linear forwards;
+    animation-delay: 2.3s;
+    overflow: hidden;
+  }
+
+  @keyframes zoomBox {
+    0% {
+      transform: scale3d(9, 9, 9);
+      width: 20%;
+      height: 7%;
+      left: 40%;
+      top: 50%;
+      visibility: visible;
+  
+    }
+    5% {
+      transform: scale3d(7, 7, 7);
+      width: 20%;
+      height: 7%;
+      left: 40%;
+      top: 50%;
+    }
+    10% {
+      transform: scale3d(5, 5, 5);
+      width: 20%;
+      height: 7%;
+      left: 40%;
+      top: 50%;
+    }
+    15% {
+      transform: scale3d(3, 3, 3);
+      width: 20%;
+      height: 7%;
+      left: 40%;
+      top: 50%;
+    }
+    20% {
+      transform: scale3d(2, 2, 2);
+      width: 60%;
+      height: 22%;
+      left: 20%;
+      top: 40%;
+    }
+    25% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 22%;
+      left: 25%;
+      top: 40%;
+    }
+    30% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 22%;
+      left: 25%;
+      top: 40%;
+    }
+    35% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 22%;
+      left: 25%;
+      top: 40%;
+    }
+    40% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 22%;
+      left: 25%;
+      top: 40%;
+    }
+    45% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 22%;
+      left: 25%;
+      top: 40%;
+    }
+    50% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 22%;
+      left: 25%;
+      top: 40%;
+    }
+    55% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 22%;
+      left: 25%;
+      top: 40%;
+    }
+    60% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 22%;
+      left: 25%;
+      top: 40%;
+    }
+    65% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 22%;
+      left: 25%;
+      top: 40%;
+    }
+    70% {
+      transform: scale3d(1, 1, 1);
+      width: 60%;
+      height: 80%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+    80% {
+      transform: scale3d(1, 1, 1);
+      width: 60%;
+      height: 80%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+    90% {
+      transform: scale3d(1, 1, 1);
+      width: 60%;
+      height: 80%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+    100% {
+      width: 61%;
+      height: 80%;
+      background-repeat: no-repeat;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      visibility: visible;
+    }
+  }
+  
   .anima1 {
     zoom: 1;
     top: 65%;
