@@ -706,6 +706,11 @@ body {
     opacity: 0.2;
   }
 
+  .run_num {
+    pointer-events: none;
+    opacity: 1;
+  }
+
   #calc-backspace {
     text-align: center;
     border-radius: 3px;
