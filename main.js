@@ -76,7 +76,9 @@ const audio7 = new Audio('sounds/Blop.mp3');
         };
 
         init();
-
+    }, false);
+  });
+    
       // Arrays
       let displayVal = [];
       let clearStrArray = [];
@@ -386,6 +388,4 @@ const audio7 = new Audio('sounds/Blop.mp3');
             [j].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
           }
       });
-    }, false);
-  });
-  
+   
