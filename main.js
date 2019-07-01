@@ -15,6 +15,7 @@ const numDivide = document.getElementById('calc-divide');
 const numLB = document.getElementById('calc-left-bracket');
 const numRB = document.getElementById('calc-right-bracket');
 const numClear = document.getElementById('calc-backspace');
+const clear = document.getElementById('backspace');
 
 // Confirm and Stop buttons
 const confirm = document.getElementById('calc-confirm');
@@ -191,6 +192,36 @@ const audio7 = new Audio('sounds/Blop.mp3');
           // update display whit correct sign
         displayValElement.innerText = displayVal.join('');
           
+      };
+
+      clear.onclick = ()=> {
+        audio7.play();
+        let lengthOfDisplayVal = displayVal.length;
+        let elem = clearStrArray[displayVal.length - 1];
+        if(elem){
+          elem.classList.remove('used');
+        }
+        
+        // Backspace elements on display
+        displayVal = displayVal.slice(0, lengthOfDisplayVal - 1);  
+        displayValElement.innerText = displayVal.join('');
+      
+        if(displayResult.innerText == ''){
+          displayResult.innerText = '???';
+        }else if(displayVal == ''){
+          displayResult.innerText = '???';
+        }
+        // Replace sign * whit sign x
+        for(let i = 0; i < displayVal.length; i++)
+        if(displayVal[i] == '*')
+            displayVal[i] = 'x ';
+        // Replace sign / whit sign ÷
+        for(let e = 0; e < displayVal.length; e++)
+          if(displayVal[e] == '/')
+              displayVal[e] = '÷ ';
+      
+          // update display whit correct sign
+        displayValElement.innerText = displayVal.join('');
       };
       
       // Start Game And Start Rundom Numbers Countdowon #################################################################
