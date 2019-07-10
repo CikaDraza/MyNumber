@@ -146,6 +146,7 @@ const audio7 = new Audio('sounds/Blop.mp3');
           newGame.style.display = 'block';
           stop.style.display = 'none';
           numClear.classList.add('used');
+          clear.classList.add('used');
           confirm.style.display = 'none';
           window.clearInterval(timer);
           time.style.color = 'red';

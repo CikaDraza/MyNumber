@@ -44,8 +44,7 @@
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-  width: 60%;
-  height: 70%;
+  background-size: 100% 100%;
   padding: 10px;
   display: inline-block;
   background: url(img/box-loader.png) no-repeat;
@@ -522,186 +521,307 @@
 }
 
 /* Response for 19" #################################################################################################################################### */
-@media only screen and (max-width: 1440px) and (min-width: 1366px) {
-
-  .box-loader {
-    background-size: 100% 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .anima1-bg {    
-    top: calc(60% - 5px);    
- }
-
-  .anima2 {
-    top: calc(55% + 7px);
-    left: calc(55% + 2px);
-  }
-
-  .numbers {
-    width: 85%;
-    top: -5%;
-    left: +6%;
-  }
-}
-
-/* Response for 17" #################################################################################################################################### */
-@media only screen and (max-width: 1366px) {
-
-  .box-loader {
-    position: relative;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 100%;
-    width: 100%;
-    height: 70%;
-    padding: 10px;
-    display: inline-block;
-    background: url(img/box-loader.png) no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    visibility: hidden;
-    z-index: 1;
-    transition: all 2s;
-    animation: zoomBox .8s linear forwards;
-    animation-delay: 2.3s;
-    overflow: hidden;
-  }
+@media only screen and (max-width: 1500px) {
 
   @keyframes zoomBox {
     0% {
       transform: scale3d(9, 9, 9);
-      width: 20%;
-      height: 7%;
+      width: 40%;
+      height: 15%;
       left: 40%;
       top: 50%;
-      visibility: visible;
-  
+      visibility: visible;  
     }
     5% {
       transform: scale3d(7, 7, 7);
-      width: 20%;
-      height: 7%;
+      width: 40%;
+      height: 15%;
       left: 40%;
       top: 50%;
     }
     10% {
       transform: scale3d(5, 5, 5);
-      width: 20%;
-      height: 7%;
-      left: 40%;
+      width: 40%;
+      height: 20%;
+      left: 30%;
       top: 50%;
     }
     15% {
       transform: scale3d(3, 3, 3);
-      width: 20%;
-      height: 7%;
-      left: 40%;
-      top: 50%;
+      width: 50%;
+      height: 20%;
+      left: 30%;
+      top: 45%;
     }
     20% {
       transform: scale3d(2, 2, 2);
-      width: 60%;
-      height: 22%;
-      left: 20%;
+      width: 50%;
+      height: 20%;
+      left: 25%;
       top: 40%;
     }
     25% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 22%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     30% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 22%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     35% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 22%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     40% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 22%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     45% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 22%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
-    50% {
+     50% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 22%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
+   
     55% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 22%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     60% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 22%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     65% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 22%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
+     
     70% {
       transform: scale3d(1, 1, 1);
-      width: 60%;
-      height: 80%;
+      width: 40%;
+      height: 17%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
     }
+    75% {
+      transform: scale3d(1, 1, 1);
+      width: 65%;
+      height: 28%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+    
     80% {
       transform: scale3d(1, 1, 1);
-      width: 60%;
-      height: 80%;
+      width: 65%;
+      height: 45%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
     }
+    
     90% {
       transform: scale3d(1, 1, 1);
-      width: 60%;
+      width: 65%;
       height: 80%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
     }
     100% {
-      width: 61%;
+      transform: scale3d(1, 1, 1);
+      width: 65%;
       height: 80%;
-      background-repeat: no-repeat;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
-      visibility: visible;
+    }
+  }
+
+  .anima2 {
+    top: calc(55% + 10px);
+    left: calc(55% - 1px);
+  }
+
+}
+
+/* Response for 17" #################################################################################################################################### */
+@media only screen and (max-width: 1400px) {
+
+  @keyframes zoomBox {
+    0% {
+      transform: scale3d(9, 9, 9);
+      width: 40%;
+      height: 15%;
+      left: 40%;
+      top: 50%;
+      visibility: visible;  
+    }
+    5% {
+      transform: scale3d(7, 7, 7);
+      width: 40%;
+      height: 15%;
+      left: 40%;
+      top: 50%;
+    }
+    10% {
+      transform: scale3d(5, 5, 5);
+      width: 40%;
+      height: 20%;
+      left: 30%;
+      top: 50%;
+    }
+    15% {
+      transform: scale3d(3, 3, 3);
+      width: 50%;
+      height: 20%;
+      left: 30%;
+      top: 45%;
+    }
+    20% {
+      transform: scale3d(2, 2, 2);
+      width: 50%;
+      height: 20%;
+      left: 25%;
+      top: 40%;
+    }
+    25% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 20%;
+      left: 25%;
+      top: 40%;
+    }
+    30% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 20%;
+      left: 25%;
+      top: 40%;
+    }
+    35% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 20%;
+      left: 25%;
+      top: 40%;
+    }
+    40% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 20%;
+      left: 25%;
+      top: 40%;
+    }
+    45% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 20%;
+      left: 25%;
+      top: 40%;
+    }
+     50% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 20%;
+      left: 25%;
+      top: 40%;
+    }
+   
+    55% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 20%;
+      left: 25%;
+      top: 40%;
+    }
+    60% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 20%;
+      left: 25%;
+      top: 40%;
+    }
+    65% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 20%;
+      left: 25%;
+      top: 40%;
+    }
+     
+    70% {
+      transform: scale3d(1, 1, 1);
+      width: 40%;
+      height: 17%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+    75% {
+      transform: scale3d(1, 1, 1);
+      width: 65%;
+      height: 28%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+    
+    80% {
+      transform: scale3d(1, 1, 1);
+      width: 65%;
+      height: 45%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+    
+    90% {
+      transform: scale3d(1, 1, 1);
+      width: 65%;
+      height: 80%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+    100% {
+      width: 75%;
+      height: 85%;
+      transform: scale3d(1, 1, 1);
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
     }
   }
 
@@ -710,8 +830,6 @@
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: block;
-    visibility: hidden;
   }
 
   .anima1-bg {    
@@ -719,27 +837,20 @@
   }
 
   .anima2 {
-    zoom: 1;
-    top: calc(55% - 4px);
-    left: calc(55% + 6px);
+    top: calc(55% + 10px);
+    left: calc(55% - 1px);
   }
 
 }
 
 /* Response for tablet #################################################################################################################################### */
-@media only screen and (max-width: 767px) {
-
-  .box-loader {
-    background-size: 100% 100%;
-    padding: 0;
-    margin: 0;
-  }
+@media only screen and (max-width: 780px) {
 
   @keyframes zoomBox {
     0% {
       transform: scale3d(9, 9, 9);
       width: 20%;
-      height: 7.5%;
+      height: 2.5%;
       left: 40%;
       top: 50%;
       visibility: visible;
@@ -748,69 +859,77 @@
     10% {
       transform: scale3d(7, 7, 7);
       width: 20%;
-      height: 7.5%;
+      height: 2.5%;
       left: 40%;
       top: 50%;
     }
     20% {
       transform: scale3d(5, 5, 5);
       width: 20%;
-      height: 7.5%;
+      height: 2.5%;
       left: 40%;
       top: 50%;
-    }
+    } 
     30% {
       transform: scale3d(3, 3, 3);
       width: 20%;
-      height: 7.5%;
+      height: 2.5%;
       left: 40%;
       top: 50%;
     }
     40% {
       transform: scale3d(2, 2, 2);
-      width: 60%;
-      height: 26%;
-      left: 20%;
-      top: 40%;
+    width: 20%;
+    height: 2.5%;
+    left: 40%;
+    top: 50%;
     }
     50% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 22%;
+      height: 9%;
       left: 25%;
-      top: 40%;
-    }
+      top: 45%;
+    } 
     60% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 22%;
+      height: 9%;
       left: 25%;
-      top: 40%;
+      top: 45%;
     }
     70% {
       transform: scale3d(1, 1, 1);
-      width: 60%;
-      height: 26%;
-      left: 20%;
-      top: 40%;
+      width: 50%;
+      height: 9%;
+      left: 25%;
+      top: 45%;
+    }
+    75% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 9%;
+      left: 25%;
+      top: 45%;
     }
     80% {
       transform: scale3d(1, 1, 1);
-      width: 60%;
-      height: 26%;
-      left: 20%;
-      top: 40%;
+      width: 50%;
+      height: 20%;
+      left: 25%;
+      top: 45%;
     }
     90% {
       transform: scale3d(1, 1, 1);
       width: 60%;
-      height: 26%;
+      height: 40%;
       left: 20%;
-      top: 40%;
+      top: 45%;
     }
     100% {
-      width: 95%;
-      height: 90%;
+      transform: scale3d(1, 1, 1);
+      width: 70%;
+      height: 42%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
@@ -819,67 +938,179 @@
   }
 
   .anima1 {
-    zoom: 1;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: block;
     visibility: hidden;
   }
 
   .anima1-bg {    
-    top: calc(60% - 5px);    
+    top: calc(60% - 15px);
+    left: calc(50% - 3px);
   }
 
   .anima2 {
-    zoom: 1;
-    top: calc(55% + 5px);
-    left: calc(55% + 10px);
+    top: calc(55% + -19px);
+    left: calc(55% + 19px);
   }
 
   .numbers {
     width: 85%;
     top: -5%;
-    left: +6%;
+    left: +7%;
   }
 }
 
 /* Response for mobile device 4" #################################################################################################################################### */
 @media only screen and (max-width: 575px) {
 
-  .box-loader {
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding: 0;
-    margin: 0;
+  @keyframes zoomBox {
+    0% {
+      transform: scale3d(9, 9, 9);
+      width: 50%;
+      height: 2.5%;
+      left: 35%;
+      top: 50%;
+      visibility: visible;
+  
+    }
+   10% {
+      transform: scale3d(7, 7, 7);
+      width: 35%;
+      height: 1.5%;
+      left: 35%;
+      top: 50%;
+    }  
+    20% {
+      transform: scale3d(5, 5, 5);
+      width: 30%;
+      height: 1%;
+      left: 35%;
+      top: 50%;
+    } 
+    30% {
+      transform: scale3d(5, 5, 5);
+      width: 30%;
+      height: 1%;
+      left: 35%;
+      top: 50%;
+    }
+    40% {
+      transform: scale3d(2, 2, 2);
+      width: 40%;
+      height: 1%;
+      left: 27%;
+      top: 50%;
+    }
+    50% {
+      transform: scale3d(2, 2, 2);
+      width: 40%;
+      height: 1%;
+      left: 27%;
+      top: 50%;
+    } 
+    60% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 2%;
+      left: 20%;
+      top: 50%;
+    }
+    70% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 2%;
+      left: 20%;
+      top: 50%;
+    }
+    75% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 2%;
+      left: 20%;
+      top: 50%;
+    }
+    80% {
+      transform: scale3d(1, 1, 1);
+      width: 50%;
+      height: 2%;
+      left: 20%;
+      top: 50%;
+    }
+    90% {
+      transform: scale3d(1, 1, 1);
+      width: 65%;
+      height: 16%;
+      left: 15%;
+      top: 30%;
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+      width: 82%;
+      height: 25%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 45%;
+      visibility: visible;
+    }
   }
 
   .anima1 {
-    zoom: .8;
+    zoom: .4;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: block;
     visibility: hidden;
   }
 
   .anima1-bg {    
-    top: calc(60% - 5px);
+    top: calc(60% - 16px);
     left: 50%;
-    zoom: .8;   
+    zoom: .4;
   }
 
   .anima2 {
-    zoom: .8;
-    top: calc(55% + 2px);
-    left: calc(60% + 8px);
+    top: calc(55% + -18px);
+    left: calc(60% + -25px);
+    zoom: .4;
   }
 
   .numbers {
     width: 80%;
     top: 0%;
     left: 10%;
-    zoom: .8;
+    zoom: .4;
+  }
+}
+
+/* Response for mobile device 4" #################################################################################################################################### */
+@media only screen and (max-width: 575px) {
+
+  .anima1 {
+    zoom: .4;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+  }
+
+  .anima1-bg {    
+    top: calc(60% - 8px);
+    left: 50%;
+    zoom: .4;
+  }
+
+  .anima2 {
+    top: calc(55% + -1px);
+    left: calc(60% + -25px);
+    zoom: .4;
+  }
+
+  .numbers {
+    width: 80%;
+    top: 0%;
+    left: 10%;
+    zoom: .4;
   }
 }
 
