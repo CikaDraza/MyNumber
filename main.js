@@ -76,7 +76,7 @@ const audio7 = new Audio('sounds/Blop.mp3');
           }, 9000);
         };
 
-        init();
+        // init();
     }, false);
   });
     

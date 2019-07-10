@@ -832,13 +832,13 @@
     transform: translate(-50%, -50%);
   }
 
-  .anima1-bg {    
-    top: calc(60% - 5px);    
+  .anima1-bg {
+    top: calc(60% - 0px);
   }
 
   .anima2 {
-    top: calc(55% + 10px);
-    left: calc(55% - 1px);
+    top: calc(55% + 15px);
+    left: calc(55% - 4px);
   }
 
 }
@@ -1084,7 +1084,7 @@
 }
 
 /* Response for mobile device 4" #################################################################################################################################### */
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 350px) {
 
   .anima1 {
     zoom: .4;
