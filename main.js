@@ -458,12 +458,6 @@ const audio7 = new Audio('sounds/Blop.mp3');
         newGame.style.display = 'block';
         confirm.style.display = 'none';
         numClear.classList.add('used');
-
-            sumsOfelements(intStoreNums, targetNum);
-            threeOfElements(intStoreNums, targetNum);
-            twoSum(intStoreNums, targetNum);
-            eachNum(intStoreNums, targetNum);
-            arraySum();
     
         for(let t = 0; t < calcBtnOperators.length; t++) {
           [t].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));

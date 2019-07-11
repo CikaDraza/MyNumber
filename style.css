@@ -726,6 +726,10 @@ body {
     line-height: 2.5;
   }
 
+  .display {
+    width: 70%;
+  }
+
   #keyboard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -734,7 +738,7 @@ body {
     justify-items: start;
     position: absolute;
     left: 4%;
-    top: calc(20% + 15px);
+    top: calc(22% + 15px);
   }
 
   .column {
@@ -984,6 +988,10 @@ body {
   
   #value {
     line-height: 1.2;
+  }
+
+  .display {
+    width: 70%;
   }
 
   .column {
