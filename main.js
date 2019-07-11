@@ -422,8 +422,6 @@ const audio7 = new Audio('sounds/Blop.mp3');
             [j].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
           }
       });
-   
-<<<<<<< HEAD
 
 
 // ###############################################################################################################################
@@ -888,4 +886,4 @@ const audio7 = new Audio('sounds/Blop.mp3');
               return smallStock;
           }
           eachNum(intStoreNums, targetNum);
-    };
+};
