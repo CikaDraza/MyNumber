@@ -676,7 +676,7 @@
     0% {
       transform: scale3d(9, 9, 9);
       width: 20%;
-      height: 3%;
+      height: 6%;
       left: 40%;
       top: 50%;
       visibility: visible;  
@@ -684,121 +684,121 @@
     5% {
       transform: scale3d(7, 7, 7);
       width: 20%;
-      height: 3%;
+      height: 6%;
       left: 40%;
       top: 50%;
     }  
     10% {
       transform: scale3d(5, 5, 5);
       width: 20%;
-      height: 4%;
+      height: 6%;
       left: 40%;
       top: 50%;
     }
     15% {
       transform: scale3d(3, 3, 3);
       width: 20%;
-      height: 4%;
+      height: 6%;
       left: 40%;
       top: 50%;
     }
     20% {
       transform: scale3d(2, 2, 2);
       width: 60%;
-      height: 15%;
+      height: 20%;
       left: 20%;
       top: 40%;
     }
     25% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 12%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     30% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 12%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     35% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 12%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     40% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 12%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     45% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 12%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     50% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 12%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     55% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 12%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     60% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 12%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     65% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 12%;
+      height: 20%;
       left: 25%;
       top: 40%;
     }
     70% {
       transform: scale3d(1, 1, 1);
-      width: 74%;
-      height: 60%;
+      width: 57%;
+      height: 80%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
     }
     80% {
       transform: scale3d(1, 1, 1);
-      width: 74%;
-      height: 60%;
+      width: 57%;
+      height: 80%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
     }
     90% {
       transform: scale3d(1, 1, 1);
-      width: 74%;
-      height: 60%;
+      width: 57%;
+      height: 80%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
     }
     100% {
-      width: 74%;
-      height: 60%;
+      width: 57%;
+      height: 80%;
       background-repeat: no-repeat;
       transform: translate(-50%, -50%);
       left: 50%;
@@ -815,12 +815,12 @@
   }
 
   .anima1-bg {
-    top: calc(60% - 12px);
+    top: calc(60% - 10px);
   }
 
   .anima2 {
-    top: calc(55% + -16px);
-    left: calc(55% - -8px);
+    top: calc(55% + -4px);
+    left: calc(55% - -7px);
   }
 
 }
@@ -1259,7 +1259,7 @@
     70% {
       transform: scale3d(1, 1, 1);
       width: 70%;
-      height: 21%;
+      height: 22%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
@@ -1267,7 +1267,7 @@
     80% {
       transform: scale3d(1, 1, 1);
       width: 70%;
-      height: 21%;
+      height: 22%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
@@ -1275,7 +1275,7 @@
     90% {
       transform: scale3d(1, 1, 1);
       width: 70%;
-      height: 21%;
+      height: 22%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
@@ -1283,7 +1283,7 @@
     100% {
       transform: scale3d(1, 1, 1);
       width: 70%;
-      height: 21%;
+      height: 22%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;

@@ -936,7 +936,7 @@ body {
   .frame {
     position: relative;
     width: 310px;
-    height: 95%;
+    height: 99%;
   }
 
   .calc-shine {
@@ -944,7 +944,7 @@ body {
   }
 
   #timer {
-    line-height: 2.8;
+    line-height: 2.7;
   }
   
   #target {
@@ -952,7 +952,7 @@ body {
   }
 
   .text-value {
-    top: 16%;
+    top: 15%;
   }
   
   #value {
@@ -971,7 +971,7 @@ body {
   .calc-backspace-row {
     top: 3px;
     left: 34px;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   #start_game {
