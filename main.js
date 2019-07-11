@@ -423,6 +423,7 @@ const audio7 = new Audio('sounds/Blop.mp3');
           }
       });
    
+<<<<<<< HEAD
 
 
 // ###############################################################################################################################
@@ -888,5 +889,3 @@ const audio7 = new Audio('sounds/Blop.mp3');
           }
           eachNum(intStoreNums, targetNum);
     };
-    
-    
