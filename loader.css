@@ -1196,94 +1196,94 @@
     25% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 2%;
+      height: 3%;
       left: 20%;
       top: 40%;
     }
     30% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 2%;
+      height: 3%;
       left: 20%;
       top: 40%;
     }
     35% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 2%;
+      height: 3%;
       left: 20%;
       top: 40%;
     }
     40% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 2%;
+      height: 3%;
       left: 20%;
       top: 40%;
     }
     45% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 2%;
+      height: 3%;
       left: 20%;
       top: 40%;
     }
     50% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 2%;
+      height: 3%;
       left: 20%;
       top: 40%;
     }
     55% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 2%;
+      height: 3%;
       left: 20%;
       top: 40%;
     }
     60% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 2%;
+      height: 3%;
       left: 20%;
       top: 40%;
     }
     65% {
       transform: scale3d(1, 1, 1);
       width: 50%;
-      height: 2%;
+      height: 3%;
       left: 20%;
       top: 40%;
     }
     70% {
       transform: scale3d(1, 1, 1);
-      width: 70%;
-      height: 22%;
+      width: 71%;
+      height: 27%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
     }
     80% {
       transform: scale3d(1, 1, 1);
-      width: 70%;
-      height: 22%;
+      width: 71%;
+      height: 27%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
     }
     90% {
       transform: scale3d(1, 1, 1);
-      width: 70%;
-      height: 22%;
+      width: 71%;
+      height: 27%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
     }
     100% {
       transform: scale3d(1, 1, 1);
-      width: 70%;
-      height: 22%;
+      width: 71%;
+      height: 27%;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
@@ -1306,7 +1306,7 @@
   }
 
   .anima2 {
-    top: calc(55% + -16px);
+    top: calc(55% + -15px);
     left: calc(60% + -14px);
     zoom: .4;
   }

@@ -936,7 +936,7 @@ body {
   .frame {
     position: relative;
     width: 310px;
-    height: 99%;
+    height: 97%;
   }
 
   .calc-shine {
@@ -948,7 +948,7 @@ body {
   }
   
   #target {
-    line-height: 1.3;
+    line-height: 1.2;
   }
 
   .text-value {
@@ -956,7 +956,6 @@ body {
   }
   
   #value {
-    /* padding: 3px 0px 5px; */
     line-height: 1.2;
   }
 
@@ -975,18 +974,18 @@ body {
   }
 
   #start_game {
-    top: calc(45% - 5px);
+    top: calc(45% + 5px);
   }
 
   #calc-stop {
-    top: calc(45% - 5px);
+    top: calc(45% + 5px);
   }
 
   #calc-confirm {
-    top: calc(45% - 5px);
+    top: calc(45% + 5px);
   }
 
   #new_game {
-    top: calc(45% - 5px);
+    top: calc(45% + 5px);
   }
 }
