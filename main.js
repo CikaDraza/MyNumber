@@ -25,7 +25,7 @@ const stop = document.getElementById('calc-stop');
 const displayValElement = document.getElementById('calc-display-val');
 const displayResult = document.getElementById('value');
 let targetResult = document.getElementById("target");
-let displayCpu = document.querySelector('.display');
+let displayCpu = document.querySelector('.solution-display');
 
 //  Button operators and numbers ###############################
 const calcNumBtns = document.querySelectorAll('.calc-btn-num');
@@ -268,11 +268,15 @@ const audio7 = new Audio('sounds/Blop.mp3');
           numSix.innerHTML = randomElement(numb);
         }, 50);
       
-        // Remove New Game button ########################################################################
+        // Remove and add style ########################################################################
         startGame.style.display = 'none';
         newGame.style.display = 'none';
         stop.style.display = 'block';
         confirm.style.display = 'none';
+        displayCpu.style.display = 'none';
+        if(screen && screen.width < 480){
+          displayCpu.style.display = 'none';
+        }
         for(let i = 0; i < calcNumBtns.length; i++) {
             [i].forEach.call(calcNumBtns, (e)=> e.classList.add('run_num'));        
         }
@@ -348,6 +352,7 @@ const audio7 = new Audio('sounds/Blop.mp3');
               newGame.style.display = 'block';
               confirm.style.display = 'none';
               numClear.classList.add('used');
+              displayCpu.style.display = 'block';
           
               for(let t = 0; t < calcBtnOperators.length; t++) {
                 [t].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
@@ -393,9 +398,6 @@ const audio7 = new Audio('sounds/Blop.mp3');
           newGame.style.display = 'none';
           startGame.style.display = 'block';
           confirm.style.display = 'none';
-          if(screen && screen.width < 480){
-            displayCpu.style.display = 'none';
-          }
           numClear.classList.add('used');    
           time.innerHTML = 90;    
           time.style.color = 'yellow';

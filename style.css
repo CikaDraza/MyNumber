@@ -242,8 +242,8 @@ body {
   width: 150px;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: calc(60% + 15px);
-  left: calc(88% + 0px);
+  top: 70%;
+  left: 88%;
   line-height: 2.2;
   letter-spacing: 5px;
 }
@@ -262,8 +262,8 @@ body {
   width: 150px;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: calc(80% - 5px);
-  left: calc(90% - 25px);
+  top: 70%;
+  left: 88%;
   line-height: 2.2;
   letter-spacing: 2px;
 }
@@ -291,7 +291,7 @@ body {
   z-index: 100;
 }
 
-.display {
+.solution-display {
   position: relative;
   width: 85%;
   height: 30px;
@@ -307,9 +307,10 @@ body {
   font-size: 24px;
   font-family: 'digital-clock-font';
   overflow: hidden;
+  display: none;
 }
 
-.display span {
+.solution-display span {
   display: inline-block;
   width: 100%;
   animation: marquee 10s linear infinite;
@@ -398,8 +399,8 @@ body {
   position: absolute;
   display: inline-block;
   transform: translate(-50%, -50%);
-  top: calc(80% - 5px);
-  left: calc(90% - 25px);
+  top: 70%;
+  left: 88%;
   width: 150px;
   height: 60px;
   font-size: 26px;
@@ -427,8 +428,8 @@ body {
   width: 150px;
   height: 60px;
   transform: translate(-50%, -50%);
-  top: calc(60% + 15px);
-  left: calc(88% + 0px);
+  top: 70%;
+  left: 88%;
   margin: 0px auto;
   padding: 0px;
   color: #f4f4f4;
@@ -492,8 +493,8 @@ body {
   }
 
   #start_game {
-    top: calc(85% - 5px);
-    left: calc(90% - 30px);
+    top: 70%;
+    left: 87%;
     width: 125px;
     height: 50px; 
     line-height: 2;
@@ -503,8 +504,8 @@ body {
   #calc-stop {
     height: 50px;
     width: 125px;
-    top: calc(55% + 10px);
-    left: calc(85% + 10px);
+    top: 70%;
+    left: 87%;
     width: 125px;
     height: 50px;
     line-height: 1.9;
@@ -514,8 +515,8 @@ body {
   #calc-confirm {    
     height: 50px;
     width: 125px;
-    top: calc(85% - 5px);
-    left: calc(90% - 30px);
+    top: 70%;
+    left: 87%;
     line-height: 1.8;
     letter-spacing: 0px;
   }
@@ -523,8 +524,8 @@ body {
   #new_game {
     width: 125px;
     height: 50px;
-    top: calc(55% + 10px);
-    left: calc(85% + 10px);
+    top: 70%;
+    left: 87%;
     background-color: #a30072;
   }
 
@@ -603,8 +604,8 @@ body {
   #calc-stop {
     height: 40px;
     width: 110px;
-    top: calc(50% + 5px);
-    left: calc(85% + 0px);
+    top: 70%;
+    left: 85%;
     line-height: 1.9;
     letter-spacing: 3px;
     font-size: 22px;
@@ -614,14 +615,14 @@ body {
     line-height: 1.9;
     height: 40px;
     width: 110px;
-    top: calc(70% + 6px);
-    left: calc(85% + 0px);
+    top: 70%;
+    left: 85%;
     font-size: 22px;
   }
 
   #start_game {
-    top: calc(70% + 6px);
-    left: calc(85% + 0px);
+    top: 70%;
+    left: 85%;
     width: 110px;
     height: 40px;
     line-height: 1.9;
@@ -630,8 +631,8 @@ body {
   } 
 
   #new_game {
-    top: calc(50% + 5px);
-    left: calc(85% + 0px);
+    top: 70%;
+    left: 85%;
     width: 110px;
     height: 40px;
     line-height: 1.9;
@@ -645,6 +646,65 @@ body {
     top: 110%;
     left: 80%;
   }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #calc-display {
+      position: relative;
+      width: 85%;
+      height: 45px;
+      margin: auto;
+    }
+
+    .calc-backspace-btn {
+      left: 88%;
+      top: 17%;
+    }
+
+    .number-row {
+      grid-template-columns: repeat(8, 35px);
+    }
+
+    .calc-row {
+      grid-template-columns: repeat(6, 35px);
+    }
+
+    #calc-confirm {
+      line-height: 4.6;
+      height: 85px;
+      width: 85px;
+      left: 88%;
+      font-size: 19px;
+    }
+
+    #calc-stop {
+      height: 85px;
+      width: 85px;
+      top: 70%;
+      left: 88%;
+      line-height: 4.6;
+      letter-spacing: 3px;
+      font-size: 19px;
+    }
+
+    #start_game {
+      top: 70%;
+      left: 88%;
+      width: 85px;
+      height: 85px;
+      line-height: 4.6;
+      letter-spacing: 0;
+      font-size: 19px;
+    }
+
+    #new_game {
+      left: 88%;
+      width: 85px;
+      height: 85px;
+      line-height: 4.6;
+      font-size: 19px;
+    }
 }
 
 /* Response for mobile" #################################################################################################################################### */
