@@ -274,9 +274,7 @@ const audio7 = new Audio('sounds/Blop.mp3');
         stop.style.display = 'block';
         confirm.style.display = 'none';
         displayCpu.style.display = 'none';
-        if(screen && screen.width < 480){
-          displayCpu.style.display = 'none';
-        }
+    
         for(let i = 0; i < calcNumBtns.length; i++) {
             [i].forEach.call(calcNumBtns, (e)=> e.classList.add('run_num'));        
         }
