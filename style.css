@@ -535,7 +535,7 @@ body {
   }
 }
 
-/* Response for 17" #################################################################################################################################### */
+/* Response for 19" #################################################################################################################################### */
 @media only screen and (max-width: 1400px) {
 
   .frame {
@@ -595,6 +595,7 @@ body {
   .calc-row {
     grid-template-columns: repeat(6, 45px);
     height: 45px;
+    top: 0px;
   }
 
   .calc-backspace-btn {
@@ -602,39 +603,39 @@ body {
   }
 
   #calc-stop {
-    height: 40px;
+    height: 50px;
     width: 110px;
-    top: 70%;
+    top: 65%;
     left: 85%;
-    line-height: 1.9;
+    line-height: 2.4;
     letter-spacing: 3px;
     font-size: 22px;
   } 
   
   #calc-confirm {
-    line-height: 1.9;
-    height: 40px;
+    line-height: 2.4;
+    height: 50px;
     width: 110px;
-    top: 70%;
+    top: 65%;
     left: 85%;
     font-size: 22px;
   }
 
   #start_game {
-    top: 70%;
+    top: 65%;
     left: 85%;
     width: 110px;
-    height: 40px;
-    line-height: 1.9;
+    height: 50px;
+    line-height: 2.4;
     letter-spacing: 0;
     font-size: 22px;
   } 
 
   #new_game {
-    top: 70%;
+    top: 65%;
     left: 85%;
     width: 110px;
-    height: 40px;
+    height: 50px;
     line-height: 1.9;
     letter-spacing: 0;
     font-size: 22px;
@@ -648,6 +649,7 @@ body {
   }
 }
 
+/* Response for 17" #################################################################################################################################### */
 @media only screen and (max-width: 1024px) {
 
     #calc-display {
@@ -673,15 +675,16 @@ body {
     #calc-confirm {
       line-height: 4.6;
       height: 85px;
-      width: 85px;
+      width: 95px;
       left: 88%;
+      top: 65%;
       font-size: 19px;
     }
 
     #calc-stop {
       height: 85px;
-      width: 85px;
-      top: 70%;
+      width: 95px;
+      top: 65%;
       left: 88%;
       line-height: 4.6;
       letter-spacing: 3px;
@@ -689,9 +692,9 @@ body {
     }
 
     #start_game {
-      top: 70%;
+      top: 65%;
       left: 88%;
-      width: 85px;
+      width: 95px;
       height: 85px;
       line-height: 4.6;
       letter-spacing: 0;
@@ -700,7 +703,8 @@ body {
 
     #new_game {
       left: 88%;
-      width: 85px;
+      top: 65%;
+      width: 95px;
       height: 85px;
       line-height: 4.6;
       font-size: 19px;
@@ -708,11 +712,11 @@ body {
 }
 
 /* Response for mobile" #################################################################################################################################### */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 960px) {
 
   .frame {
     position: relative;
-    width: 360px;
+    width: 355px;
     height: 95%;
     margin: 10px auto;
     padding: 0;
@@ -731,7 +735,7 @@ body {
   }
 
   .calc-shine {
-    left: 16%;
+    left: 37%;
   }
 
   #timer {
@@ -756,18 +760,18 @@ body {
   
   .text-target {
     position: absolute;
-    top: 4%;
-    left: 70%;
-    zoom: .7;
+    top: 7%;
+    left: 65%;
+    zoom: .8;
     padding: 0;
     margin: 0;
   }
 
   .text-value {
     position: absolute;
-    top: 15%;
-    left: 70%;
-    zoom: .7;
+    top: 17%;
+    left: 64%;
+    zoom: .8;
     padding: 0;
   }
   
@@ -805,14 +809,40 @@ body {
     width: 70%;
   }
 
+  .solution-display {
+    position: relative;
+    width: 75%;
+    height: 30px;
+    background-color: #0000;
+    border: 1px solid #ffff;
+    padding: 5px 25px;
+    border-radius: 55px;
+    transform: translate(0%, 30%);
+    margin: 10px auto;
+    z-index: 100;
+    line-height: 1.4;
+    color: yellow;
+    font-size: 24px;
+    font-family: 'digital-clock-font';
+    overflow: hidden;
+    display: none;
+  }
+
+  .solution-display span {
+    display: inline-block;
+    width: 140%;
+    font-size: 18px;
+    animation: marquee 10s linear infinite;
+  }
+
   #keyboard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
-    width: 70%;
+    grid-gap: 15px;
+    width: 55%;
     justify-items: start;
     position: absolute;
-    left: 4%;
+    left: 10%;
     top: calc(22% + 15px);
   }
 
@@ -826,7 +856,7 @@ body {
 
   .number-row {
     display: grid;
-    width: 95px;
+    width: 100px;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     margin: 0;
@@ -837,7 +867,7 @@ body {
 
   .calc-row {
     display: grid;
-    width: 95px;
+    width: 100px;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     margin: 0;
@@ -886,11 +916,11 @@ body {
     text-shadow: 3px 2px 0px #aea5a5, 3px 2px 0px #aea5a5;
     font-weight: 700;
     display: block;
-    width: 60px;
+    width: 65px;
     height: 35px;
     font-size: 23px;
-    top: 0;
-    left: 32px;
+    top: 3px;
+    left: 35%;
     z-index: 1;
     line-height: 1.4;
     box-sizing: border-box;
@@ -954,23 +984,18 @@ body {
     visibility: hidden;
   }
 
-  .calc-backspace-btn {
-    display: none;
-    visibility: hidden;
-  }
-
   #calc-stop {
     display: none;
     background: rgb(196, 0, 0);
     color: #f4f4f4;
-    height: 140px;
-    width: 55px;
+    height: 33%;
+    width: 17%;
     position: absolute;
-    top: calc(45% + 6px);
-    left: 86%;
+    top: 41%;
+    left: 85%;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    line-height: 2.8;
+    line-height: 3;
     letter-spacing: 3px;
     font-size: 20px;
   } 
@@ -983,12 +1008,12 @@ body {
     background-color: rgb(12, 153, 7);
     color: transparent;
     text-align: center;
-    line-height: 1.2;
-    height: 140px;
-    width: 55px;
+    line-height: 1.6;
+    height: 33%;
+    width: 17%;
     position: absolute;
-    top: calc(45% + 6px);
-    left: 86%;
+    top: 41%;
+    left: 85%;
   }
 
   #calc-confirm::after {
@@ -1002,29 +1027,29 @@ body {
 
   #start_game {
     position: absolute;
-    top: calc(45% + 6px);
-    left: 86%;
+    top: 41%;
+    left: 85%;
     font-size: 20px;
     margin: 0;
     padding: 0;
-    width: 55px;
-    height: 140px;
+    width: 17%;
+    height: 33%;
     writing-mode: vertical-lr;
     text-orientation: upright;
-    line-height: 2.7;
+    line-height: 3;
     letter-spacing: 0;
   } 
 
   #new_game {
     position: absolute;
     display: none;
-    top: calc(45% + 6px);
-    left: 86%;
+    top: 41%;
+    left: 85%;
     background-position: 50% 50%;
     background-size: 60%;
     margin: 0;
-    width: 55px;
-    height: 140px;
+    width: 17%;
+    height: 33%;
     background-color: #a30072;
   }
 
@@ -1037,7 +1062,7 @@ body {
 }
 
 /* Response for mobile" #################################################################################################################################### */
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 576px) {
 
   .frame {
     position: relative;
@@ -1057,21 +1082,26 @@ body {
     line-height: 1.2;
   }
 
+  .text-target {
+    top: 7%;
+}
+
   .text-value {
-    top: 15%;
+    top: 17%;
+    left: 70%;
   }
   
   #value {
     line-height: 1.2;
   }
 
-  .display {
+  .solution-display {
     display: none;
-    width: 70%;
+    width: 80%;
   }
 
-  .display span {
-    width: 200%;
+  .solution-display span {
+    width: 150%;
   }
 
   @keyframes marquee {
@@ -1083,12 +1113,17 @@ body {
     }
   }
 
+  #keyboard {
+    left: 5%;
+    top: 22%;
+}
+
   .column {
     text-align: center;
     font-size: 24px;
     padding: 0;
-    height: 37px;
-    line-height: 1.5;
+    height: 40px;
+    line-height: 1.;
   }
 
   .calc-backspace-row {
@@ -1098,18 +1133,24 @@ body {
   }
 
   #start_game {
-    top: calc(45% + 5px);
+    top: calc(39% - 2px);
+    left: 87%;
+    line-height: 2.7;
   }
 
   #calc-stop {
-    top: calc(45% + 5px);
+    top: calc(39% - 2px);
+    left: 87%;
+    line-height: 2.7;
   }
 
   #calc-confirm {
-    top: calc(45% + 5px);
+    top: calc(39% - 2px);
+    left: 87%;
   }
 
   #new_game {
-    top: calc(45% + 5px);
+    top: calc(39% - 2px);
+    left: 87%;
   }
 }

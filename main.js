@@ -290,6 +290,7 @@ const audio7 = new Audio('sounds/Blop.mp3');
           clearInterval(spin);
           clearInterval(swing);
           numClear.classList.remove('used');
+          clear.classList.remove('used');
           stop.style.display = 'none';
           confirm.style.display = 'block';
           audio1.play();
