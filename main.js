@@ -53,9 +53,9 @@ const audio7 = new Audio('sounds/Blop.mp3');
   document.addEventListener('DOMContentLoaded', ()=> {
     window.addEventListener('load', ()=> {
         const loaderWrap = document.querySelector('.loader-wrap');
-        const game = document.querySelector('#game-page');
-        const gun = document.querySelector('#gun');
-        const appre = document.querySelector('#appre');
+        const game = document.getElementById('game-page');
+        const gun = document.getElementById('gun');
+        const appre = document.getElementById('appre');
 
 
         setTimeout(()=> {
@@ -132,6 +132,7 @@ const audio7 = new Audio('sounds/Blop.mp3');
           for(let e = 0; e < displayVal.length; e++)
           if(displayVal[e] == '÷ ')
                 displayVal[e] = '/';
+                
           // When click confirm calculate
           displayResult.innerText = eval(displayVal.join(''));
       
@@ -338,6 +339,7 @@ const audio7 = new Audio('sounds/Blop.mp3');
                 newGame.style.display = 'block';
                 confirm.style.display = 'none';
                 numClear.classList.add('used');
+                clear.classList.add('used');
                 for(let k = 0; k < calcBtnOperators.length; k++) {
                   [k].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
                 }
@@ -351,6 +353,7 @@ const audio7 = new Audio('sounds/Blop.mp3');
               newGame.style.display = 'block';
               confirm.style.display = 'none';
               numClear.classList.add('used');
+              clear.classList.add('used');
               displayCpu.style.display = 'block';
           
               for(let t = 0; t < calcBtnOperators.length; t++) {
