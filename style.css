@@ -1086,12 +1086,18 @@ body {
 
 @media only screen and (max-width: 320px) {
 
+  .frame {
+    height: 95%;
+  }
+
   #calculator {
     width: 97%;
   }
 
   .solution-display {
     width: 73%;
+    height: 15px;
+    font-size: 15px;
   }
 
   .solution-display span {
@@ -1114,5 +1120,9 @@ body {
     top: 0;
     left: 0;
     width: 160px;
+  }
+
+  .footer {
+    top: 97%;
   }
 }
