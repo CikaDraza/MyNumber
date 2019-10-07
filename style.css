@@ -1087,7 +1087,8 @@ body {
 @media only screen and (max-width: 320px) {
 
   .frame {
-    height: 95%;
+    height: 99%;
+    margin: 2% auto;
   }
 
   #calculator {
