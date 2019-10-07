@@ -228,9 +228,9 @@ body {
   width: 90%;
   height: 30px;
   background-color: #0000;
-  border: 1px solid #ffff;
+  /* border: 1px solid #ffff; */
   padding: 5px 25px;
-  border-radius: 55px;
+  /* border-radius: 55px; */
   transform: translate(0%, 30%);
   margin: 10px auto;
   z-index: 100;
@@ -623,7 +623,7 @@ body {
       grid-template-columns: repeat(15, 35px);
     }
 
-    #calc-confirm {
+    /* #calc-confirm {
       grid-column: 10/13;
     }
 
@@ -637,7 +637,8 @@ body {
 
     #new_game {
       grid-column: 10/13;
-    }
+      transform: translate(0, 0);
+    } */
 }
 
 /* Response for mobile" #################################################################################################################################### */
@@ -737,27 +738,12 @@ body {
   }
 
   .solution-display {
-    position: relative;
     width: 75%;
-    height: 30px;
-    background-color: #0000;
-    border: 1px solid #ffff;
-    padding: 5px 25px;
-    border-radius: 55px;
-    transform: translate(0%, 30%);
-    margin: 10px auto;
-    z-index: 100;
-    line-height: 1.4;
-    color: yellow;
-    font-size: 24px;
-    font-family: 'digital-clock-font';
-    overflow: hidden;
-    display: none;
   }
 
   .solution-display span {
     display: inline-block;
-    width: 140%;
+    width: 150%;
     font-size: 18px;
     animation: marquee 10s linear infinite;
   }
@@ -769,8 +755,8 @@ body {
     width: 55%;
     justify-items: start;
     position: absolute;
-    left: 10%;
-    top: 35%;
+    left: 6%;
+    top: 30%;
   }
 
   .column {
@@ -911,7 +897,7 @@ body {
     top: 60%;
     right: 44%;
     width: 50px;
-    height: 189px;
+    height: 187px;
   } 
   
   #calc-confirm {
@@ -922,7 +908,7 @@ body {
     top: 60%;
     right: 44%;
     width: 50px;
-    height: 189px;
+    height: 187px;
     color: transparent;
     font-size: 30px;
   }
@@ -945,7 +931,7 @@ body {
     top: 60%;
     right: 44%;
     width: 50px;
-    height: 189px;
+    height: 187px;
   } 
 
   #new_game {
@@ -955,7 +941,7 @@ body {
     top: 60%;
     right: 44%;
     width: 50px;
-    height: 189px;
+    height: 187px;
     background-size: 50%;
   }
 
@@ -972,7 +958,7 @@ body {
 
   .frame {
     position: relative;
-    width: 90%;
+    width: 95%;
     height: 90%;
   }
 
@@ -989,21 +975,26 @@ body {
   }
 
   .text-target {
-    top: 7%;
+    top: 5%;
 }
 
   .text-value {
-    top: 17%;
-    left: 70%;
+    top: 20%;
+    left: 68%;
   }
   
   #value {
     line-height: 1.2;
   }
 
+  #calculator {
+    width: 95%;
+}
+
   .solution-display {
     display: none;
-    width: 80%;
+    width: 66%;
+    line-height: 1;
   }
 
   .solution-display span {
@@ -1012,7 +1003,7 @@ body {
 
   @keyframes marquee {
     from {
-      transform: translateX(55%);
+      transform: translateX(90%);
     }
     to {
       transform: translateX(-100%);
@@ -1020,43 +1011,108 @@ body {
   }
 
   #keyboard {
-    left: 5%;
-    top: 22%;
-}
+    left: 10%;
+    top: 30%;
+    grid-gap: 20px;
+  }
 
   .column {
     text-align: center;
     font-size: 24px;
     padding: 0;
     height: 40px;
-    line-height: 1.;
+    line-height: 1.7;
   }
 
-  .calc-backspace-row {
-    top: 3px;
-    left: 34px;
-    line-height: 1.6;
+  .number-row {
+    top: 0;
+    left: 0;
+    width: 115px;
+  }
+
+  .calc-row {
+    top: 0;
+    left: 0;
+  }
+
+  #backspace {
+    top: 0;
+    left: 0;
+    transform: translate( 0, 0);
   }
 
   #start_game {
-    top: calc(39% - 2px);
-    left: 87%;
-    line-height: 2.7;
+    height: 197px;
   }
 
   #calc-stop {
-    top: calc(39% - 2px);
-    left: 87%;
-    line-height: 2.7;
+    height: 197px;
   }
 
   #calc-confirm {
-    top: calc(39% - 2px);
-    left: 87%;
+    height: 197px;
   }
 
   #new_game {
-    top: calc(39% - 2px);
-    left: 87%;
+    height: 197px;
+  }
+}
+
+
+
+@media only screen and (max-width: 375px) {
+
+  .solution-display {
+    width: 75%;
+  }
+
+  #keyboard {
+    left: 4%;
+    top: 30%;
+    grid-gap: 20px;
+  }
+
+  .number-row {
+    top: 0;
+    left: 0;
+    width: 115px;
+  }
+
+  .calc-row {
+    top: 0;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  #calculator {
+    width: 97%;
+  }
+
+  .solution-display {
+    width: 73%;
+  }
+
+  .solution-display span {
+    width: 170%;
+  }
+
+  #keyboard {
+    left: 4%;
+    top: 30%;
+    grid-gap: 10px;
+  }
+
+  .number-row {
+    top: 0;
+    left: 0;
+    width: 100px;
+  }
+
+  .calc-row {
+    top: 0;
+    left: 0;
+    width: 160px;
   }
 }
