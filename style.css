@@ -32,6 +32,82 @@ body {
   display: none;
 }
 
+.audio-controller {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  width: 85%;
+  height: 50px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.sound {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.sound .sound-icon  {
+  width: 50px;
+  height: 100%;
+  background: url(img/audio-control-button.svg) no-repeat center;
+  background-size: cover;
+  border-radius: 50%;
+  border: 2px solid #f4f4f4;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.sound .mute-icon {
+  position: absolute;
+  top: 4%;
+  left: 40.5%;
+  width: 50px;
+  height: 50px;
+  background: url(img/no-stopping.svg) no-repeat center;
+  background-size: cover;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  z-index: -10;
+}
+
+.sound .sound-icon::after {
+  position: absolute;
+  content: '';
+  z-index: -1;
+  background-color: #ffffff;
+  width: 45px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.sound .sound-slider {
+  width: 100px;
+  position: relative;
+  margin: 0;
+  left: 4%;
+  cursor: pointer;
+}
+
+.tone {
+  width: 50px;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-image: url(img/music-player.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
 .frame {
   position: relative;
   width: 65%;
