@@ -9,4 +9,4 @@ https://cikadraza.github.io/MyNumber/
 
 # Explanation
   My number is a game of numbers and computation.
-   The computer randomly selects one target number from 100 to 999, as well as 6 smaller numbers. These 6 numbers should be combined with mathematical operations (addition, subtraction, multiplication, and division) to get the target number.
+   The computer randomly selects one target number from 1 to 999, as well as 6 smaller numbers. These 6 numbers should be combined with mathematical operations (addition, subtraction, multiplication, and division) to get the target number.
