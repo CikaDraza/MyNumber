@@ -9,55 +9,11 @@
   <title>MyNumber Game</title>  
 </head>
 <body>
-  
-  <!-- Audio Loader -->
-  <iframe id="gun" src="" style="display:none" frameborder="0"></iframe>
-  <iframe id="appre" src="" style="display:none" frameborder="0"></iframe>
-
-  <!-- Audio Controler -->
-<!--   <div class="audio-controller">
-    <div class="sound">
-      <div class="sound-icon"></div>
-      <div class="mute-icon"></div>
-      <input type="range" min="0" max="1" step="0.01" class="sound-slider" onchange="volumeSlide()"></input>
-    </div>
-    <div class="tone"></div>
-  </div> -->
 
   <!-- Loader Page -->
   <div class="loader-wrap">
     <div class="loader">
       <div class="box-loader">
-        <div class="wrap-anima1">
-          <img class="anima1" src="img/empty-brain.png" alt="">
-          <div class="anima1-bg"></div>      
-        </div>
-        <div class="wrap-anima2">
-          <img class="anima2" src="img/head-open1.png" alt="">
-        </div>
-        <div class="numbers">
-          <img src="img/Layer 2.png" alt="">
-          <img src="img/Layer 3.png" alt="">
-          <img src="img/Layer 4.png" alt="">
-          <img src="img/Layer 5.png" alt="">
-          <img src="img/Layer 6.png" alt="">
-          <img src="img/Layer 7.png" alt="">
-          <img src="img/Layer 8.png" alt="">
-          <img src="img/Layer 2.png" alt="">
-          <img src="img/Layer 3.png" alt="">
-          <img src="img/Layer 4.png" alt="">
-          <img src="img/Layer 5.png" alt="">
-          <img src="img/Layer 6.png" alt="">
-          <img src="img/Layer 7.png" alt="">
-          <img src="img/Layer 8.png" alt="">
-          <img src="img/Layer 2.png" alt="">
-          <img src="img/Layer 3.png" alt="">
-          <img src="img/Layer 4.png" alt="">
-          <img src="img/Layer 5.png" alt="">
-          <img src="img/Layer 6.png" alt="">
-          <img src="img/Layer 7.png" alt="">
-          <img src="img/Layer 8.png" alt="">
-        </div>
       </div>
     </div>    
   </div>
@@ -83,7 +39,7 @@
           <!-- Backspace Button -->
           <div class="calc-backspace-btn used" id="calc-backspace">x</div>
         </div>
-        <div class="solution-display"><span>computer solution should appear here ... soon!</span></div>
+        <div class="solution-display"></div>
         
   
         <!-- Button Numbers -->
@@ -118,14 +74,27 @@
         
   
       </div>
-      <div class="footer">
-          <p>Made by: Drazilica &copy; 2019</p>
-          <img src="img/Logo.png" alt="Drazilica">
-      </div> 
+      
     </div>    
+    <!-- Audio Controler -->
+    <div class="footer">
+      <div class="audio-controller">
+        <div class="sound">
+          <div class="sound-icon"></div>
+          <div class="mute-icon"></div>
+          <input type="range" min="0" max="1" step="0.01" class="sound-slider" onchange="volumeSlide()"></input>
+        </div>
+        <div class="tone"></div>
+      </div>
+      <div class="logo">
+        <p>Made by: Drazilica &copy; 2019</p>
+        <img src="img/Logo.png" alt="Drazilica">
+      </div>
+    </div> 
   </div>
 
-  <script src="audio.js"></script>
   <script src="main.js"></script>
+  <script src="findSolution.js"></script>
+  <script src="audio.js"></script>
 </body>
 </html>

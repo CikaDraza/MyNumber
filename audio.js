@@ -13,20 +13,25 @@ const audio4 = new Audio('sounds/ten_seconds.m4a');
 const audio5 = new Audio('sounds/time.wav');
 const audio6 = new Audio('sounds/Ta Da.mp3');
 const audio7 = new Audio('sounds/Blop.mp3');
+const gun = new Audio('sounds/Gun_Shot.mp3');
+const appre = new Audio('sounds/apprehensive.mp3');
 
-window.addEventListener('load', ()=> {
-  const gun = document.getElementById('gun');
-  const appre = document.getElementById('appre');
-  
-        setTimeout(()=> {
-          gun.src = 'sounds/Gun_Shot.mp3';
-          appre.src = 'sounds/apprehensive.mp3';
-        }, 2000);
+window.addEventListener('DOMContentLoaded', ()=> {
+  setTimeout(()=> {
+    gun.play();
+    appre.play();
+    gun.volume = 0.2;
+    appre.volume = 0.2;
+  }, 2000);
+});
+
+audio.addEventListener('error', function(event) {
+  console.log('Audio playback error:', event.target.error);
 });
 
 sound.onclick = ()=> {
-  console.log('click');
   audio1.play();
+  audio1.volume = 0.2;
   if(audio3.muted) {
     audio3.muted = false;
     mute.style.zIndex = '-10';
@@ -37,9 +42,9 @@ sound.onclick = ()=> {
       audio3.muted = false;
       mute.style.zIndex = '-10';
     };
-    // let pseud = window.getComputedStyle(sound, '::after');
-    // let color = pseud.getPropertyValue('color');
-    // console.log(color);
+    let pseud = window.getComputedStyle(sound, '::after');
+    let color = pseud.getPropertyValue('color');
+    console.log(color);
   }
 };
 
@@ -50,8 +55,4 @@ function volumeSlide() {
   }else {
     mute.style.zIndex = '-10';
   }
-  console.log(volumeSlider.value);
 }
-
-console.log(volumeSlider.value);
-console.log(soundPseudo);
