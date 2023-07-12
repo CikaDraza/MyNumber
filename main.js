@@ -35,6 +35,12 @@ const calcBtnOperators = document.querySelectorAll('.calc-btn-operator');
 let counter;
 const timer = document.getElementById('timer');
 let intervalId;
+let spinTarget;
+let rotate;
+let spin;
+let swing;
+let target = [];
+let numbers = [];
 
 // Buttons Start and New game
 const startGame = document.getElementById("start_game");
@@ -220,12 +226,12 @@ const newGame = document.getElementById('new_game');
   // Start Game And Start Rundom Numbers Countdowon #################################################################
   startGame.addEventListener('click', ()=> {
     // Target Number
-    let spinTarget = setInterval( ()=> {
+    spinTarget = setInterval( ()=> {
       targetResult.innerHTML = Math.floor(Math.random() * 999) + 1;
     }, 50);
     
     // with the help of numbers [1 - 9]
-    let rotate = setInterval( ()=> {
+    rotate = setInterval( ()=> {
       let firstFourNumb = Object.entries(calcNumBtns).slice(0,4).map(entry => entry[1]);
       for(let i = 0; i < calcNumBtns.length; i++) {
         [i].forEach.call(firstFourNumb, (e)=> e.innerText = Math.floor(Math.random() * 9) + 1);
@@ -233,7 +239,7 @@ const newGame = document.getElementById('new_game');
     }, 50);
   
     // with the help of numbers [10, 15, 20]
-    let spin = setInterval( ()=> {
+    spin = setInterval( ()=> {
   
     let numb = ["10", "15", "20"]; 
   
@@ -245,7 +251,7 @@ const newGame = document.getElementById('new_game');
     }, 50);
   
     // with the help of numbers [25, 50, 75, 100]
-    let swing = setInterval( ()=> {
+    swing = setInterval( ()=> {
       
     let numb = ["25", "50", "75", "100"];
       
@@ -271,254 +277,137 @@ const newGame = document.getElementById('new_game');
     audio3.currentTime = 0;
     audio3.volume = 0.2;
   
-    // Stop random numbers and start Timer #################################################################
-    stop.addEventListener('click', ()=> {
-      // Remove existing event listener
-      stop.removeEventListener('click', stopClickHandler);
-    
-      // Add new event listener
-      stop.addEventListener('click', stopClickHandler);
-
-      window.clearInterval(intervalId);
-      clearInterval(spinTarget);
-      clearInterval(rotate);
-      clearInterval(spin);
-      clearInterval(swing);
-      numClear.classList.remove('used');
-      clear.classList.remove('used');
-      stop.style.display = 'none';
-      confirmBtn.style.display = 'block';
-      audio1.play();
-      audio1.volume = 0.2;
-      audio5.play();
-      audio5.volume = 0.2;
-  
-      // every second the timer calls the function progressTime => this should be loaded before the timer
-      progressTime = ()=> {
-        counter--;
-        if(counter < 90){
-            timer.innerHTML = counter;
-            audio3.play();    
-            audio3.volume = 0.5;    
-        }
-        if(counter < 13){
-            audio4.play();        
-            audio4.volume = 0.5;
-        }  
-        if(counter < 10){
-            audio2.play();
-            audio2.volume = 0.5;
-            audio3.pause();     
-            audio3.volume = 0.5; 
-        }
-        if(counter < 9){
-            audio4.pause();
-            audio4.volume = 0.5;
-        }
-        if(counter < 1){
-            window.clearInterval(intervalId);
-            timer.style.color = 'red';
-            timer.style.borderColor = 'red';
-            audio.play();
-            audio.volume = 0.5;
-            audio2.pause();
-            audio3.pause();
-            audio3.currentTime = 0;
-        }
-        if(counter === 0){    
-          // Replace sign x whit sign * to make a calculation
-          for(let i = 0; i < displayVal.length; i++)
-            if(displayVal[i] ==='x ')
-            displayVal[i] = '*';
-          // Replace sign ÷ whit sign / to make a calculation
-          for(let e = 0; e < displayVal.length; e++)
-          if(displayVal[e] === '÷ ')
-          displayVal[e] = '/';
-      
-          // If not a number on display set on new game
-          if(isNaN(displayValElement.innerText) == true){
-            displayResult.innerText = '???';
-            newGame.style.display = 'block';
-            confirmBtn.style.display = 'none';
-            numClear.classList.add('used');
-            clear.classList.add('used');
-            for(let k = 0; k < calcBtnOperators.length; k++) {
-              [k].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
-            }
-            for(let j = 0; j < calcNumBtns.length; j++) {
-              [j].forEach.call(calcNumBtns, (e)=> e.classList.add('used'));
-            }
-          }
-          
-          // When time up calculate what is on display  
-          displayResult.innerText = eval(displayVal.join(''));
-          newGame.style.display = 'block';
-          confirmBtn.style.display = 'none';
-          numClear.classList.add('used');
-          clear.classList.add('used');
-          displayCpu.style.display = 'block';
-      
-          for(let t = 0; t < calcBtnOperators.length; t++) {
-            [t].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
-          }
-          for(let g = 0; g < calcNumBtns.length; g++) {
-            [g].forEach.call(calcNumBtns, (e)=> e.classList.add('used'));
-          }
-          
-          if(displayResult.innerText == targetResult.innerText){
-            targetResult.style.boxShadow = '2px 4px 30px 7px #ce03b3';
-            document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
-            audio6.play();
-          }
-          if(displayValElement.innerText == ''){
-            displayResult.innerText = '???';
-          }else if(displayVal == []){
-            displayResult.innerText = '???';
-          }else if(clearStrArray == []){
-            displayResult.innerText = '???';
-          }
-          audio3.currentTime = 0;
-        }    
-      };
-      // ------------------------------------------------------
-      // timer call progressTime every secund
-        counter = 90;
-        function startInterval() {
-          intervalId = setInterval(progressTime, 1000); // Update timer every second (1000ms)
-        }
-        startInterval();
-      // -------------------------------------------------------
-    
-      for(let i = 0; i < calcNumBtns.length; i++) {
-          [i].forEach.call(calcNumBtns, (e)=> (e.classList.remove('used'), e.classList.remove('run_num')));        
-      }
-      for(let j = 0; j < calcBtnOperators.length; j++) {
-          [j].forEach.call(calcBtnOperators, (e)=> e.classList.remove('used'));        
-      }
-       
-    });
-    const stopClickHandler = () => {
-      window.clearInterval(intervalId);
-      clearInterval(spinTarget);
-      clearInterval(rotate);
-      clearInterval(spin);
-      clearInterval(swing);
-      numClear.classList.remove('used');
-      clear.classList.remove('used');
-      stop.style.display = 'none';
-      confirmBtn.style.display = 'block';
-      audio1.play();
-      audio1.volume = 0.2;
-      audio5.play();
-      audio5.volume = 0.2;
-  
-      // every second the timer calls the function progressTime => this should be loaded before the timer
-      progressTime = ()=> {
-        counter--;
-        if(counter < 90){
-            timer.innerHTML = counter;
-            audio3.play();    
-            audio3.volume = 0.5;    
-        }
-        if(counter < 13){
-            audio4.play();        
-            audio4.volume = 0.5;
-        }  
-        if(counter < 10){
-            audio2.play();
-            audio2.volume = 0.5;
-            audio3.pause();     
-            audio3.volume = 0.5; 
-        }
-        if(counter < 9){
-            audio4.pause();
-            audio4.volume = 0.5;
-        }
-        if(counter < 1){
-            window.clearInterval(intervalId);
-            timer.style.color = 'red';
-            timer.style.borderColor = 'red';
-            audio.play();
-            audio.volume = 0.5;
-            audio2.pause();
-            audio3.pause();
-            audio3.currentTime = 0;
-        }
-        if(counter === 0){    
-          // Replace sign x whit sign * to make a calculation
-          for(let i = 0; i < displayVal.length; i++)
-            if(displayVal[i] ==='x ')
-            displayVal[i] = '*';
-          // Replace sign ÷ whit sign / to make a calculation
-          for(let e = 0; e < displayVal.length; e++)
-          if(displayVal[e] === '÷ ')
-          displayVal[e] = '/';
-      
-          // If not a number on display set on new game
-          if(isNaN(displayValElement.innerText) == true){
-            displayResult.innerText = '???';
-            newGame.style.display = 'block';
-            confirmBtn.style.display = 'none';
-            numClear.classList.add('used');
-            clear.classList.add('used');
-            for(let k = 0; k < calcBtnOperators.length; k++) {
-              [k].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
-            }
-            for(let j = 0; j < calcNumBtns.length; j++) {
-              [j].forEach.call(calcNumBtns, (e)=> e.classList.add('used'));
-            }
-          }
-          
-          // When time up calculate what is on display  
-          displayResult.innerText = eval(displayVal.join(''));
-          newGame.style.display = 'block';
-          confirmBtn.style.display = 'none';
-          numClear.classList.add('used');
-          clear.classList.add('used');
-          displayCpu.style.display = 'block';
-      
-          for(let t = 0; t < calcBtnOperators.length; t++) {
-            [t].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
-          }
-          for(let g = 0; g < calcNumBtns.length; g++) {
-            [g].forEach.call(calcNumBtns, (e)=> e.classList.add('used'));
-          }
-          
-          if(displayResult.innerText == targetResult.innerText){
-            targetResult.style.boxShadow = '2px 4px 30px 7px #ce03b3';
-            document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
-            audio6.play();
-          }
-          if(displayValElement.innerText == ''){
-            displayResult.innerText = '???';
-          }else if(displayVal == []){
-            displayResult.innerText = '???';
-          }else if(clearStrArray == []){
-            displayResult.innerText = '???';
-          }
-          audio3.currentTime = 0;
-        }    
-      };
-      // ------------------------------------------------------
-      // timer call progressTime every secund
-        counter = 90;
-        function startInterval() {
-          intervalId = setInterval(progressTime, 1000); // Update timer every second (1000ms)
-        }
-        startInterval();
-      // -------------------------------------------------------
-    
-      for(let i = 0; i < calcNumBtns.length; i++) {
-          [i].forEach.call(calcNumBtns, (e)=> (e.classList.remove('used'), e.classList.remove('run_num')));        
-      }
-      for(let j = 0; j < calcBtnOperators.length; j++) {
-          [j].forEach.call(calcBtnOperators, (e)=> e.classList.remove('used'));        
-      }
-    };
   });
-      
+  
+  // Stop random numbers and start Timer #################################################################
+  stop.addEventListener('click', ()=> {
+    window.clearInterval(spinTarget);
+    window.clearInterval(rotate);
+    window.clearInterval(spin);
+    window.clearInterval(swing);
+    window.clearInterval(intervalId);
+    numbers.push(Number(numOne.innerHTML), Number(numTwo.innerHTML), Number(numThree.innerHTML), Number(numFour.innerHTML), Number(numFive.innerHTML), Number(numSix.innerHTML))
+    target.push(targetResult && Number(targetResult.innerHTML));
+    solutinHandler(target, numbers)
+    numClear.classList.remove('used');
+    clear.classList.remove('used');
+    stop.style.display = 'none';
+    confirmBtn.style.display = 'block';
+    audio1.play();
+    audio1.volume = 0.2;
+    audio5.play();
+    audio5.volume = 0.2;
+
+    // every second the timer calls the function progressTime => this should be loaded before the timer
+    progressTime = ()=> {
+      counter--;
+      if(counter < 90){
+          timer.innerHTML = counter;
+          audio3.play();    
+          audio3.volume = 0.5;    
+      }
+      if(counter < 13){
+          audio4.play();        
+          audio4.volume = 0.5;
+      }  
+      if(counter < 10){
+          audio2.play();
+          audio2.volume = 0.5;
+          audio3.pause();     
+          audio3.volume = 0.5; 
+      }
+      if(counter < 9){
+          audio4.pause();
+          audio4.volume = 0.5;
+      }
+      if(counter < 1){
+          window.clearInterval(intervalId);
+          timer.style.color = 'red';
+          timer.style.borderColor = 'red';
+          audio.play();
+          audio.volume = 0.5;
+          audio2.pause();
+          audio3.pause();
+          audio3.currentTime = 0;
+      }
+      if(counter === 0){    
+        // Replace sign x whit sign * to make a calculation
+        for(let i = 0; i < displayVal.length; i++)
+          if(displayVal[i] ==='x ')
+          displayVal[i] = '*';
+        // Replace sign ÷ whit sign / to make a calculation
+        for(let e = 0; e < displayVal.length; e++)
+        if(displayVal[e] === '÷ ')
+        displayVal[e] = '/';
+    
+        // If not a number on display set on new game
+        if(isNaN(displayValElement.innerText) == true){
+          displayResult.innerText = '???';
+          newGame.style.display = 'block';
+          confirmBtn.style.display = 'none';
+          numClear.classList.add('used');
+          clear.classList.add('used');
+          for(let k = 0; k < calcBtnOperators.length; k++) {
+            [k].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
+          }
+          for(let j = 0; j < calcNumBtns.length; j++) {
+            [j].forEach.call(calcNumBtns, (e)=> e.classList.add('used'));
+          }
+        }
+        
+        // When time up calculate what is on display  
+        displayResult.innerText = eval(displayVal.join(''));
+        newGame.style.display = 'block';
+        confirmBtn.style.display = 'none';
+        numClear.classList.add('used');
+        clear.classList.add('used');
+        displayCpu.style.display = 'block';
+    
+        for(let t = 0; t < calcBtnOperators.length; t++) {
+          [t].forEach.call(calcBtnOperators, (e)=> e.classList.add('used'));
+        }
+        for(let g = 0; g < calcNumBtns.length; g++) {
+          [g].forEach.call(calcNumBtns, (e)=> e.classList.add('used'));
+        }
+        
+        if(displayResult.innerText == targetResult.innerText){
+          targetResult.style.boxShadow = '2px 4px 30px 7px #ce03b3';
+          document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #ce03b3';
+          audio6.play();
+        }
+        if(displayValElement.innerText == ''){
+          displayResult.innerText = '???';
+        }else if(displayVal == []){
+          displayResult.innerText = '???';
+        }else if(clearStrArray == []){
+          displayResult.innerText = '???';
+        }
+        audio3.currentTime = 0;
+      }    
+    };
+    // ------------------------------------------------------
+    // timer call progressTime every secund
+      counter = 90;
+      function startInterval() {
+        intervalId = setInterval(progressTime, 1000); // Update timer every second (1000ms)
+      }
+      startInterval();
+    // -------------------------------------------------------
+  
+    for(let i = 0; i < calcNumBtns.length; i++) {
+        [i].forEach.call(calcNumBtns, (e)=> (e.classList.remove('used'), e.classList.remove('run_num')));        
+    }
+    for(let j = 0; j < calcBtnOperators.length; j++) {
+        [j].forEach.call(calcBtnOperators, (e)=> e.classList.remove('used'));        
+    }
+     
+  });
+
   // Start New game ##############################################################################
   newGame.addEventListener('click', ()=> {
+      target = [];
+      numbers = [];
+      displayCpu.innerHTML = '';
       window.clearInterval(intervalId);
       newGame.style.display = 'none';
       startGame.style.display = 'block';
