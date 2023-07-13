@@ -824,10 +824,10 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
-    width: 55%;
+    width: 100%;
     justify-items: start;
     position: absolute;
-    left: 6%;
+    left: 2rem;
     top: 30%;
   }
 
@@ -841,7 +841,7 @@ body {
 
   .number-row {
     display: grid;
-    width: 100px;
+    width: 300px;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     margin: 0;
@@ -852,7 +852,7 @@ body {
 
   .calc-row {
     display: grid;
-    width: 180px;
+    width: 300px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 10px;
@@ -860,7 +860,7 @@ body {
     margin: 0;
     padding: 0;
     top: 0;
-    left: 0;
+    left: 0rem;
   }
   
   .calc-btn-num {
@@ -1023,132 +1023,168 @@ body {
 }
 
 /* Response for mobile" #################################################################################################################################### */
-@media only screen and (max-width: 430px) {
-
-  #game-page {
-    position: relative;
-  }
-
+@media only screen and (max-width: 420px) {
   .frame {
-    position: relative;
     width: 95%;
-    height: 90%;
+    height: 80%;
   }
-
-  .calc-shine {
-    left: 45%;
-  }
-
-  #timer {
-    line-height: 2.5;
-  }
-  
-  #target {
-    line-height: 1.2;
-  }
-
-  .text-target {
-    top: 5%;
-}
-
-  .text-value {
-    top: 20%;
-    left: 68%;
-  }
-  
-  #value {
-    line-height: 1.2;
-  }
-
-  #calculator {
-    width: 95%;
-}
 
   .solution-display {
-    display: none;
     width: 100%;
-    line-height: 1;
-
   }
 
   #keyboard {
-    left: 10%;
+    width: 100%;
+    left: 0;
     top: 30%;
-    grid-gap: 20px;
-  }
-
-  .column {
-    text-align: center;
-    font-size: 24px;
-    padding: 0;
-    height: 40px;
-    line-height: 1.7;
+    grid-gap: 50px;
+    justify-items: end;
   }
 
   .number-row {
     top: 0;
     left: 0;
-    width: 115px;
+    width: 110px;
   }
 
   .calc-row {
     top: 0;
-    left: 0;
-  }
-
-  #backspace {
-    top: 0;
-    left: 0;
-    transform: translate( 0, 0);
-  }
-
-  #start_game {
-    height: 197px;
+    left: -2rem;
+    width: 180px
   }
 
   #calc-stop {
-    height: 197px;
+    right: 0;
+  } 
+  
+  #calc-confirm {
+    right: 0;
   }
 
-  #calc-confirm {
-    height: 197px;
-  }
+  #start_game {
+    right: 0;
+  } 
 
   #new_game {
-    height: 197px;
+    right: 0;
   }
 
   .footer {
     flex-wrap: wrap;
     position: absolute;
-    bottom: 3rem;
+    bottom: -1rem;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    transform: scale(.8);
   }
-
 }
 
+@media only screen and (max-width: 389px) {
 
 
-@media only screen and (max-width: 420px) {
+  .frame {
+    width: 95%;
+    height: 80%;
+  }
 
   .solution-display {
     width: 100%;
   }
 
   #keyboard {
-    left: 4%;
+    width: 100%;
+    left: 0;
     top: 30%;
-    grid-gap: 20px;
+    grid-gap: 25px;
+    justify-items: end;
   }
 
   .number-row {
     top: 0;
     left: 0;
-    width: 115px;
+    width: 110px;
   }
 
   .calc-row {
     top: 0;
     left: 0;
+    width: 180px
+  }
+
+  #calc-stop {
+    right: 1rem;
+  } 
+  
+  #calc-confirm {
+    right: 1rem;
+  }
+
+  #start_game {
+    right: 1rem;
+  } 
+
+  #new_game {
+    right: 1rem;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: -1rem;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    transform: scale(.8);
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
+
+  .frame {
+    width: 95%;
+    height: 80%;
+  }
+
+  .solution-display {
+    width: 100%;
+  }
+
+  #keyboard {
+    width: 100%;
+    left: 0;
+    top: 30%;
+    grid-gap: 10px;
+    justify-items: end;
+  }
+
+  .number-row {
+    top: 0;
+    left: 0;
+    width: 110px;
+  }
+
+  .calc-row {
+    top: 0;
+    left: 0;
+    width: 180px
+  }
+
+  #calc-stop {
+    right: 1rem;
+  } 
+  
+  #calc-confirm {
+    right: 1rem;
+  }
+
+  #start_game {
+    right: 1rem;
+  } 
+
+  #new_game {
+    right: 1rem;
   }
 
   .footer {
