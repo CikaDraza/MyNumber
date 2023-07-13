@@ -76,7 +76,6 @@ const newGame = document.getElementById('new_game');
   // Number Buttons
   calcNumBtns.forEach(num => num.addEventListener('click', function(clickObj) {
       audio1.play();
-      audio1.volume = 0.5;
       if(displayVal.length && clearStrArray[displayVal.length - 1]){
         return;
       }
@@ -94,7 +93,6 @@ const newGame = document.getElementById('new_game');
   // Operator Buttons
   calcBtnOperators.forEach(oprt => oprt.addEventListener('click', function(clickObj) {
       audio1.play();
-      audio1.volume = 0.5;
       let oper = this.valueOf();
       clearStrArray[displayVal.length] = null;
       clearStrArray[clearStrArray.length] = oper;
@@ -149,7 +147,6 @@ const newGame = document.getElementById('new_game');
       timer.style.color = 'red';
       timer.style.borderColor = 'red';
       audio.play();      
-      audio.volume = 0.2;
       audio3.pause();
       audio3.currentTime = 0;
       
@@ -273,9 +270,7 @@ const newGame = document.getElementById('new_game');
       [i].forEach.call(calcNumBtns, (e)=> e.classList.add('run_num'));        
     }
     audio1.play();
-    audio1.volume = 0.2;
     audio3.currentTime = 0;
-    audio3.volume = 0.2;
   
   });
   
@@ -294,9 +289,7 @@ const newGame = document.getElementById('new_game');
     stop.style.display = 'none';
     confirmBtn.style.display = 'block';
     audio1.play();
-    audio1.volume = 0.2;
     audio5.play();
-    audio5.volume = 0.2;
 
     // every second the timer calls the function progressTime => this should be loaded before the timer
     progressTime = ()=> {
@@ -304,28 +297,22 @@ const newGame = document.getElementById('new_game');
       if(counter < 90){
           timer.innerHTML = counter;
           audio3.play();    
-          audio3.volume = 0.5;    
       }
       if(counter < 13){
           audio4.play();        
-          audio4.volume = 0.5;
       }  
       if(counter < 10){
           audio2.play();
-          audio2.volume = 0.5;
           audio3.pause();     
-          audio3.volume = 0.5; 
       }
       if(counter < 9){
           audio4.pause();
-          audio4.volume = 0.5;
       }
       if(counter < 1){
           window.clearInterval(intervalId);
           timer.style.color = 'red';
           timer.style.borderColor = 'red';
           audio.play();
-          audio.volume = 0.5;
           audio2.pause();
           audio3.pause();
           audio3.currentTime = 0;
@@ -419,7 +406,6 @@ const newGame = document.getElementById('new_game');
       targetResult.style.boxShadow = 'none';
       document.getElementById('calculator').style.boxShadow = '2px 4px 30px 7px #f4f4f4';
       audio1.play();
-      audio1.volume = 0.5;
       audio3.pause();
       displayResult.innerText = '???';
       displayValElement.innerText = '';

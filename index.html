@@ -80,11 +80,14 @@
     <div class="footer">
       <div class="audio-controller">
         <div class="sound">
-          <div class="sound-icon"></div>
-          <div class="mute-icon"></div>
+          <div id="sound_icon" class="sound-icon">
+            <div class="mute-icon"></div>
+          </div>
           <input type="range" min="0" max="1" step="0.01" class="sound-slider" onchange="volumeSlide()"></input>
         </div>
-        <div class="tone"></div>
+        <div class="tone">
+          <div class="mute-icon-tone"></div>
+        </div>
       </div>
       <div class="logo">
         <p>Made by: Drazilica &copy; 2019</p>
